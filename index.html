@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ミヨスマート（MiYOSMART）取り扱い開始 | アイメガネ</title>
+<meta name="description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」をアイメガネ全店で取り扱い。HOYAのDIMSテクノロジー搭載、業界最高水準のアイキッズ＆ジュニア保証付き。">
+<meta property="og:title" content="ミヨスマート（MiYOSMART）取り扱い開始 | アイメガネ">
+<meta property="og:description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」をアイメガネ全店で取り扱い。HOYAのDIMSテクノロジー搭載、業界最高水準のアイキッズ＆ジュニア保証付き。">
+<meta property="og:image" content="https://iida-moe.github.io/miyosmart-lp/images/hero-girl.png">
+<meta property="og:url" content="https://iida-moe.github.io/miyosmart-lp/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="アイメガネ">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --deep:      #1b5ea8;
+    --blue:      #3aadd4;
+    --pale:      #d6ecf7;
+    --sky:       #eef6fb;
+    --cream:     #faf8f4;
+    --white:     #ffffff;
+    --orange:    #f07030;
+    --orange-d:  #d35c22;
+    --text:      #1a3a5c;
+    --muted:     #5878a0;
+    --rule:      #c2dff0;
+    --warn:      #c87010;
+    --warn-pale: #fff9f2;
+
+    --serif: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'Yu Gothic', sans-serif;
+    --sans:  'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+
+    --r:      20px;
+    --r-sm:   12px;
+    --r-pill: 100px;
+
+    --shadow:    0 4px 24px rgba(27,94,168,0.10);
+    --shadow-sm: 0 2px 12px rgba(27,94,168,0.07);
+
+    --max-w: 960px;
+    --py:    80px;
+  }
+
+  body { font-family: var(--sans); background: var(--cream); color: var(--text); line-height: 1.85; font-size: 15px; }
+
+  .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+
+  /* ── NAV ── */
+  .btn-nav { background: var(--orange); color: #fff; border: none; padding: 11px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 3px 12px rgba(240,112,48,.3); white-space: nowrap; }
+  .btn-nav:hover  { background: var(--orange-d); }
+  .btn-nav:active { transform: scale(.97); }
+  .btn-nav:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+  /* ── HERO: 丸ブロブ型センター写真構成 ── */
+  .pg-frame { position: relative; background: var(--cream); padding: 22px 22px 0; overflow: hidden; }
+  .pg-topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 6px 10px 22px; flex-wrap: wrap; }
+  .pg-logo { display: flex; align-items: center; gap: 12px; }
+  .pg-logo-img { height: 30px; width: auto; display: block; }
+  .pg-logo-divider { width: 1px; height: 22px; background: var(--rule); }
+  .pg-logo-en { font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--blue); text-transform: uppercase; }
+  .pg-nav { display: flex; align-items: center; gap: 28px; }
+  .pg-nav a { font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none; position: relative; padding-bottom: 2px; }
+  .pg-nav a:hover { color: var(--blue); }
+  .pg-topbar-right { display: flex; align-items: center; gap: 16px; }
+  .pg-topbar-tel { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  .hero-center { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px 10px 56px; }
+  .hero-blob-wrap { position: relative; width: 420px; max-width: 82vw; aspect-ratio: 1/1.05; margin-bottom: 36px; }
+  .hero-blob-photo { position: relative; width: 100%; height: 100%; border-radius: 48% 52% 43% 57% / 57% 44% 56% 43%; overflow: hidden; box-shadow: 0 16px 56px rgba(27,94,168,.18); }
+  .hero-blob-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 78% 22%; display: block; }
+  .hero-blob-deco { position: absolute; top: -22px; left: -30px; width: 84px; height: 84px; border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%; background: var(--pale); z-index: -1; }
+  .hero-blob-deco2 { position: absolute; bottom: -18px; right: -26px; width: 60px; height: 60px; border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%; background: rgba(58,173,212,.25); z-index: -1; }
+  .pg-quote { position: absolute; left: 8%; right: 8%; bottom: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px; z-index: 2; }
+  .pg-quote-bubble { background: rgba(255,255,255,.95); color: var(--deep); font-weight: 700; font-size: 16px; line-height: 1.4; padding: 10px 18px; border-radius: 14px; box-shadow: 0 6px 20px rgba(13,40,80,.18); }
+  .hero-badge-float { position: absolute; right: -10px; bottom: 18%; background: #fff; border-radius: 18px; padding: 12px 18px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 10px; z-index: 3; max-width: 190px; }
+  .hero-badge-icon { width: 30px; height: 30px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .hero-badge-label { font-size: 10px; color: var(--muted); line-height: 1.4; }
+  .hero-badge-value { font-size: 12px; font-weight: 700; color: var(--deep); }
+  .badge-pill { display: inline-flex; align-items: center; gap: 7px; background: var(--pale); color: var(--deep); font-size: 12px; font-weight: 700; letter-spacing: .1em; padding: 6px 16px; border-radius: var(--r-pill); margin-bottom: 16px; }
+  .badge-dot  { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+  .hero-h1 { font-family: var(--serif); font-size: 44px; font-weight: 700; line-height: 1.3; color: var(--deep); text-wrap: balance; margin-bottom: 14px; }
+  .hero-h1 span { color: var(--blue); }
+  .hero-sub { font-size: 15px; color: var(--muted); line-height: 1.9; max-width: 440px; margin: 0 auto 28px; }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 18px; }
+  .btn-primary { background: var(--orange); color: #fff; border: none; padding: 16px 36px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 16px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 18px rgba(240,112,48,.32); }
+  .btn-primary:hover  { background: var(--orange-d); }
+  .btn-primary:active { transform: scale(.97); }
+  .btn-primary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+  .btn-secondary { background: transparent; color: var(--deep); border: 2px solid var(--pale); padding: 14px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: border-color .2s, color .2s; }
+  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+  .hero-check { font-size: 13px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; }
+  .check-mark { width: 18px; height: 18px; border-radius: 50%; background: var(--pale); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .check-mark svg { display: block; }
+
+  /* ── HERO STRIP ── */
+  .hero-strip  { background: var(--deep); padding: 16px 0; }
+  .strip-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
+  .strip-item  { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.9); font-size: 13px; font-weight: 700; }
+  .strip-dot   { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
+
+  /* ── SECTION COMMON ── */
+  section { padding: var(--py) 0; }
+  .sec-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 12px; }
+  .sec-h2  { font-family: var(--serif); font-size: 36px; font-weight: 700; color: var(--deep); line-height: 1.4; text-wrap: balance; margin-bottom: 14px; }
+  .sec-lead { font-size: 15px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
+
+  /* ── PROBLEM ── */
+  .sec-problem { background: var(--sky); }
+  .stat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  .stat-card { background: var(--white); border-radius: var(--r); padding: 28px 24px; box-shadow: var(--shadow-sm); border-top: 4px solid var(--blue); }
+  .stat-num  { font-family: var(--serif); font-size: 34px; font-weight: 700; color: var(--deep); line-height: 1.1; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+  .stat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* ── CONCERNS ── */
+  .sec-concerns  { background: var(--cream); }
+  .concerns-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; margin-top: 12px; }
+  .concern-card  { background: var(--white); border-radius: var(--r); padding: 26px 24px; box-shadow: var(--shadow-sm); display: flex; gap: 18px; align-items: flex-start; transition: box-shadow .2s, transform .2s; }
+  .concern-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .concern-icon  { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .ci-blue   { background: var(--pale); }
+  .ci-orange { background: rgba(240,112,48,.10); }
+  .ci-green  { background: rgba(0,153,96,.10); }
+  .ci-gold   { background: rgba(200,112,16,.10); }
+  .concern-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 6px; line-height: 1.45; }
+  .concern-text  { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+  /* ── PRODUCT ── */
+  .sec-product    { background: var(--sky); }
+  .product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .product-img-box { border-radius: 52% 48% 60% 40% / 46% 54% 46% 54%; background: var(--white); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; box-shadow: 0 8px 48px rgba(27,94,168,.13); overflow: hidden; }
+  .dims-box   { margin-top: 24px; background: var(--white); border-radius: var(--r-sm); border-left: 4px solid var(--blue); padding: 16px 20px; }
+  .dims-title { font-size: 12px; font-weight: 700; color: var(--deep); letter-spacing: .03em; margin-bottom: 6px; }
+  .dims-body  { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+  /* ── FEATURES ── */
+  .sec-features { background: var(--cream); }
+  .feature-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px; }
+  .feature-card { background: var(--white); border-radius: var(--r); padding: 32px 24px; box-shadow: var(--shadow-sm); transition: box-shadow .2s, transform .2s; }
+  .feature-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+  .f-num   { font-size: 11px; font-weight: 700; letter-spacing: .14em; color: var(--blue); margin-bottom: 12px; }
+  .feature-title { font-size: 16px; font-weight: 700; color: var(--deep); line-height: 1.5; margin-bottom: 10px; }
+  .feature-body  { font-size: 14px; color: var(--muted); line-height: 1.85; }
+
+  /* ── STATS STRIP ── */
+  .stats-strip { background: var(--deep); padding: 56px 0; position: relative; overflow: hidden; }
+  .stats-strip::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(58,173,212,.15) 0%, transparent 60%); pointer-events: none; }
+  .stats-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; align-items: center; position: relative; z-index: 1; }
+  .s-stat { text-align: center; padding: 0 24px; }
+  .s-stat-num  { font-family: var(--serif); font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 700; color: #fff; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .s-stat-unit { font-size: 1.1rem; font-weight: 700; }
+  .s-stat-label { color: rgba(255,255,255,.6); font-size: 12px; margin-top: 10px; line-height: 1.6; }
+  .s-stat-label strong { color: rgba(255,255,255,.88); font-size: 13px; display: block; margin-bottom: 2px; }
+  .s-divider { height: 56px; background: rgba(255,255,255,.2); }
+
+  /* ── FLOW ── */
+  .sec-flow  { background: var(--sky); }
+  .flow-list { margin-top: 48px; display: flex; flex-direction: column; }
+  .flow-item { display: grid; grid-template-columns: 52px 1fr; gap: 0 20px; position: relative; }
+  .flow-item:not(:last-child)::after { content: ""; position: absolute; left: 25px; top: 52px; bottom: 0; width: 2px; background: var(--pale); }
+  .flow-step-col  { display: flex; flex-direction: column; align-items: center; padding-top: 4px; }
+  .flow-num-circle { width: 52px; height: 52px; border-radius: 50%; background: var(--deep); color: #fff; font-family: var(--serif); font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(27,94,168,.25); flex-shrink: 0; position: relative; z-index: 1; }
+  .flow-body { padding: 8px 0 36px; }
+  .flow-item:last-child .flow-body { padding-bottom: 0; }
+  .flow-title { font-size: 16px; font-weight: 700; color: var(--deep); margin-bottom: 8px; line-height: 1.45; }
+  .flow-desc  { font-size: 13px; color: var(--muted); line-height: 1.75; }
+  .flow-chip  { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: var(--r-pill); }
+  .chip-blue  { background: var(--pale); color: var(--deep); }
+  .chip-green { background: rgba(0,153,96,.1); color: #007a4c; border: 1px solid rgba(0,153,96,.2); }
+  .flow-note  { margin-top: 32px; background: var(--pale); border-radius: var(--r-sm); padding: 18px 24px; }
+  .flow-note p { font-size: 13px; color: var(--deep); line-height: 1.8; }
+
+  /* ── WHY ── */
+  .sec-why  { background: var(--cream); }
+  .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 28px; padding-top: 20px; }
+  .why-card { background: var(--white); border-radius: var(--r); padding: 32px 24px; box-shadow: var(--shadow-sm); position: relative; }
+  .why-card.featured { border: 2px solid var(--blue); }
+  .featured-label { position: absolute; top: -14px; left: 22px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 4px 14px; border-radius: var(--r-pill); }
+  .w-icon    { width: 60px; height: 60px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .why-title { font-size: 17px; font-weight: 700; color: var(--deep); line-height: 1.45; margin-bottom: 10px; }
+  .why-body  { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 16px; }
+  .why-list  { list-style: none; display: flex; flex-direction: column; gap: 7px; border-top: 1px solid var(--rule); padding-top: 14px; }
+  .why-list li { font-size: 13px; color: var(--text); line-height: 1.6; padding-left: 18px; position: relative; }
+  .why-list li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+  /* ── WARRANTY ── */
+  .sec-warranty { background: var(--sky); }
+  .warranty-panel { margin-top: 12px; border: 2px solid rgba(58,173,212,.25); background: linear-gradient(135deg, rgba(58,173,212,.06) 0%, var(--white) 100%); border-radius: var(--r); padding: 32px; }
+  .warranty-head  { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--rule); }
+  .warranty-shield { width: 52px; height: 52px; background: var(--white); border-radius: var(--r-sm); border: 1.5px solid var(--rule); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm); }
+  .warranty-title { font-size: 17px; font-weight: 700; color: var(--deep); line-height: 1.4; }
+  .warranty-sub   { font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .warranty-items { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .w-item  { display: flex; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.55; }
+  .w-check { color: var(--blue); font-weight: 700; flex-shrink: 0; }
+  .w-note  { font-size: 12px; color: var(--muted); display: block; }
+
+  /* ── PRICE ── */
+  .sec-price  { background: var(--cream); }
+  .price-band { margin-top: 12px; background: var(--sky); border: 1px solid var(--rule); border-radius: var(--r); padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+  .price-label-sm { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+  .price-main { font-family: var(--serif); font-size: 3rem; font-weight: 700; color: var(--deep); line-height: 1; letter-spacing: -.02em; }
+  .price-main .yen { font-size: 1.6rem; vertical-align: super; }
+  .price-main .tax { font-size: .9rem; font-weight: 500; color: var(--muted); vertical-align: baseline; font-family: var(--sans); }
+  .price-context { margin-top: 12px; font-size: 13px; color: var(--muted); line-height: 1.8; }
+  .price-includes { background: var(--white); border: 2px solid var(--rule); border-radius: var(--r-sm); padding: 20px 22px; box-shadow: var(--shadow-sm); }
+  .price-includes h4 { font-size: 13px; font-weight: 700; color: var(--deep); margin-bottom: 12px; }
+  .price-includes ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .price-includes li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text); line-height: 1.55; }
+  .price-includes li::before { content: "✓"; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+
+  /* ── FAQ ── */
+  .sec-faq  { background: var(--sky); }
+  .faq-list { margin-top: 48px; display: flex; flex-direction: column; gap: 10px; }
+  details.faq-card { background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); overflow: hidden; border: 2px solid transparent; transition: border-color .2s; }
+  details.faq-card[open] { border-color: var(--blue); }
+  summary.faq-q { padding: 20px 52px 20px 28px; font-weight: 700; font-size: 15px; color: var(--deep); cursor: pointer; list-style: none; position: relative; display: flex; align-items: center; gap: 14px; }
+  summary.faq-q::-webkit-details-marker { display: none; }
+  .faq-qbadge { width: 34px; height: 34px; border-radius: 50%; background: var(--pale); color: var(--blue); font-family: var(--serif); font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .faq-q-text { flex: 1; }
+  summary.faq-q::after { content: ""; position: absolute; right: 22px; top: 50%; width: 9px; height: 9px; border-right: 2px solid var(--blue); border-bottom: 2px solid var(--blue); transform: translateY(-65%) rotate(45deg); transition: transform .2s; }
+  details.faq-card[open] summary.faq-q::after { transform: translateY(-35%) rotate(-135deg); }
+  summary.faq-q:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+  .faq-a { padding: 14px 28px 22px; font-size: 14px; color: var(--muted); border-top: 1.5px solid var(--rule); line-height: 1.95; }
+  .faq-a strong { color: var(--deep); }
+
+  /* ── CAUTION ── */
+  .sec-caution { background: var(--cream); }
+  .caution-box { background: var(--warn-pale); border: 2px solid rgba(200,112,16,.35); border-radius: var(--r); padding: 28px 32px; }
+  .caution-head { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 14px; color: var(--warn); margin-bottom: 16px; }
+  .caution-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .caution-list li { display: flex; gap: 12px; font-size: 13px; color: #5a3800; line-height: 1.75; }
+  .c-dot { flex-shrink: 0; width: 5px; height: 5px; background: var(--warn); border-radius: 50%; margin-top: 8px; }
+
+  /* ── CTA ── */
+  .sec-cta { background: var(--deep); text-align: center; position: relative; overflow: hidden; }
+  .sec-cta::before { content: ""; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; background: rgba(58,173,212,.10); pointer-events: none; }
+  .sec-cta::after  { content: ""; position: absolute; bottom: -80px; left: -80px; width: 320px; height: 320px; border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%; background: rgba(255,255,255,.04); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 1; }
+  .cta-h2   { font-family: var(--serif); font-size: 34px; font-weight: 700; color: #fff; line-height: 1.5; text-wrap: balance; margin-bottom: 14px; }
+  .cta-body { font-size: 15px; color: rgba(255,255,255,.65); line-height: 1.95; max-width: 520px; margin: 0 auto 40px; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-cta { background: var(--orange); color: #fff; border: none; padding: 18px 52px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 17px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 22px rgba(240,112,48,.38); transition: background .2s, transform .12s; }
+  .btn-cta:hover  { background: var(--orange-d); }
+  .btn-cta:active { transform: scale(.97); }
+  .btn-cta-tel { background: transparent; color: rgba(255,255,255,.85); border: 2px solid rgba(255,255,255,.3); padding: 16px 38px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: border-color .2s, color .2s; }
+  .btn-cta-tel:hover { border-color: rgba(255,255,255,.75); color: #fff; }
+  .cta-note { margin-top: 18px; font-size: 12px; color: rgba(255,255,255,.35); }
+
+  /* ── FOOTER ── */
+  .footer { background: #0e3a6e; padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
+  .footer-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .footer-logo { color: rgba(255,255,255,.55); font-size: 14px; font-weight: 700; }
+  .footer-copy { color: rgba(255,255,255,.28); font-size: 12px; }
+  .footer-note { color: rgba(255,255,255,.22); font-size: 11px; line-height: 1.7; width: 100%; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 740px) {
+    :root { --py: 56px; }
+    .pg-frame        { padding: 16px 16px 0; }
+    .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
+    .pg-nav          { display: none; }
+    .hero-center     { padding: 8px 6px 44px; }
+    .hero-blob-wrap  { width: 260px; margin-bottom: 28px; }
+    .pg-quote-bubble { font-size: 13px; padding: 8px 14px; }
+    .hero-badge-float { right: -8px; bottom: 10%; padding: 10px 14px; max-width: 150px; }
+    .hero-h1         { font-size: 28px; }
+    .stat-grid, .why-grid { grid-template-columns: 1fr; }
+    .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
+    .product-layout  { grid-template-columns: 1fr; gap: 28px; }
+    .price-band      { grid-template-columns: 1fr; padding: 28px 22px; }
+    .flow-item       { grid-template-columns: 40px 1fr; }
+    .flow-num-circle { width: 40px; height: 40px; font-size: 18px; }
+    .flow-item:not(:last-child)::after { left: 19px; top: 44px; }
+    .stats-inner     { grid-template-columns: 1fr; gap: 24px; }
+    .s-divider       { display: none; }
+    .s-stat          { text-align: left; }
+    .strip-inner     { gap: 14px; }
+    .wrap, .strip-inner, .stats-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .feature-card:hover, .concern-card:hover { transform: none; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO: 丸ブロブ型写真 ── -->
+<div class="pg-frame" aria-label="メインビジュアル">
+  <div class="pg-topbar">
+    <div class="pg-logo">
+      <img src="images/aimegane_logo.jpg" alt="アイメガネ" class="pg-logo-img">
+      <span class="pg-logo-divider" aria-hidden="true"></span>
+      <span class="pg-logo-en">HOYA MiYOSMART</span>
+    </div>
+    <nav class="pg-nav">
+      <a href="#product">ミヨスマートとは</a>
+      <a href="#features">選ばれる理由</a>
+      <a href="#warranty">保証について</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <div class="pg-topbar-right">
+      <span class="pg-topbar-tel">※電話番号後ほど設定</span>
+      <button class="btn-nav">無料相談</button>
+    </div>
+  </div>
+
+  <div class="hero-center">
+    <div class="hero-blob-wrap">
+      <div class="hero-blob-deco" aria-hidden="true"></div>
+      <div class="hero-blob-deco2" aria-hidden="true"></div>
+      <div class="hero-blob-photo">
+        <img src="images/hero-girl.png" alt="メガネをかけて空を見上げる笑顔の女の子">
+        <div class="pg-quote">
+          <p class="pg-quote-bubble">今日の「見えにくい」を、</p>
+          <p class="pg-quote-bubble">これからも安心に。</p>
+        </div>
+      </div>
+      <div class="hero-badge-float">
+        <span class="hero-badge-icon">
+          <svg width="16" height="16" viewBox="0 0 26 26" fill="none"><path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.15)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <span>
+          <p class="hero-badge-label">アイキッズ＆ジュニア保証</p>
+          <p class="hero-badge-value">業界最高水準</p>
+        </span>
+      </div>
+    </div>
+
+    <span class="badge-pill"><span class="badge-dot"></span>HOYA MiYOSMART</span>
+    <h1 class="hero-h1">小児の近視用<span> メガネレンズ</span></h1>
+    <p class="hero-sub">アイメガネ全店では、HOYAが開発した近視抑制レンズ「ミヨスマート」を取り扱っています。お子さまの近視が気になる方へ、まずはご相談ください。</p>
+    <div class="hero-btns">
+      <button class="btn-primary">無料相談</button>
+      <button class="btn-secondary">店舗予約</button>
+    </div>
+    <p class="hero-check">
+      <span class="check-mark"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7L8 3" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      処方箋がなくても、まずご相談いただけます
+    </p>
+  </div>
+</div>
+
+<!-- ── HERO STRIP ── -->
+<div class="hero-strip">
+  <div class="strip-inner">
+    <span class="strip-item"><span class="strip-dot"></span>アイメガネ全店で取り扱い中</span>
+    <span class="strip-item"><span class="strip-dot"></span>処方箋取得後すぐ購入可能</span>
+    <span class="strip-item"><span class="strip-dot"></span>アイキッズ＆ジュニア保証あり</span>
+  </div>
+</div>
+
+<!-- ── PROBLEM ── -->
+<section class="sec-problem">
+  <div class="wrap">
+    <span class="sec-tag">Near-sightedness in children</span>
+    <h2 class="sec-h2">子どもの近視、<br>進んでいませんか？</h2>
+    <p class="sec-lead">近視は一度進行すると元に戻りません。特に子どもの頃は進行が速く、将来的に目の病気のリスクが高まることもわかっています。早めの対策が大切です。</p>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <p class="stat-num">2人に1人</p>
+        <p class="stat-desc">現代の子どもが<br>近視といわれています</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-num">小学生から</p>
+        <p class="stat-desc">近視が特に<br>進みやすい時期</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-num">早期対策</p>
+        <p class="stat-desc">進行を抑えることで<br>将来のリスクを低減</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONCERNS ── -->
+<section class="sec-concerns">
+  <div class="wrap">
+    <span class="sec-tag">こんなお悩みはありませんか</span>
+    <h2 class="sec-h2">最初の一歩を、<br>アイメガネと一緒に。</h2>
+    <p class="sec-lead" style="margin-bottom:0">眼科で処方箋をもらった方も、まだ情報収集中の方も。あなたの状況に合わせて丁寧にご対応します。</p>
+    <div class="concerns-grid">
+      <div class="concern-card">
+        <div class="concern-icon ci-blue">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="9" stroke="#3aadd4" stroke-width="1.8"/>
+            <path d="M13 9v4M13 15v1" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="concern-title">取扱店がどこかわからない</p>
+          <p class="concern-text">眼科で「近視の進行を抑えるレンズがある」と紹介されたが、どこで作れるか見つからない</p>
+        </div>
+      </div>
+      <div class="concern-card">
+        <div class="concern-icon ci-orange">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="9" r="4.5" stroke="#f07030" stroke-width="1.8"/>
+            <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#f07030" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="concern-title">子どもの視力低下が心配</p>
+          <p class="concern-text">ここ1〜2年で視力が急激に落ちており、このまま近視が進んでしまわないか不安</p>
+        </div>
+      </div>
+      <div class="concern-card">
+        <div class="concern-icon ci-green">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <rect x="3" y="10" width="20" height="12" rx="2.5" stroke="#007a4c" stroke-width="1.8"/>
+            <path d="M13 5v5M9 5v5M17 5v5" stroke="#007a4c" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="concern-title">処方箋を持って行く先がない</p>
+          <p class="concern-text">眼科から処方箋をいただいたが、ミヨスマートに対応しているお店が見つからない</p>
+        </div>
+      </div>
+      <div class="concern-card">
+        <div class="concern-icon ci-gold">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 2L15.9 9.3H23L17.2 13.7L19.4 21L13 16.8L6.6 21L8.8 13.7L3 9.3H10.1L13 2Z" stroke="#c87010" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="concern-title">信頼できるお店に相談したい</p>
+          <p class="concern-text">専門知識のある信頼できるお店に、しっかりと相談しながら決めたい</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCT ── -->
+<section class="sec-product">
+  <div class="wrap">
+    <div class="product-layout">
+      <div>
+        <span class="sec-tag">About MiYOSMART</span>
+        <h2 class="sec-h2">「ミヨスマート」とは</h2>
+        <p class="sec-lead" style="margin-bottom:0">単なる視力補正にとどまらない、小児の近視のために開発されたHOYA独自のメガネレンズ。独自技術「DIMS（Defocus Incorporated Multiple Segments）テクノロジー」を採用しています。2026年6月よりアイメガネ全店での取り扱いを開始しました。</p>
+        <div class="dims-box">
+          <p class="dims-title">DIMSテクノロジー（デフォーカス・インコーポレーテッド・マルチプル・セグメンツ）</p>
+          <p class="dims-body">レンズの中央には遠くをはっきり見るための度数を配置。その周囲に、高密度に配置された<strong style="color:var(--deep)">多数の「小玉」を含むゾーン</strong>を設けることで、クリアな視界を確保しながら、お子さまの瞳をサポートする特殊な光学構造を作り出しています。</p>
+        </div>
+      </div>
+      <div class="product-img-box">
+        <img src="images/lens.png" alt="ミヨスマートのレンズイメージ" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section class="sec-features">
+  <div class="wrap">
+    <span class="sec-tag">3 reasons</span>
+    <h2 class="sec-h2">ミヨスマートが選ばれる<br>3つの理由</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <p class="f-num">POINT 01</p>
+        <h3 class="feature-title">自然な<br>使い心地</h3>
+        <p class="feature-body">コンタクトや点眼薬とは異なり、通常のメガネと同じように掛けるだけ。小さなお子さまでも無理なく継続いただけます。</p>
+      </div>
+      <div class="feature-card">
+        <p class="f-num">POINT 02</p>
+        <h3 class="feature-title">活発なお子さまにも<br>安心の素材</h3>
+        <p class="feature-body">非常に高い耐衝撃性を持つ「ポリカーボネート」素材を採用。元気に動き回るお子さまの目もしっかり守ります。</p>
+      </div>
+      <div class="feature-card">
+        <p class="f-num">POINT 03</p>
+        <h3 class="feature-title">違和感のない<br>外見</h3>
+        <p class="feature-body">特殊な構造が入っていますが、外観は一般的なレンズとほとんど同じ。学校生活でも気兼ねなくお使いいただけるデザインです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS STRIP ── -->
+<div class="stats-strip" aria-label="アイメガネについて">
+  <div class="stats-inner">
+    <div class="s-stat">
+      <div class="s-stat-num">1964</div>
+      <div class="s-stat-label">
+        <strong>創業年</strong>
+        60年以上にわたり<br>地域の眼鏡専門店として
+      </div>
+    </div>
+    <div class="s-divider" aria-hidden="true"></div>
+    <div class="s-stat">
+      <div class="s-stat-num">全店</div>
+      <div class="s-stat-label">
+        <strong>アイメガネ全店で対応</strong>
+        お近くの店舗でご相談いただけます
+      </div>
+    </div>
+    <div class="s-divider" aria-hidden="true"></div>
+    <div class="s-stat">
+      <div class="s-stat-num">6<span class="s-stat-unit"> step</span></div>
+      <div class="s-stat-label">
+        <strong>眼科連携の対応フロー</strong>
+        処方から定期フォローまで
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FLOW ── -->
+<section class="sec-flow" id="flow">
+  <div class="wrap">
+    <span class="sec-tag">How to get started</span>
+    <h2 class="sec-h2">アイメガネの対応フロー</h2>
+    <p class="sec-lead" style="margin-bottom:0">眼科医との連携を前提とした6ステップ。処方箋をお持ちの方も、ご相談段階の方もお気軽にどうぞ。</p>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">1</div></div>
+        <div class="flow-body">
+          <p class="flow-title">眼科医の受診・処方箋の取得</p>
+          <p class="flow-desc">かかりつけの眼科を受診し、処方箋をお受け取りください。ミヨスマートの適応判断は眼科医が行います。</p>
+          <span class="flow-chip chip-blue">処方箋なしでのお渡しは行いません</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">2</div></div>
+        <div class="flow-body">
+          <p class="flow-title">アイメガネへご来店・処方箋の確認</p>
+          <p class="flow-desc">処方箋と合わせてご来店ください。フィッティングのための補助測定を実施しますが、眼科処方の度数変更は行いません。</p>
+          <span class="flow-chip chip-blue">処方度数の変更は行いません</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">3</div></div>
+        <div class="flow-body">
+          <p class="flow-title">フレーム選定・フィッティング</p>
+          <p class="flow-desc">瞳孔間距離・頂点間距離・フレームの傾きを正確に合わせます。ミヨスマートの光学性能を最大限に引き出すフィッティングを行います。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">4</div></div>
+        <div class="flow-body">
+          <p class="flow-title">レンズ発注・お渡し</p>
+          <p class="flow-desc">HOYAへレンズを発注。お渡し時に見え方・装用感を再確認し、お手入れ方法をお子さまにも分かりやすくご説明します。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">5</div></div>
+        <div class="flow-body">
+          <p class="flow-title">定期アフターフィッティング（無料）</p>
+          <p class="flow-desc">3〜6ヶ月を目安にご来店いただき、フレームのずれ・装用状態の変化を確認します。近視進行の確認は眼科での定期検査をお続けください。</p>
+          <span class="flow-chip chip-green">眼科定期受診と並行することを推奨</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">6</div></div>
+        <div class="flow-body">
+          <p class="flow-title">度数変化時の対応</p>
+          <p class="flow-desc">眼科医の判断で度数変更が必要な場合は、保証制度を活用しながらスムーズに対応します。</p>
+        </div>
+      </div>
+    </div>
+    <div class="flow-note">
+      <p>「眼科に行く前にまず話を聞きたい」という方も、お電話またはご来店でご相談いただけます。処方箋をお持ちの方も、ご相談段階の方も歓迎です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY ── -->
+<section class="sec-why">
+  <div class="wrap">
+    <span class="sec-tag">Why choose us</span>
+    <h2 class="sec-h2">アイメガネで選ぶ理由</h2>
+    <div class="why-grid">
+      <div class="why-card featured">
+        <span class="featured-label">着け続けるために</span>
+        <div class="w-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+            <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+            <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
+            <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="why-title">子どもが嫌がらないフレーム選び</h3>
+        <p class="why-body">どれほど優れたレンズでも、はずしてしまっては意味がありません。軽くてズレにくい子ども専用フレームを豊富に取りそろえています。</p>
+        <ul class="why-list">
+          <li>軽量・安全素材の子ども専用ブランドを複数取り扱い</li>
+          <li>鼻パッド・耳掛けをミリ単位で調整</li>
+          <li>走ってもズレにくい、痛くならないフィット感</li>
+        </ul>
+      </div>
+      <div class="why-card">
+        <div class="w-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="why-title">汚れ・型崩れを何度でも無料対応</h3>
+        <p class="why-body">STX撥水膜コート標準装備で汚れが拭き取りやすい設計。フレームが曲がった際もアイメガネに持ち込めば何度でも無料で調整します。</p>
+        <ul class="why-list">
+          <li>STX撥水膜コート標準装備</li>
+          <li>お手入れ方法をお子様に分かりやすく説明</li>
+          <li>型崩れ・ズレ調整：何度でも無料</li>
+        </ul>
+      </div>
+      <div class="why-card">
+        <div class="w-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="10" r="4.5" stroke="#3aadd4" stroke-width="1.8"/>
+            <path d="M5 23C5 19.1 8.6 16 13 16C17.4 16 21 19.1 21 23" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="why-title">眼鏡作製技能士が対応</h3>
+        <p class="why-body">ミヨスマートは周辺部に特殊な光学構造があるため、通常のレンズ以上に精密なフィッティングが必要です。国家資格取得者が対応します。</p>
+        <ul class="why-list">
+          <li>眼鏡作製技能士（国家資格）が在籍</li>
+          <li>精密測定でレンズの光学性能を最大限に発揮</li>
+          <li>成長に合わせた継続的な再フィッティング</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WARRANTY ── -->
+<section class="sec-warranty">
+  <div class="wrap">
+    <span class="sec-tag">アイキッズ＆ジュニア保証・補償</span>
+    <h2 class="sec-h2">業界最高水準の<br>手厚い安心保証・補償</h2>
+    <p class="sec-lead" style="margin-bottom:0">ミヨスマートは成長期のお子さまが長く使うレンズだからこそ、アイメガネの保証・補償で安心してお使いいただけます。</p>
+    <div class="warranty-panel">
+      <div class="warranty-head">
+        <div class="warranty-shield">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.1)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="warranty-title">アイキッズ＆ジュニア保証・補償（ミヨスマート対応）</p>
+          <p class="warranty-sub">詳細条件は店舗スタッフにご確認ください</p>
+        </div>
+      </div>
+      <div class="warranty-items">
+        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">①1年間の品質保証</strong><br>通常のお取り扱いにおいてフレームまたはレンズに損傷が生じた場合、無料で交換いたします。</div></div>
+        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">②1年間の視え方保証</strong><br>度数が変わっても、1年間何度でもレンズを度数交換いたします。<span class="w-note">※度数交換は再度眼科を受診のうえ、発行された処方箋をご持参ください。</span></div></div>
+        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">③1年間のアイ情補償</strong><br>お客様の不注意による損傷は、同一商品を1回目無料・2回目は50％引きでお求めいただけます。紛失の場合も50％引きでお求めいただけます。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICE ── -->
+<section class="sec-price">
+  <div class="wrap">
+    <span class="sec-tag">Price</span>
+    <h2 class="sec-h2">価格について</h2>
+    <div class="price-band">
+      <div>
+        <p class="price-label-sm">レンズ価格</p>
+        <p class="price-context" style="margin-top:10px">
+          レンズ価格は店舗にてご案内しております。フレーム代は別途必要です。<br>
+          子ども医療費助成制度の適用対象外となる場合があります。<br>
+          まずはお近くのアイメガネ店舗、またはお電話でお気軽にお問い合わせください。
+        </p>
+      </div>
+      <div class="price-includes">
+        <h4>レンズ価格に含まれるサービス</h4>
+        <ul>
+          <li>眼科処方に基づいたレンズの提供</li>
+          <li>専門スタッフによる精密フィッティング</li>
+          <li>アイキッズ＆ジュニア保証・補償（品質保証・視え方保証・アイ情補償）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec-faq">
+  <div class="wrap">
+    <span class="sec-tag">FAQ</span>
+    <h2 class="sec-h2">よくあるご質問</h2>
+    <div class="faq-list">
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">眼科の処方箋なしでもミヨスマートを作れますか？</span></summary>
+        <div class="faq-a">いいえ。<strong>処方箋なしでのお渡しは行いません。</strong>ミヨスマートは眼科医の処方に基づくレンズです。まずかかりつけ眼科にご相談ください。「まだ眼科に行っていないが情報収集したい」という段階でのご来店はお気軽にどうぞ。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">レンズの価格はいくらですか？</span></summary>
+        <div class="faq-a">レンズ価格は店舗にてご案内しております。フレーム代は別途必要です。価格には「アイキッズ＆ジュニア保証・補償」（品質保証・視え方保証・アイ情補償）が含まれます。子ども医療費助成制度の適用対象外となる場合があります。詳しくは店舗スタッフへお問い合わせください。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">何歳から使えますか？</span></summary>
+        <div class="faq-a">眼科医の判断によります。具体的な年齢・度数の適応はかかりつけ眼科にご確認ください。「うちの子は対象になるか」というご相談はアイメガネ店舗でもお気軽にどうぞ。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">掛け始めに子どもが違和感を訴えることはありますか？</span></summary>
+        <div class="faq-a">レンズ周辺部に特殊な微小構造（小玉）が配置されているため、掛け始めの数日間は周辺視野にわずかな違和感を感じる場合があります。多くのお子様は<strong>数日〜1〜2週間ほどで自然に慣れ</strong>、通常のメガネと同じように使えるようになります。2週間を過ぎても不快感が続く場合は、無理をせず眼科医にご相談ください。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">普段のメガネとの使い分けは必要ですか？</span></summary>
+        <div class="faq-a">基本的にミヨスマートを通常のメガネとして日常使いしていただきます。スポーツ時など特定シーンについては担当スタッフまたは眼科医にご相談ください。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">レンズの汚れやお手入れはどうすればよいですか？</span></summary>
+        <div class="faq-a">ミヨスマートには<strong>STX撥水膜コートが標準装備</strong>されており、汚れが拭き取りやすい設計です。まず水でチリやホコリを洗い流してから、清潔なメガネ拭きで優しく拭くのが基本です。砂やホコリが付いた状態でそのまま乾拭きすると傷がつく原因になります。お渡し時にお子様へも分かりやすくお伝えします。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">経過はどのように確認しますか？</span></summary>
+        <div class="faq-a">アイメガネでは3〜6ヶ月を目安にご来店いただき、フレームのずれや装用状態の変化を確認します。近視の進行については、<strong>引き続き眼科での定期検査をお続けください。</strong>眼鏡店と眼科の役割は異なります。両方を継続することをお勧めします。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">取り扱い店舗はどこですか？</span></summary>
+        <div class="faq-a">アイメガネ全店にてお取り扱いしております。来店前にお電話またはお問い合わせフォームよりご確認いただくとスムーズです。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAUTION ── -->
+<section class="sec-caution">
+  <div class="wrap">
+    <div class="caution-box">
+      <div class="caution-head">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L2 17h16L10 2z" stroke="#c87010" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 8v4M10 13.5v.5" stroke="#c87010" stroke-width="1.5" stroke-linecap="round"/></svg>
+        重要事項・ご注意
+      </div>
+      <ul class="caution-list">
+        <li><span class="c-dot"></span><span>ミヨスマートは眼科医の処方に基づいてご使用ください。処方箋なしでのお渡しは行いません。</span></li>
+        <li><span class="c-dot"></span><span>効果・効能には個人差があります。近視を「治す」ものではなく、「進行を抑制する」ことを目的としたレンズです。</span></li>
+        <li><span class="c-dot"></span><span>定期的な眼科受診（視力・眼軸長測定等）を継続されることを強くお勧めします。</span></li>
+        <li><span class="c-dot"></span><span>装用中に異常（見えにくさの急激な変化・眼の痛みなど）が生じた場合は、速やかに眼科を受診してください。</span></li>
+        <li><span class="c-dot"></span><span>本ページはアイメガネのサービス内容をご案内するものであり、医療的なアドバイスを提供するものではありません。</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="sec-cta">
+  <div class="wrap cta-inner">
+    <h2 class="cta-h2">子どもの目のことを、<br>まずは相談してみてください。</h2>
+    <p class="cta-body">ミヨスマートは眼科医の処方箋がないと販売できないレンズです。まずは処方箋がなくてもご相談いただけます。</p>
+    <div class="cta-btns">
+      <button class="btn-cta">無料相談</button>
+      <button class="btn-cta-tel">店舗予約</button>
+    </div>
+    <p class="cta-note">※電話番号・予約フォームURLは後ほど設定</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">アイメガネ</span>
+    <span class="footer-copy">© アイジャパン株式会社 / アイメガネ All rights reserved.</span>
+    <p class="footer-note">MiYOSMART はHOYA Corporationの登録商標です。本ページの製品情報はHOYA社およびアイメガネの公式情報に基づいています。</p>
+  </div>
+</footer>
+</body>
+</html>

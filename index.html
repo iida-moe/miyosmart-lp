@@ -89,7 +89,7 @@
   .btn-primary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
 
   /* ── HERO STRIP ── */
-  .hero-strip  { background: var(--deep); padding: 16px 0; }
+  .hero-strip  { position: relative; background: var(--deep); padding: 16px 0; overflow: hidden; }
   .strip-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
   .strip-item  { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.9); font-size: 13px; font-weight: 700; }
   .strip-dot   { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
@@ -378,6 +378,11 @@
     <span class="strip-item"><span class="strip-dot"></span>アイメガネ全店で取り扱い中</span>
     <span class="strip-item"><span class="strip-dot"></span>処方箋取得後すぐ購入可能</span>
     <span class="strip-item"><span class="strip-dot"></span>アイキッズ＆ジュニア保証あり</span>
+  </div>
+  <div class="wave-divider wave-divider-bottom" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,0 H1200 V30 C900,60 300,0 0,30 Z" style="fill:var(--deep)"/>
+    </svg>
   </div>
 </div>
 

@@ -37,8 +37,8 @@
     --serif: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'Yu Gothic', sans-serif;
     --sans:  'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
 
-    --r:      20px;
-    --r-sm:   12px;
+    --r:      28px;
+    --r-sm:   18px;
     --r-pill: 100px;
 
     --shadow:    0 4px 24px rgba(36,74,107,0.10);
@@ -149,6 +149,12 @@
   .feature-title { font-size: 16px; font-weight: 700; color: var(--deep); line-height: 1.5; margin-bottom: 10px; }
   .feature-body  { font-size: 14px; color: var(--muted); line-height: 1.85; }
 
+  /* ── WAVE DIVIDER(角のない帯の切り替え) ── */
+  .wave-divider    { position: absolute; left: 0; width: 100%; height: 44px; line-height: 0; z-index: 2; pointer-events: none; }
+  .wave-divider svg { width: 100%; height: 100%; display: block; }
+  .wave-divider-top    { top: -1px; }
+  .wave-divider-bottom { bottom: -1px; transform: scaleY(-1); }
+
   /* ── STATS STRIP ── */
   .stats-strip { background: var(--deep); padding: 56px 0; position: relative; overflow: hidden; }
   .stats-strip::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(58,173,212,.15) 0%, transparent 60%); pointer-events: none; }
@@ -194,7 +200,7 @@
   .sec-warranty { background: var(--cream); }
   .warranty-panel { margin-top: 12px; border: 2px solid rgba(58,173,212,.25); background: linear-gradient(135deg, rgba(58,173,212,.06) 0%, var(--white) 100%); border-radius: var(--r); padding: 32px; }
   .warranty-head  { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--rule); }
-  .warranty-shield { width: 52px; height: 52px; background: var(--white); border-radius: var(--r-sm); border: 1.5px solid var(--rule); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm); }
+  .warranty-shield { width: 52px; height: 52px; background: var(--white); border-radius: 50%; border: 1.5px solid var(--rule); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm); }
   .warranty-title { font-size: 17px; font-weight: 700; color: var(--deep); line-height: 1.4; }
   .warranty-sub   { font-size: 12px; color: var(--muted); margin-top: 3px; }
   .warranty-items { display: grid; grid-template-columns: 1fr; gap: 16px; }
@@ -702,6 +708,12 @@
 
 <!-- ── STATS STRIP ── -->
 <div class="stats-strip" aria-label="アイメガネについて">
+  <div class="wave-divider wave-divider-top" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 H1200 V30 C900,60 300,0 0,30 Z" style="fill:var(--cream)"/></svg>
+  </div>
+  <div class="wave-divider wave-divider-bottom" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 H1200 V30 C900,60 300,0 0,30 Z" style="fill:var(--sky)"/></svg>
+  </div>
   <div class="stats-inner">
     <div class="s-stat">
       <div class="s-stat-num">1964</div>
@@ -828,6 +840,9 @@
 
 <!-- ── CTA ── -->
 <section class="sec-cta">
+  <div class="wave-divider wave-divider-top" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 H1200 V30 C900,60 300,0 0,30 Z" style="fill:var(--sky)"/></svg>
+  </div>
   <div class="wrap cta-inner">
     <h2 class="cta-h2">子どもの目のことを、<br>まずは相談してみてください。</h2>
     <p class="cta-body">ミヨスマートは眼科医の処方箋がないと販売できないレンズです。まずは処方箋がなくてもご相談いただけます。</p>

@@ -70,10 +70,9 @@
   .pg-nav a:hover { color: var(--blue); }
   .pg-topbar-right { display: flex; align-items: center; gap: 28px; }
 
-  .hero-v3 { position: relative; z-index: 1; max-width: 1020px; margin: 0 auto; padding: 4px 20px 56px; display: grid; grid-template-columns: 1.6fr 1fr; align-items: center; gap: 8px; }
-  .hero-v3-photo { position: relative; z-index: 1; width: 600px; max-width: 90vw; aspect-ratio: 1/1; margin: 0 auto; }
-  .hero-v3-photo-bg { position: absolute; width: 116%; height: 114%; top: -9%; left: -11%; background: linear-gradient(150deg, var(--pale) 0%, var(--sky) 100%); clip-path: url(#heroBlobBgClip); z-index: 0; }
-  .hero-v3-photo-circle { position: absolute; inset: 0; z-index: 1; clip-path: url(#heroBlobClip); filter: drop-shadow(0 16px 30px rgba(36,74,107,.28)); }
+  .hero-v3 { position: relative; z-index: 1; max-width: 1020px; margin: 0 auto; padding: 4px 20px 56px; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 40px; }
+  .hero-v3-photo { position: relative; z-index: 1; width: 100%; max-width: 520px; aspect-ratio: 4/5; margin: 0 auto; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); }
+  .hero-v3-photo-circle { position: absolute; inset: 0; z-index: 1; }
   .hero-v3-photo-circle img { width: 100%; height: 100%; object-fit: cover; object-position: 32% 48%; display: block; }
   .hero-v3-text { position: relative; z-index: 1; }
   .hero-v3-blob { position: relative; z-index: 1; padding: 12px 8px; }
@@ -306,36 +305,6 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <clipPath id="heroBlobClip" clipPathUnits="objectBoundingBox">
-      <path d="M 0.712,0.1595
-        C 0.781,0.1725 0.848,0.2165 0.8755,0.2785
-        C 0.9035,0.3405 0.8925,0.42 0.8705,0.4875
-        C 0.8485,0.5545 0.8165,0.6095 0.7875,0.6695
-        C 0.7585,0.7295 0.7335,0.795 0.686,0.826
-        C 0.639,0.857 0.5695,0.8535 0.495,0.8625
-        C 0.4205,0.8715 0.341,0.8925 0.288,0.8645
-        C 0.2355,0.8365 0.2095,0.7595 0.182,0.6905
-        C 0.154,0.6215 0.124,0.561 0.1155,0.495
-        C 0.107,0.429 0.1195,0.3585 0.1595,0.311
-        C 0.2,0.2635 0.2675,0.239 0.329,0.2215
-        C 0.39,0.2035 0.445,0.1925 0.5085,0.1785
-        C 0.5715,0.164 0.643,0.1465 0.712,0.1595 Z" />
-    </clipPath>
-    <clipPath id="heroBlobBgClip" clipPathUnits="objectBoundingBox">
-      <path d="M 0.712,0.1595
-        C 0.781,0.1725 0.848,0.2165 0.8755,0.2785
-        C 0.9035,0.3405 0.8925,0.42 0.8705,0.4875
-        C 0.8485,0.5545 0.8165,0.6095 0.7875,0.6695
-        C 0.7585,0.7295 0.7335,0.795 0.686,0.826
-        C 0.639,0.857 0.5695,0.8535 0.495,0.8625
-        C 0.4205,0.8715 0.341,0.8925 0.288,0.8645
-        C 0.2355,0.8365 0.2095,0.7595 0.182,0.6905
-        C 0.154,0.6215 0.124,0.561 0.1155,0.495
-        C 0.107,0.429 0.1195,0.3585 0.1595,0.311
-        C 0.2,0.2635 0.2675,0.239 0.329,0.2215
-        C 0.39,0.2035 0.445,0.1925 0.5085,0.1785
-        C 0.5715,0.164 0.643,0.1465 0.712,0.1595 Z" />
-    </clipPath>
     <clipPath id="heroBlobSmallClip" clipPathUnits="objectBoundingBox">
       <path d="M 0.628,0.294
         C 0.691,0.315 0.785,0.298 0.823,0.326
@@ -377,7 +346,6 @@
 
   <div class="hero-v3">
     <div class="hero-v3-photo">
-      <div class="hero-v3-photo-bg" aria-hidden="true"></div>
       <div class="hero-v3-photo-circle">
         <img src="images/hero-eye2.png" alt="メガネをかけた子どもの目元アップ">
       </div>

@@ -104,6 +104,20 @@
   .stat-num  { font-family: var(--serif); font-size: 34px; font-weight: 700; color: var(--deep); line-height: 1.1; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
   .stat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
+  /* ── WIRE (仮ワイヤー) ── */
+  .sec-wire-product { background: #d9d9d9; padding: 60px 0; }
+  .wire-tag  { display: inline-block; background: #fff; border: 1px dashed #999; font-size: 11px; padding: 4px 10px; margin-bottom: 18px; color: #666; }
+  .wire-h2   { font-size: 22px; font-weight: 700; color: #222; margin-bottom: 18px; }
+  .wire-line { font-size: 14px; color: #222; margin-bottom: 8px; }
+  .wire-layout      { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-top: 40px; flex-wrap: wrap; }
+  .wire-circle-row  { display: flex; gap: 20px; align-items: flex-end; }
+  .wire-circle-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .wire-circle      { background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #333; text-align: center; }
+  .wire-circle-lg   { width: 110px; height: 110px; }
+  .wire-circle-sm   { width: 90px; height: 90px; }
+  .wire-circle-xl   { width: 230px; height: 230px; font-size: 14px; }
+  .wire-caption     { font-size: 12px; color: #333; }
+
   /* ── CONCERNS ── */
   .sec-concerns  { background: var(--sky); }
   .sec-support   { background: var(--cream); }
@@ -375,6 +389,31 @@
     <span class="strip-item"><span class="strip-dot"></span>アイキッズ＆ジュニア保証あり</span>
   </div>
 </div>
+
+<!-- ── WIRE: ミヨスマートとは？(仮ワイヤー) ── -->
+<section class="sec-wire-product">
+  <div class="wrap">
+    <span class="wire-tag">仮ワイヤー</span>
+    <h2 class="wire-h2">ミヨスマート（MiYOSMART）とは？</h2>
+    <p class="wire-line"><strong>近視の進行を抑制することを目的としたメガネレンズです。</strong></p>
+    <p class="wire-line">購入には眼科が発行する眼鏡処方箋が必要です。以下説明文</p>
+    <div class="wire-layout">
+      <div class="wire-circle-row">
+        <div class="wire-circle-block">
+          <div class="wire-circle wire-circle-lg">アイコン</div>
+          <p class="wire-caption">説明</p>
+        </div>
+        <div class="wire-circle-block">
+          <div class="wire-circle wire-circle-sm"></div>
+        </div>
+        <div class="wire-circle-block">
+          <div class="wire-circle wire-circle-sm"></div>
+        </div>
+      </div>
+      <div class="wire-circle wire-circle-xl">レンズの画像</div>
+    </div>
+  </div>
+</section>
 
 <!-- ── CONCERNS(共感) ── -->
 <section class="sec-concerns">

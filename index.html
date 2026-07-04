@@ -69,18 +69,13 @@
   .pg-topbar-right { display: flex; align-items: center; gap: 28px; }
 
   .hero-v3 { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 28px 20px 76px; display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: 8px; }
-  .hero-v3-bg-blob-a { position: absolute; top: -30%; right: -26%; width: 78%; height: 100%; background: linear-gradient(155deg, #ffffff 0%, var(--pale) 50%, var(--sky) 100%); border-radius: 58% 42% 38% 62% / 52% 58% 42% 48%; z-index: 0; pointer-events: none; }
-  .hero-v3-bg-blob-b { position: absolute; bottom: -22%; left: -16%; width: 42%; height: 54%; background: linear-gradient(200deg, #ffffff 0%, var(--pale) 100%); opacity: .7; border-radius: 62% 38% 55% 45% / 42% 55% 45% 58%; z-index: 0; pointer-events: none; }
-  .hero-v3-dots { position: absolute; top: -8%; right: 2%; width: 30%; height: 26%; background-color: var(--blue); background-image: radial-gradient(#ffffff 1.8px, transparent 2px); background-size: 13px 13px; border-radius: 55% 45% 40% 60% / 48% 40% 60% 52%; opacity: .9; z-index: 0; pointer-events: none; }
   .hero-v3-photo { position: relative; z-index: 1; width: 480px; max-width: 88vw; aspect-ratio: 1/1; margin: 0 auto; }
   .hero-v3-photo-bg { position: absolute; width: 116%; height: 114%; top: -9%; left: -11%; background: linear-gradient(150deg, var(--pale) 0%, var(--sky) 100%); clip-path: url(#heroBlobBgClip); z-index: 0; }
   .hero-v3-photo-circle { position: absolute; inset: 0; z-index: 1; clip-path: url(#heroBlobClip); filter: drop-shadow(0 16px 30px rgba(36,74,107,.28)); }
   .hero-v3-photo-circle img { width: 100%; height: 100%; object-fit: cover; object-position: 32% 48%; display: block; }
-  .hero-v3-dot { position: absolute; z-index: 2; }
-  .hero-v3-dot-a { width: 68px; height: 64px; background: var(--blue); clip-path: url(#heroBlobSmallClip); top: -6%; right: -4%; }
-  .hero-v3-dot-b { width: 28px; height: 24px; background: var(--pale); opacity: .9; border-radius: 40% 60% 55% 45% / 60% 45% 55% 40%; bottom: 6%; left: -6%; }
   .hero-v3-text { position: relative; z-index: 1; }
-  .hero-v3-blob { position: relative; background: linear-gradient(160deg, var(--pale) 0%, var(--white) 100%); border-radius: 42% 58% 55% 45% / 52% 46% 54% 48%; padding: 48px 42px; box-shadow: var(--shadow); }
+  .hero-v3-bg-blob-a { position: absolute; top: -16%; right: -14%; width: 76%; height: 128%; background: linear-gradient(155deg, var(--pale) 0%, var(--sky) 100%); opacity: .8; border-radius: 58% 42% 38% 62% / 52% 58% 42% 48%; z-index: 0; pointer-events: none; }
+  .hero-v3-blob { position: relative; z-index: 1; background: var(--white); border-radius: 42% 58% 55% 45% / 52% 46% 54% 48%; padding: 48px 42px; box-shadow: var(--shadow); }
   .hero-v3-kicker { font-size: 13px; font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 10px; }
   .hero-v3-blob h1 { font-family: var(--sans); font-weight: 900; font-size: clamp(24px, 3.4vw, 32px); color: var(--deep); line-height: 1.35; text-wrap: balance; margin-bottom: 14px; }
   .hero-v3-sub { font-size: 13px; color: var(--muted); line-height: 1.85; margin-bottom: 26px; }
@@ -264,7 +259,7 @@
     .hero-v3-blob h1  { font-size: 22px; }
     .hero-v3-sub      { font-size: 12px; margin-bottom: 20px; }
     .hero-v3-kicker   { font-size: 12px; }
-    .hero-v3-bg-blob-a, .hero-v3-bg-blob-b { display: none; }
+    .hero-v3-bg-blob-a { display: none; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
     .product-layout  { grid-template-columns: 1fr; gap: 28px; }
@@ -354,18 +349,14 @@
   </div>
 
   <div class="hero-v3">
-    <div class="hero-v3-bg-blob-a" aria-hidden="true"></div>
-    <div class="hero-v3-bg-blob-b" aria-hidden="true"></div>
-    <div class="hero-v3-dots" aria-hidden="true"></div>
     <div class="hero-v3-photo">
       <div class="hero-v3-photo-bg" aria-hidden="true"></div>
       <div class="hero-v3-photo-circle">
         <img src="images/hero-eye2.png" alt="メガネをかけた子どもの目元アップ">
       </div>
-      <span class="hero-v3-dot hero-v3-dot-a" aria-hidden="true"></span>
-      <span class="hero-v3-dot hero-v3-dot-b" aria-hidden="true"></span>
     </div>
     <div class="hero-v3-text">
+      <div class="hero-v3-bg-blob-a" aria-hidden="true"></div>
       <div class="hero-v3-blob">
         <p class="hero-v3-kicker">お子さまの近視が気になり始めた方へ</p>
         <h1>小児の近視用<br>メガネレンズ</h1>

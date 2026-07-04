@@ -7,7 +7,7 @@
 <meta name="description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」をアイメガネ全店で取り扱い。HOYAのDIMSテクノロジー搭載、業界最高水準のアイキッズ＆ジュニア保証付き。">
 <meta property="og:title" content="ミヨスマート（MiYOSMART）取り扱い開始 | アイメガネ">
 <meta property="og:description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」をアイメガネ全店で取り扱い。HOYAのDIMSテクノロジー搭載、業界最高水準のアイキッズ＆ジュニア保証付き。">
-<meta property="og:image" content="https://iida-moe.github.io/miyosmart-lp/images/hero-girl.png">
+<meta property="og:image" content="https://iida-moe.github.io/miyosmart-lp/images/hero-eye2.png">
 <meta property="og:url" content="https://iida-moe.github.io/miyosmart-lp/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="アイメガネ">
@@ -58,45 +58,35 @@
   .btn-nav:active { transform: scale(.97); }
   .btn-nav:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
-  /* ── HERO: 丸ブロブ型センター写真構成 ── */
+  /* ── HERO: 丸写真+ブロブ型見出しカード ── */
   .pg-frame { position: relative; background: var(--cream); padding: 22px 22px 0; overflow: hidden; }
   .pg-topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 6px 10px 22px; flex-wrap: wrap; }
   .pg-logo { display: flex; align-items: center; gap: 12px; }
-  .pg-logo-img { height: 30px; width: auto; display: block; }
-  .pg-logo-divider { width: 1px; height: 22px; background: var(--rule); }
-  .pg-logo-en { font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--blue); text-transform: uppercase; }
+  .pg-logo-img { height: 30px; width: auto; display: block; mix-blend-mode: multiply; }
   .pg-nav { display: flex; align-items: center; gap: 28px; }
   .pg-nav a { font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none; position: relative; padding-bottom: 2px; }
   .pg-nav a:hover { color: var(--blue); }
-  .pg-topbar-right { display: flex; align-items: center; gap: 16px; }
-  .pg-topbar-tel { font-size: 11px; color: var(--muted); white-space: nowrap; }
-  .hero-center { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px 10px 56px; }
-  .hero-blob-wrap { position: relative; width: 420px; max-width: 82vw; aspect-ratio: 1/1.05; margin-bottom: 36px; }
-  .hero-blob-photo { position: relative; width: 100%; height: 100%; border-radius: 48% 52% 43% 57% / 57% 44% 56% 43%; overflow: hidden; box-shadow: 0 16px 56px rgba(27,94,168,.18); }
-  .hero-blob-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 78% 22%; display: block; }
-  .hero-blob-deco { position: absolute; top: -22px; left: -30px; width: 84px; height: 84px; border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%; background: var(--pale); z-index: -1; }
-  .hero-blob-deco2 { position: absolute; bottom: -18px; right: -26px; width: 60px; height: 60px; border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%; background: rgba(58,173,212,.25); z-index: -1; }
-  .pg-quote { position: absolute; left: 8%; right: 8%; bottom: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px; z-index: 2; }
-  .pg-quote-bubble { background: rgba(255,255,255,.95); color: var(--deep); font-weight: 700; font-size: 16px; line-height: 1.4; padding: 10px 18px; border-radius: 14px; box-shadow: 0 6px 20px rgba(13,40,80,.18); }
-  .hero-badge-float { position: absolute; right: -10px; bottom: 18%; background: #fff; border-radius: 18px; padding: 12px 18px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 10px; z-index: 3; max-width: 190px; }
-  .hero-badge-icon { width: 30px; height: 30px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .hero-badge-label { font-size: 10px; color: var(--muted); line-height: 1.4; }
-  .hero-badge-value { font-size: 12px; font-weight: 700; color: var(--deep); }
-  .badge-pill { display: inline-flex; align-items: center; gap: 7px; background: var(--pale); color: var(--deep); font-size: 12px; font-weight: 700; letter-spacing: .1em; padding: 6px 16px; border-radius: var(--r-pill); margin-bottom: 16px; }
-  .badge-dot  { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
-  .hero-h1 { font-family: var(--serif); font-size: 44px; font-weight: 700; line-height: 1.3; color: var(--deep); text-wrap: balance; margin-bottom: 14px; }
-  .hero-h1 span { color: var(--blue); }
-  .hero-sub { font-size: 15px; color: var(--muted); line-height: 1.9; max-width: 440px; margin: 0 auto 28px; }
-  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 18px; }
+  .pg-topbar-right { display: flex; align-items: center; gap: 28px; }
+
+  .hero-v3 { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 28px 20px 76px; display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 8px; }
+  .hero-v3-bg-blob-a { position: absolute; top: -20%; right: -14%; width: 56%; height: 78%; background: var(--sky); border-radius: 38% 62% 55% 45% / 48% 42% 58% 52%; z-index: 0; pointer-events: none; }
+  .hero-v3-bg-blob-b { position: absolute; bottom: -16%; left: -10%; width: 32%; height: 42%; background: var(--pale); opacity: .55; border-radius: 46% 54% 40% 60% / 55% 45% 55% 45%; z-index: 0; pointer-events: none; }
+  .hero-v3-photo { position: relative; z-index: 1; width: 340px; max-width: 82vw; aspect-ratio: 1/1; margin: 0 auto; }
+  .hero-v3-photo-circle { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; box-shadow: 0 18px 50px rgba(27,94,168,.18); }
+  .hero-v3-photo-circle img { width: 100%; height: 100%; object-fit: cover; object-position: 32% 48%; display: block; }
+  .hero-v3-dot { position: absolute; border-radius: 50%; z-index: 2; }
+  .hero-v3-dot-a { width: 40px; height: 40px; background: var(--pale); top: -4%; right: 0; }
+  .hero-v3-dot-b { width: 24px; height: 24px; background: var(--orange); opacity: .85; bottom: 6%; left: -6%; }
+  .hero-v3-text { position: relative; z-index: 1; }
+  .hero-v3-blob { position: relative; background: linear-gradient(160deg, var(--pale) 0%, var(--white) 100%); border-radius: 42% 58% 55% 45% / 52% 46% 54% 48%; padding: 48px 42px; box-shadow: var(--shadow); }
+  .hero-v3-kicker { font-size: 13px; font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 10px; }
+  .hero-v3-blob h1 { font-family: var(--sans); font-weight: 900; font-size: clamp(24px, 3.4vw, 32px); color: var(--deep); line-height: 1.35; text-wrap: balance; margin-bottom: 14px; }
+  .hero-v3-sub { font-size: 13px; color: var(--muted); line-height: 1.85; margin-bottom: 26px; }
+
   .btn-primary { background: var(--orange); color: #fff; border: none; padding: 16px 36px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 16px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 18px rgba(240,112,48,.32); }
   .btn-primary:hover  { background: var(--orange-d); }
   .btn-primary:active { transform: scale(.97); }
   .btn-primary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
-  .btn-secondary { background: transparent; color: var(--deep); border: 2px solid var(--pale); padding: 14px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: border-color .2s, color .2s; }
-  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
-  .hero-check { font-size: 13px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; }
-  .check-mark { width: 18px; height: 18px; border-radius: 50%; background: var(--pale); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .check-mark svg { display: block; }
 
   /* ── HERO STRIP ── */
   .hero-strip  { background: var(--deep); padding: 16px 0; }
@@ -266,11 +256,13 @@
     .pg-frame        { padding: 16px 16px 0; }
     .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
     .pg-nav          { display: none; }
-    .hero-center     { padding: 8px 6px 44px; }
-    .hero-blob-wrap  { width: 260px; margin-bottom: 28px; }
-    .pg-quote-bubble { font-size: 13px; padding: 8px 14px; }
-    .hero-badge-float { right: -8px; bottom: 10%; padding: 10px 14px; max-width: 150px; }
-    .hero-h1         { font-size: 28px; }
+    .hero-v3          { grid-template-columns: 1fr; gap: 32px; padding: 8px 8px 44px; }
+    .hero-v3-photo    { width: 220px; }
+    .hero-v3-blob     { padding: 34px 26px; border-radius: 32px; text-align: center; }
+    .hero-v3-blob h1  { font-size: 22px; }
+    .hero-v3-sub      { font-size: 12px; margin-bottom: 20px; }
+    .hero-v3-kicker   { font-size: 12px; }
+    .hero-v3-bg-blob-a, .hero-v3-bg-blob-b { display: none; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
     .product-layout  { grid-template-columns: 1fr; gap: 28px; }
@@ -293,59 +285,40 @@
 </head>
 <body>
 
-<!-- ── HERO: 丸ブロブ型写真 ── -->
+<!-- ── HERO: 重なる円(レンズ)型ワイヤー準拠 ── -->
 <div class="pg-frame" aria-label="メインビジュアル">
   <div class="pg-topbar">
     <div class="pg-logo">
       <img src="images/aimegane_logo.jpg" alt="アイメガネ" class="pg-logo-img">
-      <span class="pg-logo-divider" aria-hidden="true"></span>
-      <span class="pg-logo-en">HOYA MiYOSMART</span>
     </div>
-    <nav class="pg-nav">
-      <a href="#product">ミヨスマートとは</a>
-      <a href="#features">選ばれる理由</a>
-      <a href="#warranty">保証について</a>
-      <a href="#faq">よくある質問</a>
-    </nav>
     <div class="pg-topbar-right">
-      <span class="pg-topbar-tel">※電話番号後ほど設定</span>
+      <nav class="pg-nav">
+        <a href="#product">商品について</a>
+        <a href="#warranty">保証について</a>
+        <a href="#faq">よくある質問</a>
+      </nav>
       <button class="btn-nav">無料相談</button>
     </div>
   </div>
 
-  <div class="hero-center">
-    <div class="hero-blob-wrap">
-      <div class="hero-blob-deco" aria-hidden="true"></div>
-      <div class="hero-blob-deco2" aria-hidden="true"></div>
-      <div class="hero-blob-photo">
-        <img src="images/hero-girl.png" alt="メガネをかけて空を見上げる笑顔の女の子">
-        <div class="pg-quote">
-          <p class="pg-quote-bubble">今日の「見えにくい」を、</p>
-          <p class="pg-quote-bubble">これからも安心に。</p>
-        </div>
+  <div class="hero-v3">
+    <div class="hero-v3-bg-blob-a" aria-hidden="true"></div>
+    <div class="hero-v3-bg-blob-b" aria-hidden="true"></div>
+    <div class="hero-v3-photo">
+      <div class="hero-v3-photo-circle">
+        <img src="images/hero-eye2.png" alt="メガネをかけた子どもの目元アップ">
       </div>
-      <div class="hero-badge-float">
-        <span class="hero-badge-icon">
-          <svg width="16" height="16" viewBox="0 0 26 26" fill="none"><path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.15)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        </span>
-        <span>
-          <p class="hero-badge-label">アイキッズ＆ジュニア保証</p>
-          <p class="hero-badge-value">業界最高水準</p>
-        </span>
+      <span class="hero-v3-dot hero-v3-dot-a" aria-hidden="true"></span>
+      <span class="hero-v3-dot hero-v3-dot-b" aria-hidden="true"></span>
+    </div>
+    <div class="hero-v3-text">
+      <div class="hero-v3-blob">
+        <p class="hero-v3-kicker">お子さまの近視が気になり始めた方へ</p>
+        <h1>小児の近視用<br>メガネレンズ</h1>
+        <p class="hero-v3-sub">HOYAが開発した近視抑制レンズ「ミヨスマート」。<br>アイメガネ全店でご相談いただけます。</p>
+        <button class="btn-primary">無料相談</button>
       </div>
     </div>
-
-    <span class="badge-pill"><span class="badge-dot"></span>HOYA MiYOSMART</span>
-    <h1 class="hero-h1">小児の近視用<span> メガネレンズ</span></h1>
-    <p class="hero-sub">アイメガネ全店では、HOYAが開発した近視抑制レンズ「ミヨスマート」を取り扱っています。お子さまの近視が気になる方へ、まずはご相談ください。</p>
-    <div class="hero-btns">
-      <button class="btn-primary">無料相談</button>
-      <button class="btn-secondary">店舗予約</button>
-    </div>
-    <p class="hero-check">
-      <span class="check-mark"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7L8 3" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      処方箋がなくても、まずご相談いただけます
-    </p>
   </div>
 </div>
 

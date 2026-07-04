@@ -60,6 +60,8 @@
 
   /* ── HERO: 丸写真+ブロブ型見出しカード ── */
   .pg-frame { position: relative; background: var(--cream); padding: 16px 22px 0; overflow: hidden; }
+  .hero-wave-bg { position: absolute; left: 0; bottom: 0; width: 100%; height: 240px; z-index: 0; pointer-events: none; }
+  .hero-wave-bg svg { width: 100%; height: 100%; display: block; }
   .pg-topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 6px 10px 12px; flex-wrap: wrap; }
   .pg-logo { display: flex; align-items: center; gap: 12px; }
   .pg-logo-img { height: 30px; width: auto; display: block; mix-blend-mode: multiply; }
@@ -354,6 +356,11 @@
 
 <!-- ── HERO: 重なる円(レンズ)型ワイヤー準拠 ── -->
 <div class="pg-frame" aria-label="メインビジュアル">
+  <div class="hero-wave-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 240" preserveAspectRatio="none">
+      <path d="M0,50 C 200,20 350,110 550,90 C 750,70 900,160 1200,225 L1200,240 L0,240 Z" style="fill:var(--pale)"/>
+    </svg>
+  </div>
   <div class="pg-topbar">
     <div class="pg-logo">
       <img src="images/aimegane_logo.jpg" alt="アイメガネ" class="pg-logo-img">

@@ -89,7 +89,7 @@
   .btn-primary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
 
   /* ── HERO STRIP ── */
-  .hero-strip  { position: relative; background: var(--deep); padding: 16px 0; overflow: hidden; }
+  .hero-strip  { position: relative; background: var(--deep); padding: 16px 0; }
   .strip-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
   .strip-item  { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.9); font-size: 13px; font-weight: 700; }
   .strip-dot   { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
@@ -108,7 +108,7 @@
   .stat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
   /* ── WIRE (仮ワイヤー) ── */
-  .sec-wire-product { background: #d9d9d9; padding: 60px 0; }
+  .sec-wire-product { position: relative; background: #d9d9d9; padding: 60px 0; }
   .wire-tag  { display: inline-block; background: #fff; border: 1px dashed #999; font-size: 11px; padding: 4px 10px; margin-bottom: 18px; color: #666; }
   .wire-h2   { font-size: 22px; font-weight: 700; color: #222; margin-bottom: 18px; }
   .wire-line { font-size: 14px; color: #222; margin-bottom: 8px; }
@@ -379,15 +379,15 @@
     <span class="strip-item"><span class="strip-dot"></span>処方箋取得後すぐ購入可能</span>
     <span class="strip-item"><span class="strip-dot"></span>アイキッズ＆ジュニア保証あり</span>
   </div>
-  <div class="wave-divider wave-divider-bottom" aria-hidden="true">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-      <path d="M0,0 H1200 V30 C900,60 300,0 0,30 Z" style="fill:var(--deep)"/>
-    </svg>
-  </div>
 </div>
 
 <!-- ── WIRE: ミヨスマートとは？(仮ワイヤー) ── -->
 <section class="sec-wire-product">
+  <div class="wave-divider wave-divider-top" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,0 H1200 V30 C900,60 300,0 0,30 Z" style="fill:var(--deep)"/>
+    </svg>
+  </div>
   <div class="wrap">
     <span class="wire-tag">仮ワイヤー</span>
     <h2 class="wire-h2">ミヨスマート（MiYOSMART）とは？</h2>

@@ -74,11 +74,11 @@
   .hero-v3-photo-circle { position: absolute; inset: 0; z-index: 1; clip-path: url(#heroBlobClip); filter: drop-shadow(0 16px 30px rgba(36,74,107,.28)); }
   .hero-v3-photo-circle img { width: 100%; height: 100%; object-fit: cover; object-position: 32% 48%; display: block; }
   .hero-v3-text { position: relative; z-index: 1; }
-  .hero-v3-bg-blob-a { position: absolute; top: -16%; right: -14%; width: 76%; height: 128%; background: linear-gradient(155deg, var(--pale) 0%, var(--sky) 100%); opacity: .8; border-radius: 58% 42% 38% 62% / 52% 58% 42% 48%; z-index: 0; pointer-events: none; }
-  .hero-v3-blob { position: relative; z-index: 1; background: var(--white); border-radius: 42% 58% 55% 45% / 52% 46% 54% 48%; padding: 48px 42px; box-shadow: var(--shadow); }
+  .hero-v3-blob { position: relative; z-index: 1; padding: 12px 8px; }
   .hero-v3-kicker { font-size: 13px; font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 10px; }
   .hero-v3-blob h1 { font-family: var(--sans); font-weight: 900; font-size: clamp(24px, 3.4vw, 32px); color: var(--deep); line-height: 1.35; text-wrap: balance; margin-bottom: 14px; }
   .hero-v3-sub { font-size: 13px; color: var(--muted); line-height: 1.85; margin-bottom: 26px; }
+  .hero-v3-corner-blob { position: absolute; z-index: -1; width: 120px; height: 112px; bottom: -60px; right: -30px; background: var(--pale); clip-path: url(#heroBlobSmallClip); pointer-events: none; }
 
   .btn-primary { background: var(--orange); color: #fff; border: none; padding: 16px 36px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 16px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 18px rgba(245,130,32,.32); }
   .btn-primary:hover  { background: var(--orange-d); }
@@ -255,11 +255,11 @@
     .pg-nav          { display: none; }
     .hero-v3          { grid-template-columns: 1fr; gap: 32px; padding: 8px 8px 44px; }
     .hero-v3-photo    { width: 360px; }
-    .hero-v3-blob     { padding: 34px 26px; border-radius: 32px; text-align: center; }
+    .hero-v3-blob     { padding: 12px 8px; text-align: center; }
     .hero-v3-blob h1  { font-size: 22px; }
     .hero-v3-sub      { font-size: 12px; margin-bottom: 20px; }
     .hero-v3-kicker   { font-size: 12px; }
-    .hero-v3-bg-blob-a { display: none; }
+    .hero-v3-corner-blob { display: none; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
     .product-layout  { grid-template-columns: 1fr; gap: 28px; }
@@ -356,12 +356,12 @@
       </div>
     </div>
     <div class="hero-v3-text">
-      <div class="hero-v3-bg-blob-a" aria-hidden="true"></div>
       <div class="hero-v3-blob">
         <p class="hero-v3-kicker">お子さまの近視が気になり始めた方へ</p>
         <h1>小児の近視用<br>メガネレンズ</h1>
         <p class="hero-v3-sub">HOYAが開発した近視抑制レンズ「ミヨスマート」。<br>アイメガネ全店でご相談いただけます。</p>
         <button class="btn-primary">無料相談</button>
+        <div class="hero-v3-corner-blob" aria-hidden="true"></div>
       </div>
     </div>
   </div>

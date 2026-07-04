@@ -88,12 +88,6 @@
   .btn-primary:active { transform: scale(.97); }
   .btn-primary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
 
-  /* ── HERO STRIP ── */
-  .hero-strip  { position: relative; background: var(--deep); padding: 16px 0; }
-  .strip-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
-  .strip-item  { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.9); font-size: 13px; font-weight: 700; }
-  .strip-dot   { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
-
   /* ── SECTION COMMON ── */
   section { padding: var(--py) 0; }
   .sec-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 12px; }
@@ -296,8 +290,7 @@
     .stats-inner     { grid-template-columns: 1fr; gap: 24px; }
     .s-divider       { display: none; }
     .s-stat          { text-align: left; }
-    .strip-inner     { gap: 14px; }
-    .wrap, .strip-inner, .stats-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
+    .wrap, .stats-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -369,15 +362,6 @@
         <button class="btn-primary">無料相談</button>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ── HERO STRIP ── -->
-<div class="hero-strip">
-  <div class="strip-inner">
-    <span class="strip-item"><span class="strip-dot"></span>アイメガネ全店で取り扱い中</span>
-    <span class="strip-item"><span class="strip-dot"></span>処方箋取得後すぐ購入可能</span>
-    <span class="strip-item"><span class="strip-dot"></span>アイキッズ＆ジュニア保証あり</span>
   </div>
 </div>
 

@@ -181,9 +181,9 @@
   .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 28px; padding-top: 20px; }
   .why-card { background: var(--white); border-radius: var(--r); padding: 32px 24px; box-shadow: var(--shadow-sm); position: relative; }
   .why-card.featured { border: 2px solid var(--blue); }
-  .why-split { display: flex; gap: 48px; margin-top: 28px; padding-top: 20px; }
-  .why-photo { flex: 0 0 38%; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
-  .why-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .why-split { display: flex; gap: 48px; margin-top: 28px; padding-top: 20px; align-items: center; }
+  .why-photo { flex: 0 0 300px; width: 300px; height: 300px; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .why-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
   .why-list-split { flex: 1; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; gap: 34px; }
   .why-list-split li { display: flex; gap: 18px; align-items: flex-start; }
   .why-list-split .w-icon { margin-bottom: 0; flex-shrink: 0; }
@@ -311,7 +311,7 @@
     .brand-card-point p { font-size: 14px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .why-split { flex-direction: column; gap: 28px; }
-    .why-photo { flex: none; width: 100%; height: 220px; }
+    .why-photo { flex: none; width: 220px; height: 220px; margin: 0 auto; }
     .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
     .warranty-scards { grid-template-columns: 1fr; }
     .warranty-cta-banner { flex-direction: column; }

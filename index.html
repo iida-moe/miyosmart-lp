@@ -181,6 +181,12 @@
   .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 28px; padding-top: 20px; }
   .why-card { background: var(--white); border-radius: var(--r); padding: 32px 24px; box-shadow: var(--shadow-sm); position: relative; }
   .why-card.featured { border: 2px solid var(--blue); }
+  .why-split { display: flex; gap: 48px; margin-top: 28px; padding-top: 20px; }
+  .why-photo { flex: 0 0 38%; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .why-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .why-list-split { flex: 1; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; gap: 34px; }
+  .why-list-split li { display: flex; gap: 18px; align-items: flex-start; }
+  .why-list-split .w-icon { margin-bottom: 0; flex-shrink: 0; }
   .featured-label { position: absolute; top: -14px; left: 22px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 4px 14px; border-radius: var(--r-pill); }
   .w-icon    { width: 60px; height: 60px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
   .why-title { font-size: 17px; font-weight: 700; color: var(--deep); line-height: 1.45; margin-bottom: 10px; }
@@ -304,6 +310,8 @@
     .brand-card-point-icon { width: 72px; height: 72px; }
     .brand-card-point p { font-size: 14px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
+    .why-split { flex-direction: column; gap: 28px; }
+    .why-photo { flex: none; width: 100%; height: 220px; }
     .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
     .warranty-scards { grid-template-columns: 1fr; }
     .warranty-cta-banner { flex-direction: column; }
@@ -570,40 +578,51 @@
   <div class="wrap">
     <h2 class="sec-h2">子ども向けトータルサポート</h2>
     <p class="sec-lead">良いレンズでも、掛け続けてもらわなければ意味がありません。<br>アイメガネでは、レンズ以外の部分でもお子様と保護者様を支えます。</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="w-icon ci-blue">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-            <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
-            <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
-            <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
-            <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-            <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3 class="why-title">「自分で選びたくなる」フレーム</h3>
-        <p class="why-body">軽くてズレにくい、お子様が「これが好き」と思える専用フレームを豊富に用意。鼻パッド・耳掛けもミリ単位で調整します。</p>
+    <div class="why-split">
+      <div class="why-photo">
+        <img src="images/hero-girl.png" alt="メガネをかけた子ども" loading="lazy">
       </div>
-      <div class="why-card">
-        <div class="w-icon ci-green">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(0,153,96,.1)" stroke="#007a4c" stroke-width="1.8" stroke-linejoin="round"/>
-            <path d="M9 12.5L11.5 15L17 10" stroke="#007a4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3 class="why-title">汚れ・型崩れを何度でも無料対応</h3>
-        <p class="why-body">汚れが拭き取りやすい「STX撥水膜コート」を標準装備。型崩れやズレの調整は何度でも無料です。</p>
-      </div>
-      <div class="why-card">
-        <div class="w-icon ci-orange">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-            <circle cx="13" cy="9" r="4" stroke="#f07030" stroke-width="1.8"/>
-            <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#f07030" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3 class="why-title">眼鏡作製技能士が対応</h3>
-        <p class="why-body">国家資格を持つ眼鏡作製技能士が、瞳孔間距離やフレームの傾きまで精密にフィッティングします。</p>
-      </div>
+      <ul class="why-list-split">
+        <li>
+          <div class="w-icon ci-blue">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+              <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+              <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
+              <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="why-title">「自分で選びたくなる」フレーム</h3>
+            <p class="why-body">軽くてズレにくい、お子様が「これが好き」と思える専用フレームを豊富に用意。鼻パッド・耳掛けもミリ単位で調整します。</p>
+          </div>
+        </li>
+        <li>
+          <div class="w-icon ci-green">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(0,153,96,.1)" stroke="#007a4c" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 12.5L11.5 15L17 10" stroke="#007a4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="why-title">汚れ・型崩れを何度でも無料対応</h3>
+            <p class="why-body">汚れが拭き取りやすい「STX撥水膜コート」を標準装備。型崩れやズレの調整は何度でも無料です。</p>
+          </div>
+        </li>
+        <li>
+          <div class="w-icon ci-orange">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <circle cx="13" cy="9" r="4" stroke="#f07030" stroke-width="1.8"/>
+              <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#f07030" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="why-title">眼鏡作製技能士が対応</h3>
+            <p class="why-body">国家資格を持つ眼鏡作製技能士が、瞳孔間距離やフレームの傾きまで精密にフィッティングします。</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

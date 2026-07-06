@@ -48,9 +48,20 @@
     --py:    80px;
   }
 
-  body { font-family: var(--sans); background: var(--cream); color: var(--text); line-height: 1.85; font-size: 15px; }
+  body { font-family: var(--sans); background: var(--cream); color: var(--text); line-height: 1.85; font-size: 15px; padding-bottom: 76px; }
 
   .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+
+  /* ── 追尾CTA(スクロール追従バー) ── */
+  .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--white); border-top: 1px solid var(--rule); box-shadow: 0 -4px 20px rgba(36,74,107,.12); padding: 12px 20px; }
+  .sticky-cta-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .sticky-cta-text { font-size: 13px; font-weight: 700; color: var(--deep); line-height: 1.5; }
+  .sticky-cta-btns { display: flex; gap: 10px; flex-shrink: 0; }
+  .sticky-btn-primary { background: var(--orange); color: #fff; border: none; padding: 12px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; white-space: nowrap; }
+  .sticky-btn-primary:hover  { background: var(--orange-d); }
+  .sticky-btn-primary:active { transform: scale(.97); }
+  .sticky-btn-secondary { background: transparent; color: var(--deep); border: 1.5px solid var(--rule); padding: 10.5px 22px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 13px; font-weight: 700; cursor: pointer; transition: border-color .2s; white-space: nowrap; }
+  .sticky-btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
 
   /* ── NAV ── */
   .btn-nav { background: var(--orange); color: #fff; border: none; padding: 11px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 3px 12px rgba(245,130,32,.3); white-space: nowrap; }
@@ -252,6 +263,8 @@
     .pg-frame        { padding: 16px 16px 0; }
     .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
     .pg-nav          { display: none; }
+    .sticky-cta-text { display: none; }
+    .sticky-cta-inner { justify-content: center; }
     .hero-v3          { margin: 0 -16px; grid-template-columns: 1fr; min-height: 0; }
     .hero-v3-photo    { height: 260px; }
     .hero-v3-text     { padding: 28px 20px 40px; }
@@ -310,8 +323,9 @@
     </div>
     <div class="pg-topbar-right">
       <nav class="pg-nav">
-        <a href="#product">商品について</a>
-        <a href="#warranty">保証について</a>
+        <a href="#product">取り扱い商品</a>
+        <a href="#warranty">キッズ保証</a>
+        <a href="#flow">購入の流れ</a>
         <a href="#faq">よくある質問</a>
       </nav>
       <button class="btn-nav">無料相談</button>
@@ -360,6 +374,133 @@
     </div>
   </div>
 </section>
+
+<!-- ── WARRANTY ── -->
+<section class="sec-warranty" id="warranty">
+  <div class="wrap">
+    <span class="sec-tag">アイキッズ＆ジュニア保証・補償</span>
+    <h2 class="sec-h2">業界最高水準の<br>手厚い安心保証・補償</h2>
+    <p class="sec-lead" style="margin-bottom:0">近視ケアレンズは成長期のお子さまが長く使うレンズだからこそ、アイメガネの保証・補償で安心してお使いいただけます。</p>
+    <div class="warranty-panel">
+      <div class="warranty-head">
+        <div class="warranty-shield">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.1)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <p class="warranty-title">アイキッズ＆ジュニア保証・補償（近視ケアレンズ対応）</p>
+          <p class="warranty-sub">詳細条件は店舗スタッフにご確認ください</p>
+        </div>
+      </div>
+      <div class="warranty-items">
+        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">①1年間の品質保証</strong><br>通常のお取り扱いにおいてフレームまたはレンズに損傷が生じた場合、無料で交換いたします。</div></div>
+        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">②1年間の視え方保証</strong><br>度数が変わっても、1年間何度でもレンズを度数交換いたします。<span class="w-note">※度数交換は再度眼科を受診のうえ、発行された処方箋をご持参ください。</span></div></div>
+        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">③1年間のアイ情補償</strong><br>お客様の不注意による損傷は、同一商品を1回目無料・2回目は50％引きでお求めいただけます。紛失の場合も50％引きでお求めいただけます。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOW(流れ) ── -->
+<section class="sec-flow" id="flow">
+  <div class="wrap">
+    <span class="sec-tag">How to get started</span>
+    <h2 class="sec-h2">ご相談・購入までの流れ</h2>
+    <p class="sec-lead" style="margin-bottom:0">シンプルな4ステップ。処方箋をお持ちの方も、ご相談段階の方もお気軽にどうぞ。</p>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">1</div></div>
+        <div class="flow-body">
+          <p class="flow-title">来店予約</p>
+          <p class="flow-desc">お近くのアイメガネへご来店予約ください。眼科の処方箋をお持ちの方はご持参ください。</p>
+          <span class="flow-chip chip-blue">処方箋がなくても、まずはご相談OK</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">2</div></div>
+        <div class="flow-body">
+          <p class="flow-title">視力測定・ご相談</p>
+          <p class="flow-desc">スタッフが視力測定を行い、近視ケアレンズについて丁寧にご説明します。処方箋がまだの方は、ここでかかりつけ眼科への受診をご案内します。</p>
+          <span class="flow-chip chip-blue">処方箋なしでのお渡しは行いません</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">3</div></div>
+        <div class="flow-body">
+          <p class="flow-title">レンズ選定</p>
+          <p class="flow-desc">眼科の処方箋をもとに、お子さまに合ったフレームとレンズを選定。瞳孔間距離などを正確に測り、精密なフィッティングを行います。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step-col"><div class="flow-num-circle">4</div></div>
+        <div class="flow-body">
+          <p class="flow-title">メガネ作製・お渡し</p>
+          <p class="flow-desc">HOYAへレンズを発注。お渡し時に見え方・装用感を確認し、お手入れ方法もご説明します。以降は定期的なアフターフィッティングで継続サポートします。</p>
+        </div>
+      </div>
+    </div>
+    <div class="flow-note">
+      <p>「眼科に行く前にまず話を聞きたい」という方も、お電話またはご来店でご相談いただけます。処方箋をお持ちの方も、ご相談段階の方も歓迎です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec-faq" id="faq">
+  <div class="wrap">
+    <span class="sec-tag">FAQ</span>
+    <h2 class="sec-h2">よくあるご質問</h2>
+    <div class="faq-list">
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">対象年齢は？</span></summary>
+        <div class="faq-a">眼科医の判断によります。具体的な年齢・度数の適応はかかりつけ眼科にご確認ください。「うちの子は対象になるか」というご相談はアイメガネ店舗でもお気軽にどうぞ。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">普通のメガネとの違いは？</span></summary>
+        <div class="faq-a">レンズ内に近視の進行抑制を目的とした特殊な光学構造を設けている点が異なります（「ミヨスマート」はDIMSテクノロジー、「エシロール® ステレスト®」はH.A.L.T.テクノロジーを採用）。見た目や日々の使い方は通常のメガネとほぼ同じです。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">毎日使えますか？</span></summary>
+        <div class="faq-a">はい。基本的に近視ケアレンズを通常のメガネとして日常使いしていただきます。スポーツ時など特定シーンについては担当スタッフまたは眼科医にご相談ください。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">眼科受診は必要ですか？</span></summary>
+        <div class="faq-a">はい、必須です。<strong>処方箋なしでのお渡しは行いません。</strong>いずれの近視ケアレンズも眼科医の処方に基づくレンズです。まずかかりつけ眼科にご相談ください。「まだ眼科に行っていないが情報収集したい」という段階でのご来店はお気軽にどうぞ。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">レンズの価格はいくらですか？</span></summary>
+        <div class="faq-a">レンズ価格は店舗にてご案内しております。フレーム代は別途必要です。価格には「アイキッズ＆ジュニア保証・補償」（品質保証・視え方保証・アイ情補償）が含まれます。子ども医療費助成制度の適用対象外となる場合があります。詳しくは店舗スタッフへお問い合わせください。</div>
+      </details>
+      <details class="faq-card">
+        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">取り扱い店舗はどこですか？</span></summary>
+        <div class="faq-a">アイメガネ全店にてお取り扱いしております。来店前にお電話またはお問い合わせフォームよりご確認いただくとスムーズです。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="sec-cta">
+  <div class="wrap cta-inner">
+    <h2 class="cta-h2">子どもの目のことを、<br>まずは相談してみてください。</h2>
+    <p class="cta-body">近視ケアレンズは、いずれも眼科医の処方箋がないと販売できません。まずは処方箋がなくてもご相談いただけます。</p>
+    <div class="cta-btns">
+      <button class="btn-cta">無料相談</button>
+      <button class="btn-cta-tel">店舗予約</button>
+    </div>
+    <p class="cta-note">※電話番号・予約フォームURLは後ほど設定</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     以下、2026-07-06に「一旦ページから外す」で非表示にしたセクション群。
+     お悩み(sec-concerns)・アイメガネでできること(sec-support)・
+     選ばれる理由(sec-why)・価格(sec-price)・3つの理由(sec-features)・
+     なぜ早めの対策が大切か(sec-problem+stats-strip)・注意事項(sec-caution)。
+     必要になったらこのコメントを外して、表示したい位置に戻してください。
+     ══════════════════════════════════════════════════════════
 
 <!-- ── CONCERNS(共感) ── -->
 <section class="sec-concerns">
@@ -525,34 +666,6 @@
   </div>
 </section>
 
-<!-- ── WARRANTY ── -->
-<section class="sec-warranty" id="warranty">
-  <div class="wrap">
-    <span class="sec-tag">アイキッズ＆ジュニア保証・補償</span>
-    <h2 class="sec-h2">業界最高水準の<br>手厚い安心保証・補償</h2>
-    <p class="sec-lead" style="margin-bottom:0">近視ケアレンズは成長期のお子さまが長く使うレンズだからこそ、アイメガネの保証・補償で安心してお使いいただけます。</p>
-    <div class="warranty-panel">
-      <div class="warranty-head">
-        <div class="warranty-shield">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.1)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
-            <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div>
-          <p class="warranty-title">アイキッズ＆ジュニア保証・補償（近視ケアレンズ対応）</p>
-          <p class="warranty-sub">詳細条件は店舗スタッフにご確認ください</p>
-        </div>
-      </div>
-      <div class="warranty-items">
-        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">①1年間の品質保証</strong><br>通常のお取り扱いにおいてフレームまたはレンズに損傷が生じた場合、無料で交換いたします。</div></div>
-        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">②1年間の視え方保証</strong><br>度数が変わっても、1年間何度でもレンズを度数交換いたします。<span class="w-note">※度数交換は再度眼科を受診のうえ、発行された処方箋をご持参ください。</span></div></div>
-        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">③1年間のアイ情補償</strong><br>お客様の不注意による損傷は、同一商品を1回目無料・2回目は50％引きでお求めいただけます。紛失の場合も50％引きでお求めいただけます。</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── PRICE ── -->
 <section class="sec-price">
   <div class="wrap">
@@ -656,84 +769,6 @@
   </div>
 </div>
 
-<!-- ── FLOW(流れ) ── -->
-<section class="sec-flow" id="flow">
-  <div class="wrap">
-    <span class="sec-tag">How to get started</span>
-    <h2 class="sec-h2">ご相談・購入までの流れ</h2>
-    <p class="sec-lead" style="margin-bottom:0">シンプルな4ステップ。処方箋をお持ちの方も、ご相談段階の方もお気軽にどうぞ。</p>
-    <div class="flow-list">
-      <div class="flow-item">
-        <div class="flow-step-col"><div class="flow-num-circle">1</div></div>
-        <div class="flow-body">
-          <p class="flow-title">来店予約</p>
-          <p class="flow-desc">お近くのアイメガネへご来店予約ください。眼科の処方箋をお持ちの方はご持参ください。</p>
-          <span class="flow-chip chip-blue">処方箋がなくても、まずはご相談OK</span>
-        </div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-step-col"><div class="flow-num-circle">2</div></div>
-        <div class="flow-body">
-          <p class="flow-title">視力測定・ご相談</p>
-          <p class="flow-desc">スタッフが視力測定を行い、近視ケアレンズについて丁寧にご説明します。処方箋がまだの方は、ここでかかりつけ眼科への受診をご案内します。</p>
-          <span class="flow-chip chip-blue">処方箋なしでのお渡しは行いません</span>
-        </div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-step-col"><div class="flow-num-circle">3</div></div>
-        <div class="flow-body">
-          <p class="flow-title">レンズ選定</p>
-          <p class="flow-desc">眼科の処方箋をもとに、お子さまに合ったフレームとレンズを選定。瞳孔間距離などを正確に測り、精密なフィッティングを行います。</p>
-        </div>
-      </div>
-      <div class="flow-item">
-        <div class="flow-step-col"><div class="flow-num-circle">4</div></div>
-        <div class="flow-body">
-          <p class="flow-title">メガネ作製・お渡し</p>
-          <p class="flow-desc">HOYAへレンズを発注。お渡し時に見え方・装用感を確認し、お手入れ方法もご説明します。以降は定期的なアフターフィッティングで継続サポートします。</p>
-        </div>
-      </div>
-    </div>
-    <div class="flow-note">
-      <p>「眼科に行く前にまず話を聞きたい」という方も、お電話またはご来店でご相談いただけます。処方箋をお持ちの方も、ご相談段階の方も歓迎です。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── FAQ ── -->
-<section class="sec-faq" id="faq">
-  <div class="wrap">
-    <span class="sec-tag">FAQ</span>
-    <h2 class="sec-h2">よくあるご質問</h2>
-    <div class="faq-list">
-      <details class="faq-card">
-        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">対象年齢は？</span></summary>
-        <div class="faq-a">眼科医の判断によります。具体的な年齢・度数の適応はかかりつけ眼科にご確認ください。「うちの子は対象になるか」というご相談はアイメガネ店舗でもお気軽にどうぞ。</div>
-      </details>
-      <details class="faq-card">
-        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">普通のメガネとの違いは？</span></summary>
-        <div class="faq-a">レンズ内に近視の進行抑制を目的とした特殊な光学構造を設けている点が異なります（「ミヨスマート」はDIMSテクノロジー、「エシロール® ステレスト®」はH.A.L.T.テクノロジーを採用）。見た目や日々の使い方は通常のメガネとほぼ同じです。</div>
-      </details>
-      <details class="faq-card">
-        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">毎日使えますか？</span></summary>
-        <div class="faq-a">はい。基本的に近視ケアレンズを通常のメガネとして日常使いしていただきます。スポーツ時など特定シーンについては担当スタッフまたは眼科医にご相談ください。</div>
-      </details>
-      <details class="faq-card">
-        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">眼科受診は必要ですか？</span></summary>
-        <div class="faq-a">はい、必須です。<strong>処方箋なしでのお渡しは行いません。</strong>いずれの近視ケアレンズも眼科医の処方に基づくレンズです。まずかかりつけ眼科にご相談ください。「まだ眼科に行っていないが情報収集したい」という段階でのご来店はお気軽にどうぞ。</div>
-      </details>
-      <details class="faq-card">
-        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">レンズの価格はいくらですか？</span></summary>
-        <div class="faq-a">レンズ価格は店舗にてご案内しております。フレーム代は別途必要です。価格には「アイキッズ＆ジュニア保証・補償」（品質保証・視え方保証・アイ情補償）が含まれます。子ども医療費助成制度の適用対象外となる場合があります。詳しくは店舗スタッフへお問い合わせください。</div>
-      </details>
-      <details class="faq-card">
-        <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">取り扱い店舗はどこですか？</span></summary>
-        <div class="faq-a">アイメガネ全店にてお取り扱いしております。来店前にお電話またはお問い合わせフォームよりご確認いただくとスムーズです。</div>
-      </details>
-    </div>
-  </div>
-</section>
-
 <!-- ── CAUTION ── -->
 <section class="sec-caution">
   <div class="wrap">
@@ -753,18 +788,7 @@
   </div>
 </section>
 
-<!-- ── CTA ── -->
-<section class="sec-cta">
-  <div class="wrap cta-inner">
-    <h2 class="cta-h2">子どもの目のことを、<br>まずは相談してみてください。</h2>
-    <p class="cta-body">近視ケアレンズは、いずれも眼科医の処方箋がないと販売できません。まずは処方箋がなくてもご相談いただけます。</p>
-    <div class="cta-btns">
-      <button class="btn-cta">無料相談</button>
-      <button class="btn-cta-tel">店舗予約</button>
-    </div>
-    <p class="cta-note">※電話番号・予約フォームURLは後ほど設定</p>
-  </div>
-</section>
+-->
 
 <!-- ── FOOTER ── -->
 <footer class="footer">
@@ -774,5 +798,16 @@
     <p class="footer-note">MiYOSMART&reg; はHOYA Corporationの登録商標です。Essilor&reg;、Stellest&reg; はEssilorLuxottica系列会社の登録商標です。本ページの製品情報は各社およびアイメガネの公式情報に基づいています。</p>
   </div>
 </footer>
+
+<!-- ── 追尾CTA ── -->
+<div class="sticky-cta" aria-label="お問い合わせ">
+  <div class="sticky-cta-inner">
+    <span class="sticky-cta-text">お子さまの近視、まずはご相談ください</span>
+    <div class="sticky-cta-btns">
+      <button class="sticky-btn-primary">無料相談</button>
+      <button class="sticky-btn-secondary">店舗予約</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

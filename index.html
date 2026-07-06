@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>ミヨスマート（MiYOSMART）取り扱い開始 | アイメガネ</title>
-<meta name="description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」をアイメガネ全店で取り扱い。HOYAのDIMSテクノロジー搭載、業界最高水準のアイキッズ＆ジュニア保証付き。">
-<meta property="og:title" content="ミヨスマート（MiYOSMART）取り扱い開始 | アイメガネ">
-<meta property="og:description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」をアイメガネ全店で取り扱い。HOYAのDIMSテクノロジー搭載、業界最高水準のアイキッズ＆ジュニア保証付き。">
+<title>小児の近視用メガネレンズ「ミヨスマート」「エシロール ステレスト」取り扱い開始 | アイメガネ</title>
+<meta name="description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」「エシロール ステレスト（Essilor® Stellest®）」をアイメガネ全店で取り扱い。業界最高水準のアイキッズ＆ジュニア保証付き。">
+<meta property="og:title" content="小児の近視用メガネレンズ「ミヨスマート」「エシロール ステレスト」取り扱い開始 | アイメガネ">
+<meta property="og:description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART）」「エシロール ステレスト（Essilor® Stellest®）」をアイメガネ全店で取り扱い。業界最高水準のアイキッズ＆ジュニア保証付き。">
 <meta property="og:image" content="https://iida-moe.github.io/miyosmart-lp/images/hero-eye2.png">
 <meta property="og:url" content="https://iida-moe.github.io/miyosmart-lp/">
 <meta property="og:type" content="website">
@@ -96,31 +96,28 @@
   .stat-num  { font-family: var(--serif); font-size: 34px; font-weight: 700; color: var(--deep); line-height: 1.1; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
   .stat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-  /* ── ABOUT(ミヨスマートとは？) ── */
+  /* ── ABOUT(取り扱いレンズについて) ── */
   .sec-about  { background: var(--cream); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; }
   .about-h2   { font-family: var(--serif); font-size: 43px; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; text-wrap: balance; }
   .about-lead { font-size: 19px; font-weight: 700; color: var(--deep); line-height: 1.7; margin-bottom: 16px; }
   .about-lead em { font-style: italic; color: var(--blue); font-family: var(--serif); }
-  .about-body { font-size: 14px; color: var(--muted); line-height: 1.9; margin-bottom: 32px; max-width: 440px; }
-  .about-points { display: flex; gap: 22px; margin-bottom: 14px; }
+  .about-body { font-size: 14px; color: var(--muted); line-height: 1.9; margin-bottom: 32px; max-width: 640px; }
+  .about-points { display: flex; gap: 22px; margin-bottom: 14px; max-width: 520px; }
   .about-point { text-align: center; flex: 1; }
   .about-point-icon { width: 58px; height: 58px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
   .about-point p { font-size: 12.5px; font-weight: 700; color: var(--deep); line-height: 1.5; }
   .about-footnote { font-size: 11px; color: var(--muted); }
 
-  .about-lens-row { display: flex; align-items: center; gap: 28px; }
-  .dims-visual { position: relative; width: 280px; flex-shrink: 0; }
-  .dims-visual img { width: 100%; display: block; filter: drop-shadow(0 14px 24px rgba(36,74,107,.18)); }
-  .dims-visual-caption { position: absolute; right: 6px; bottom: 0; font-size: 10px; color: var(--muted); }
-  .about-logo-en  { font-family: var(--serif); font-size: 27px; font-weight: 700; color: var(--deep); letter-spacing: .01em; }
-  .about-logo-en span { font-size: 14px; vertical-align: super; }
-  .about-logo-jp  { font-size: 13px; color: var(--muted); margin-top: 4px; letter-spacing: .08em; }
-
-  .about-clinical { margin-top: 28px; background: rgba(58,173,212,.07); border: 1.5px solid rgba(58,173,212,.3); border-radius: var(--r-sm); padding: 22px 26px; }
-  .about-clinical-title  { font-size: 14px; font-weight: 700; color: var(--deep); margin-bottom: 8px; line-height: 1.6; }
-  .about-clinical-body   { font-size: 13px; color: var(--text); line-height: 1.8; }
-  .about-clinical-source { font-size: 11px; color: var(--muted); margin-top: 10px; }
+  /* ── BRAND CARDS(ブランド別レンズの比較カード。ABOUT/PRODUCTセクション共通) ── */
+  .brand-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+  .brand-card  { background: var(--white); border-radius: var(--r); padding: 28px 26px; box-shadow: var(--shadow-sm); }
+  .brand-card-badge { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--deep); margin-bottom: 10px; }
+  .brand-card-badge span { font-size: 12px; vertical-align: super; }
+  .brand-card-tag  { display: inline-block; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 4px 12px; border-radius: var(--r-pill); margin-bottom: 14px; }
+  .brand-card-body { font-size: 13.5px; color: var(--muted); line-height: 1.85; margin-bottom: 16px; }
+  .brand-card-facts { list-style: none; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--rule); padding-top: 14px; }
+  .brand-card-facts li { font-size: 12.5px; color: var(--text); line-height: 1.6; padding-left: 16px; position: relative; }
+  .brand-card-facts li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
 
   /* ── CONCERNS ── */
   .sec-concerns  { background: var(--sky); }
@@ -138,11 +135,6 @@
 
   /* ── PRODUCT ── */
   .sec-product    { background: var(--cream); }
-  .product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-  .product-img-box { border-radius: 52% 48% 60% 40% / 46% 54% 46% 54%; background: var(--white); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; box-shadow: 0 8px 48px rgba(36,74,107,.13); overflow: hidden; }
-  .dims-box   { margin-top: 24px; background: var(--white); border-radius: var(--r-sm); border-left: 4px solid var(--blue); padding: 16px 20px; }
-  .dims-title { font-size: 12px; font-weight: 700; color: var(--deep); letter-spacing: .03em; margin-bottom: 6px; }
-  .dims-body  { font-size: 13px; color: var(--muted); line-height: 1.8; }
 
   /* ── FEATURES ── */
   .sec-features { background: var(--sky); }
@@ -279,14 +271,10 @@
     .hero-v3-sub      { font-size: 14px; margin-bottom: 22px; }
     .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
-    .about-grid   { grid-template-columns: 1fr; gap: 36px; }
     .about-points { gap: 12px; }
-    .about-lens-row { gap: 16px; }
-    .dims-visual  { width: 150px; }
-    .about-logo-en { font-size: 21px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
-    .product-layout  { grid-template-columns: 1fr; gap: 28px; }
+    .brand-cards     { grid-template-columns: 1fr; }
     .price-band      { grid-template-columns: 1fr; padding: 28px 22px; }
     .flow-item       { grid-template-columns: 40px 1fr; }
     .flow-num-circle { width: 40px; height: 40px; font-size: 18px; }
@@ -349,70 +337,72 @@
       <div class="hero-v3-blob">
         <p class="hero-v3-kicker">お子さまの近視が気になり始めた方へ</p>
         <h1>小児の近視用<br>メガネレンズ</h1>
-        <p class="hero-v3-sub">HOYAが開発した近視抑制レンズ「ミヨスマート」。<br>アイメガネ全店でご相談いただけます。</p>
+        <p class="hero-v3-sub">「ミヨスマート」「エシロール ステレスト」など近視抑制レンズを、<br>アイメガネ全店でご相談いただけます。</p>
         <button class="btn-primary">無料相談</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── ABOUT: ミヨスマートとは？ ── -->
+<!-- ── ABOUT: 2種類の近視ケアレンズについて ── -->
 <section class="sec-about">
-  <div class="wrap about-grid">
-    <div>
-      <h2 class="about-h2">ミヨスマートとは？</h2>
-      <p class="about-lead">近視の進行を抑制することを目的とした<em>メガネレンズです。</em></p>
-      <p class="about-body">特殊なレンズ設計により、網膜周辺部の光の焦点をコントロールし、近視進行の抑制が期待されています。</p>
-      <div class="about-points">
-        <div class="about-point">
-          <div class="about-point-icon">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <circle cx="13" cy="13" r="9" stroke="#3aadd4" stroke-width="1.8"/>
-              <circle cx="13" cy="13" r="5" stroke="#3aadd4" stroke-width="1.8"/>
-              <circle cx="13" cy="13" r="1.6" fill="#3aadd4"/>
-            </svg>
-          </div>
-          <p>近視進行を<br>抑制する設計</p>
+  <div class="wrap">
+    <h2 class="about-h2">2種類の近視ケアレンズを<br>取り扱っています</h2>
+    <p class="about-lead">近視の進行を抑制することを目的とした<em>特殊なメガネレンズです。</em></p>
+    <p class="about-body">特殊なレンズ設計により、網膜周辺部の光の焦点をコントロールし、近視進行の抑制が期待されています。ブランドによって採用している技術が異なります。</p>
+    <div class="about-points">
+      <div class="about-point">
+        <div class="about-point-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="9" stroke="#3aadd4" stroke-width="1.8"/>
+            <circle cx="13" cy="13" r="5" stroke="#3aadd4" stroke-width="1.8"/>
+            <circle cx="13" cy="13" r="1.6" fill="#3aadd4"/>
+          </svg>
         </div>
-        <div class="about-point">
-          <div class="about-point-icon">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
-              <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
-              <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
-              <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <p>普段のメガネと<br>同じように使える</p>
-        </div>
-        <div class="about-point">
-          <div class="about-point-icon">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.08)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <p>安全性が確認された<br>レンズ設計</p>
-        </div>
+        <p>近視進行を<br>抑制する設計</p>
       </div>
-      <p class="about-footnote">※本製品は治療機器ではありません。</p>
+      <div class="about-point">
+        <div class="about-point-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+            <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+            <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
+            <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p>普段のメガネと<br>同じように使える</p>
+      </div>
+      <div class="about-point">
+        <div class="about-point-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.08)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p>安全性が確認された<br>レンズ設計</p>
+      </div>
     </div>
-    <div>
-      <div class="about-lens-row">
-        <div class="dims-visual">
-          <img src="images/dims-lens.png" alt="ミヨスマートのレンズイメージ。中央に近視進行を抑制する特殊構造のドットパターンがある">
-          <span class="dims-visual-caption">※画像はイメージです</span>
-        </div>
-        <div>
-          <p class="about-logo-en">MiYOSMART<span>&reg;</span></p>
-          <p class="about-logo-jp">ミヨスマート</p>
-        </div>
+    <p class="about-footnote">※本製品は治療機器ではありません。</p>
+
+    <div class="brand-cards">
+      <div class="brand-card">
+        <p class="brand-card-badge">MiYOSMART<span>&reg;</span></p>
+        <span class="brand-card-tag">HOYA・DIMSテクノロジー</span>
+        <p class="brand-card-body">「周辺遠視性焦点ぼけ理論」に基づいた特殊なレンズ設計で、網膜周辺部の光の焦点をコントロールします。</p>
+        <ul class="brand-card-facts">
+          <li>世界50か国以上で販売</li>
+          <li>非常に高い耐衝撃性を持つ、薄くて軽い素材</li>
+        </ul>
       </div>
-      <div class="about-clinical">
-        <p class="about-clinical-title">世界50か国以上で選ばれているレンズです</p>
-        <p class="about-clinical-body">「周辺遠視性焦点ぼけ理論」に基づいた特殊なレンズ設計。非常に高い耐衝撃性を持ちながら、薄くて軽い素材を採用しています。</p>
-        <p class="about-clinical-source">※出典：HOYA公式サイト</p>
+      <div class="brand-card">
+        <p class="brand-card-badge">Essilor<span>&reg;</span> Stellest<span>&reg;</span></p>
+        <span class="brand-card-tag">ニコン・エシロール・H.A.L.T.テクノロジー</span>
+        <p class="brand-card-body">レンズ表面に、微小な非球面レンズレットを細やかに配置した特殊設計。中心・周辺の視機能に影響を与えないことが確認されています。</p>
+        <ul class="brand-card-facts">
+          <li>紫外線を99%以上カットするAIRWEAR&reg;ポリカーボネート素材</li>
+          <li>耐衝撃性に優れた設計</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -488,8 +478,8 @@
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/></svg>
         </div>
         <div>
-          <p class="concern-title">全店でミヨスマートを取り扱い</p>
-          <p class="concern-text">アイメガネなら、どの店舗でもご相談・お取り扱いが可能です</p>
+          <p class="concern-title">全店で近視ケアレンズを取り扱い</p>
+          <p class="concern-text">「ミヨスマート」「エシロール ステレスト」、どの店舗でもご相談・お取り扱いが可能です</p>
         </div>
       </div>
       <div class="concern-card">
@@ -571,7 +561,7 @@
           </svg>
         </div>
         <h3 class="why-title">眼鏡作製技能士が対応</h3>
-        <p class="why-body">ミヨスマートは周辺部に特殊な光学構造があるため、通常のレンズ以上に精密なフィッティングが必要です。国家資格取得者が対応します。</p>
+        <p class="why-body">近視ケアレンズは周辺部に特殊な光学構造があるため、通常のレンズ以上に精密なフィッティングが必要です。国家資格取得者が対応します。</p>
         <ul class="why-list">
           <li>眼鏡作製技能士（国家資格）が在籍</li>
           <li>精密測定でレンズの光学性能を最大限に発揮</li>
@@ -587,7 +577,7 @@
   <div class="wrap">
     <span class="sec-tag">アイキッズ＆ジュニア保証・補償</span>
     <h2 class="sec-h2">業界最高水準の<br>手厚い安心保証・補償</h2>
-    <p class="sec-lead" style="margin-bottom:0">ミヨスマートは成長期のお子さまが長く使うレンズだからこそ、アイメガネの保証・補償で安心してお使いいただけます。</p>
+    <p class="sec-lead" style="margin-bottom:0">近視ケアレンズは成長期のお子さまが長く使うレンズだからこそ、アイメガネの保証・補償で安心してお使いいただけます。</p>
     <div class="warranty-panel">
       <div class="warranty-head">
         <div class="warranty-shield">
@@ -597,7 +587,7 @@
           </svg>
         </div>
         <div>
-          <p class="warranty-title">アイキッズ＆ジュニア保証・補償（ミヨスマート対応）</p>
+          <p class="warranty-title">アイキッズ＆ジュニア保証・補償（近視ケアレンズ対応）</p>
           <p class="warranty-sub">詳細条件は店舗スタッフにご確認ください</p>
         </div>
       </div>
@@ -636,21 +626,30 @@
   </div>
 </section>
 
-<!-- ── PRODUCT(解決策) ── -->
+<!-- ── PRODUCT(解決策：レンズの技術について) ── -->
 <section class="sec-product" id="product">
   <div class="wrap">
-    <div class="product-layout">
-      <div>
-        <span class="sec-tag">About MiYOSMART</span>
-        <h2 class="sec-h2">「ミヨスマート」とは</h2>
-        <p class="sec-lead" style="margin-bottom:0">単なる視力補正にとどまらない、小児の近視のために開発されたHOYA独自のメガネレンズ。独自技術「DIMS（Defocus Incorporated Multiple Segments）テクノロジー」を採用しています。2026年6月よりアイメガネ全店での取り扱いを開始しました。</p>
-        <div class="dims-box">
-          <p class="dims-title">DIMSテクノロジー（デフォーカス・インコーポレーテッド・マルチプル・セグメンツ）</p>
-          <p class="dims-body">レンズの中央には遠くをはっきり見るための度数を配置。その周囲に、高密度に配置された<strong style="color:var(--deep)">多数の「小玉」を含むゾーン</strong>を設けることで、クリアな視界を確保しながら、お子さまの瞳をサポートする特殊な光学構造を作り出しています。</p>
-        </div>
+    <span class="sec-tag">Technology</span>
+    <h2 class="sec-h2">レンズの技術について</h2>
+    <p class="sec-lead">単なる視力補正にとどまらない、小児の近視のために開発された特殊なメガネレンズ。ブランドごとに異なる独自技術を採用しています。2026年よりアイメガネ全店での取り扱いを開始しました。</p>
+    <div class="brand-cards">
+      <div class="brand-card">
+        <p class="brand-card-badge">MiYOSMART<span>&reg;</span></p>
+        <span class="brand-card-tag">HOYA・DIMSテクノロジー（Defocus Incorporated Multiple Segments）</span>
+        <p class="brand-card-body">レンズの中央には遠くをはっきり見るための度数を配置。その周囲に、高密度に配置された<strong style="color:var(--deep)">多数の「小玉」を含むゾーン</strong>を設けることで、クリアな視界を確保しながら、お子さまの瞳をサポートする特殊な光学構造を作り出しています。</p>
+        <ul class="brand-card-facts">
+          <li>世界50か国以上で販売</li>
+          <li>非常に高い耐衝撃性を持つ、薄くて軽い素材</li>
+        </ul>
       </div>
-      <div class="product-img-box">
-        <img src="images/lens.png" alt="ミヨスマートのレンズイメージ" style="width:100%;height:100%;object-fit:cover;">
+      <div class="brand-card">
+        <p class="brand-card-badge">Essilor<span>&reg;</span> Stellest<span>&reg;</span></p>
+        <span class="brand-card-tag">ニコン・エシロール・H.A.L.T.テクノロジー（Highly Aspherical Lenslet Target）</span>
+        <p class="brand-card-body">レンズ表面に、<strong style="color:var(--deep)">1,021個の微小な非球面レンズレット</strong>を同心円状に配置した特殊設計。目の前方に光のボリュームを作り出し、眼軸の伸長を抑えることで近視進行の抑制が期待されています。</p>
+        <ul class="brand-card-facts">
+          <li>中心・周辺の視機能に影響を与えないことを確認済み</li>
+          <li>紫外線を99%以上カットするAIRWEAR&reg;ポリカーボネート素材</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -660,7 +659,7 @@
 <section class="sec-features" id="features">
   <div class="wrap">
     <span class="sec-tag">3 reasons</span>
-    <h2 class="sec-h2">ミヨスマートが選ばれる<br>3つの理由</h2>
+    <h2 class="sec-h2">近視ケアレンズが選ばれる<br>3つの理由</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <p class="f-num">POINT 01</p>
@@ -752,7 +751,7 @@
         <div class="flow-step-col"><div class="flow-num-circle">2</div></div>
         <div class="flow-body">
           <p class="flow-title">視力測定・ご相談</p>
-          <p class="flow-desc">スタッフが視力測定を行い、ミヨスマートについて丁寧にご説明します。処方箋がまだの方は、ここでかかりつけ眼科への受診をご案内します。</p>
+          <p class="flow-desc">スタッフが視力測定を行い、近視ケアレンズについて丁寧にご説明します。処方箋がまだの方は、ここでかかりつけ眼科への受診をご案内します。</p>
           <span class="flow-chip chip-blue">処方箋なしでのお渡しは行いません</span>
         </div>
       </div>
@@ -789,15 +788,15 @@
       </details>
       <details class="faq-card">
         <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">普通のメガネとの違いは？</span></summary>
-        <div class="faq-a">レンズ中央部に遠くをはっきり見るための度数を配置し、周囲に多数の「小玉」を含む特殊な光学構造（DIMSテクノロジー）を設けている点が異なります。近視の進行抑制を目的とした設計ですが、見た目や日々の使い方は通常のメガネとほぼ同じです。</div>
+        <div class="faq-a">レンズ内に近視の進行抑制を目的とした特殊な光学構造を設けている点が異なります（「ミヨスマート」はDIMSテクノロジー、「エシロール ステレスト」はH.A.L.T.テクノロジーを採用）。見た目や日々の使い方は通常のメガネとほぼ同じです。</div>
       </details>
       <details class="faq-card">
         <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">毎日使えますか？</span></summary>
-        <div class="faq-a">はい。基本的にミヨスマートを通常のメガネとして日常使いしていただきます。スポーツ時など特定シーンについては担当スタッフまたは眼科医にご相談ください。</div>
+        <div class="faq-a">はい。基本的に近視ケアレンズを通常のメガネとして日常使いしていただきます。スポーツ時など特定シーンについては担当スタッフまたは眼科医にご相談ください。</div>
       </details>
       <details class="faq-card">
         <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">眼科受診は必要ですか？</span></summary>
-        <div class="faq-a">はい、必須です。<strong>処方箋なしでのお渡しは行いません。</strong>ミヨスマートは眼科医の処方に基づくレンズです。まずかかりつけ眼科にご相談ください。「まだ眼科に行っていないが情報収集したい」という段階でのご来店はお気軽にどうぞ。</div>
+        <div class="faq-a">はい、必須です。<strong>処方箋なしでのお渡しは行いません。</strong>いずれの近視ケアレンズも眼科医の処方に基づくレンズです。まずかかりつけ眼科にご相談ください。「まだ眼科に行っていないが情報収集したい」という段階でのご来店はお気軽にどうぞ。</div>
       </details>
       <details class="faq-card">
         <summary class="faq-q"><span class="faq-qbadge">Q</span><span class="faq-q-text">レンズの価格はいくらですか？</span></summary>
@@ -820,7 +819,7 @@
         重要事項・ご注意
       </div>
       <ul class="caution-list">
-        <li><span class="c-dot"></span><span>ミヨスマートは眼科医の処方に基づいてご使用ください。処方箋なしでのお渡しは行いません。</span></li>
+        <li><span class="c-dot"></span><span>近視ケアレンズは眼科医の処方に基づいてご使用ください。処方箋なしでのお渡しは行いません。</span></li>
         <li><span class="c-dot"></span><span>効果・効能には個人差があります。近視を「治す」ものではなく、「進行を抑制する」ことを目的としたレンズです。</span></li>
         <li><span class="c-dot"></span><span>定期的な眼科受診（視力・眼軸長測定等）を継続されることを強くお勧めします。</span></li>
         <li><span class="c-dot"></span><span>装用中に異常（見えにくさの急激な変化・眼の痛みなど）が生じた場合は、速やかに眼科を受診してください。</span></li>
@@ -834,7 +833,7 @@
 <section class="sec-cta">
   <div class="wrap cta-inner">
     <h2 class="cta-h2">子どもの目のことを、<br>まずは相談してみてください。</h2>
-    <p class="cta-body">ミヨスマートは眼科医の処方箋がないと販売できないレンズです。まずは処方箋がなくてもご相談いただけます。</p>
+    <p class="cta-body">近視ケアレンズは、いずれも眼科医の処方箋がないと販売できません。まずは処方箋がなくてもご相談いただけます。</p>
     <div class="cta-btns">
       <button class="btn-cta">無料相談</button>
       <button class="btn-cta-tel">店舗予約</button>
@@ -848,7 +847,7 @@
   <div class="footer-inner">
     <span class="footer-logo">アイメガネ</span>
     <span class="footer-copy">© アイジャパン株式会社 / アイメガネ All rights reserved.</span>
-    <p class="footer-note">MiYOSMART はHOYA Corporationの登録商標です。本ページの製品情報はHOYA社およびアイメガネの公式情報に基づいています。</p>
+    <p class="footer-note">MiYOSMART はHOYA Corporationの登録商標です。Essilor、Stellest はEssilorLuxottica系列会社の登録商標です。本ページの製品情報は各社およびアイメガネの公式情報に基づいています。</p>
   </div>
 </footer>
 </body>

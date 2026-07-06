@@ -96,19 +96,31 @@
   .stat-num  { font-family: var(--serif); font-size: 34px; font-weight: 700; color: var(--deep); line-height: 1.1; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
   .stat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-  /* ── WIRE (仮ワイヤー) ── */
-  .sec-wire-product { position: relative; background: #d9d9d9; padding: 60px 0; }
-  .wire-tag  { display: inline-block; background: #fff; border: 1px dashed #999; font-size: 11px; padding: 4px 10px; margin-bottom: 18px; color: #666; }
-  .wire-h2   { font-size: 22px; font-weight: 700; color: #222; margin-bottom: 18px; }
-  .wire-line { font-size: 14px; color: #222; margin-bottom: 8px; }
-  .wire-layout      { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-top: 40px; flex-wrap: wrap; }
-  .wire-circle-row  { display: flex; gap: 20px; align-items: flex-end; }
-  .wire-circle-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-  .wire-circle      { background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #333; text-align: center; }
-  .wire-circle-lg   { width: 110px; height: 110px; }
-  .wire-circle-sm   { width: 90px; height: 90px; }
-  .wire-circle-xl   { width: 230px; height: 230px; font-size: 14px; }
-  .wire-caption     { font-size: 12px; color: #333; }
+  /* ── ABOUT(ミヨスマートとは？) ── */
+  .sec-about  { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; }
+  .about-h2   { font-family: var(--serif); font-size: 34px; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; text-wrap: balance; }
+  .about-lead { font-size: 19px; font-weight: 700; color: var(--deep); line-height: 1.7; margin-bottom: 16px; }
+  .about-lead em { font-style: italic; color: var(--blue); font-family: var(--serif); }
+  .about-body { font-size: 14px; color: var(--muted); line-height: 1.9; margin-bottom: 32px; max-width: 440px; }
+  .about-points { display: flex; gap: 22px; margin-bottom: 14px; }
+  .about-point { text-align: center; flex: 1; }
+  .about-point-icon { width: 58px; height: 58px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+  .about-point p { font-size: 12.5px; font-weight: 700; color: var(--deep); line-height: 1.5; }
+  .about-footnote { font-size: 11px; color: var(--muted); }
+
+  .about-lens-row { display: flex; align-items: center; gap: 28px; }
+  .dims-visual { position: relative; width: 220px; height: 220px; border-radius: 50%; background: var(--white); overflow: hidden; flex-shrink: 0; box-shadow: 0 8px 32px rgba(36,74,107,.14); }
+  .dims-visual::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(var(--blue) 1.4px, transparent 1.6px); background-size: 9px 9px; }
+  .dims-visual::after  { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 32% 32%, transparent 0%, transparent 25%, var(--white) 78%); }
+  .about-logo-en  { font-family: var(--serif); font-size: 27px; font-weight: 700; color: var(--deep); letter-spacing: .01em; }
+  .about-logo-en span { font-size: 14px; vertical-align: super; }
+  .about-logo-jp  { font-size: 13px; color: var(--muted); margin-top: 4px; letter-spacing: .08em; }
+
+  .about-clinical { margin-top: 28px; background: rgba(58,173,212,.07); border: 1.5px solid rgba(58,173,212,.3); border-radius: var(--r-sm); padding: 22px 26px; }
+  .about-clinical-title  { font-size: 14px; font-weight: 700; color: var(--deep); margin-bottom: 8px; line-height: 1.6; }
+  .about-clinical-body   { font-size: 13px; color: var(--text); line-height: 1.8; }
+  .about-clinical-source { font-size: 11px; color: var(--muted); margin-top: 10px; }
 
   /* ── CONCERNS ── */
   .sec-concerns  { background: var(--sky); }
@@ -267,6 +279,11 @@
     .hero-v3-sub      { font-size: 14px; margin-bottom: 22px; }
     .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
+    .about-grid   { grid-template-columns: 1fr; gap: 36px; }
+    .about-points { gap: 12px; }
+    .about-lens-row { gap: 16px; }
+    .dims-visual  { width: 150px; height: 150px; }
+    .about-logo-en { font-size: 21px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
     .product-layout  { grid-template-columns: 1fr; gap: 28px; }
@@ -339,27 +356,61 @@
   </div>
 </div>
 
-<!-- ── WIRE: ミヨスマートとは？(仮ワイヤー) ── -->
-<section class="sec-wire-product">
-  <div class="wrap">
-    <span class="wire-tag">仮ワイヤー</span>
-    <h2 class="wire-h2">ミヨスマート（MiYOSMART）とは？</h2>
-    <p class="wire-line"><strong>近視の進行を抑制することを目的としたメガネレンズです。</strong></p>
-    <p class="wire-line">購入には眼科が発行する眼鏡処方箋が必要です。以下説明文</p>
-    <div class="wire-layout">
-      <div class="wire-circle-row">
-        <div class="wire-circle-block">
-          <div class="wire-circle wire-circle-lg">アイコン</div>
-          <p class="wire-caption">説明</p>
+<!-- ── ABOUT: ミヨスマートとは？ ── -->
+<section class="sec-about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="about-h2">ミヨスマートとは？</h2>
+      <p class="about-lead">近視の進行を抑制することを目的とした<em>メガネレンズです。</em></p>
+      <p class="about-body">特殊なレンズ設計により、網膜周辺部の光の焦点をコントロールし、近視進行の抑制が期待されています。</p>
+      <div class="about-points">
+        <div class="about-point">
+          <div class="about-point-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <circle cx="13" cy="13" r="9" stroke="#3aadd4" stroke-width="1.8"/>
+              <circle cx="13" cy="13" r="5" stroke="#3aadd4" stroke-width="1.8"/>
+              <circle cx="13" cy="13" r="1.6" fill="#3aadd4"/>
+            </svg>
+          </div>
+          <p>近視進行を<br>抑制する設計</p>
         </div>
-        <div class="wire-circle-block">
-          <div class="wire-circle wire-circle-sm"></div>
+        <div class="about-point">
+          <div class="about-point-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+              <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+              <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
+              <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>普段のメガネと<br>同じように使える</p>
         </div>
-        <div class="wire-circle-block">
-          <div class="wire-circle wire-circle-sm"></div>
+        <div class="about-point">
+          <div class="about-point-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="rgba(58,173,212,.08)" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>安全性が確認された<br>レンズ設計</p>
         </div>
       </div>
-      <div class="wire-circle wire-circle-xl">レンズの画像</div>
+      <p class="about-footnote">※本製品は治療機器ではありません。</p>
+    </div>
+    <div>
+      <div class="about-lens-row">
+        <div class="dims-visual" aria-hidden="true"></div>
+        <div>
+          <p class="about-logo-en">MiYOSMART<span>&reg;</span></p>
+          <p class="about-logo-jp">ミヨスマート</p>
+        </div>
+      </div>
+      <div class="about-clinical">
+        <p class="about-clinical-title">臨床試験で近視進行抑制効果が示されています</p>
+        <p class="about-clinical-body">6〜18歳を対象とした臨床試験において、単焦点レンズと比較し、近視の進行を平均60％抑制したことが報告されています。</p>
+        <p class="about-clinical-source">※出典：Hoo et al. Br J Ophthalmol. 2017</p>
+      </div>
     </div>
   </div>
 </section>

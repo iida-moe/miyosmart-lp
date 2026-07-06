@@ -193,14 +193,19 @@
   .sec-warranty { background: var(--sky); }
   .warranty-program-name { font-size: 16px; font-weight: 700; color: var(--deep); margin-top: 4px; }
   .warranty-age-note { font-size: 13px; color: var(--muted); margin-top: 6px; margin-bottom: 28px; }
-  .warranty-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .warranty-card  { background: var(--white); border-radius: var(--r); padding: 30px 22px; box-shadow: var(--shadow-sm); text-align: center; }
-  .warranty-card-eyebrow { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-  .warranty-card-title { font-size: 16px; font-weight: 700; color: var(--deep); margin-bottom: 18px; }
-  .warranty-card-title span { color: var(--blue); }
-  .warranty-card-icon { width: 68px; height: 68px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
-  .warranty-card-desc { font-size: 13px; color: var(--muted); line-height: 1.75; }
-  .warranty-checkup { margin-top: 20px; background: var(--pale); border-radius: var(--r-sm); padding: 20px 26px; text-align: center; }
+  .warranty-radial { position: relative; max-width: 640px; margin: 56px auto 0; aspect-ratio: 1; }
+  .warranty-radial-lines { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+  .warranty-radial-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 172px; height: 172px; display: flex; align-items: center; justify-content: center; text-align: center; z-index: 1; }
+  .warranty-radial-blob { position: absolute; inset: 0; border-radius: 62% 38% 55% 45% / 45% 55% 45% 55%; background: rgba(191,232,248,.75); z-index: -1; }
+  .warranty-radial-center-text { font-size: 15px; font-weight: 700; color: var(--deep); line-height: 1.5; padding: 0 14px; }
+  .warranty-radial-item { position: absolute; width: 190px; text-align: center; transform: translate(-50%,-50%); z-index: 1; }
+  .warranty-radial-item.wr-top   { top: 15%; left: 50%; }
+  .warranty-radial-item.wr-left  { top: 70%; left: 19%; }
+  .warranty-radial-item.wr-right { top: 70%; left: 81%; }
+  .warranty-radial-icon  { display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+  .warranty-radial-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
+  .warranty-radial-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .warranty-checkup { margin-top: 48px; background: var(--pale); border-radius: var(--r-sm); padding: 20px 26px; text-align: center; }
   .warranty-checkup-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 8px; }
   .warranty-checkup-list  { font-size: 13px; color: var(--text); line-height: 1.7; }
 
@@ -291,7 +296,13 @@
     .brand-card-point p { font-size: 14px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
-    .warranty-cards { grid-template-columns: 1fr; }
+    .warranty-radial { position: static; max-width: none; aspect-ratio: auto; margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .warranty-radial-lines { display: none; }
+    .warranty-radial-center { position: static; transform: none; width: 100%; height: auto; margin: 0 0 4px; padding: 20px; }
+    .warranty-radial-blob { border-radius: var(--r); }
+    .warranty-radial-item { position: static; transform: none; width: 100%; text-align: left; display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); padding: 18px 20px; }
+    .warranty-radial-icon { margin: 0; flex-shrink: 0; }
+    .warranty-radial-title { margin-bottom: 2px; }
     .price-band      { grid-template-columns: 1fr; padding: 28px 22px; }
     .flow-steps { flex-direction: column; align-items: stretch; gap: 20px; }
     .flow-step  { display: flex; align-items: center; gap: 14px; text-align: left; }
@@ -479,48 +490,56 @@
 <section class="sec-warranty" id="warranty">
   <div class="wrap">
     <h2 class="sec-h2">安心の3つの保証・補償</h2>
-    <p class="sec-lead" style="margin-bottom:0">近視ケアレンズは成長期のお子さまが長く使うレンズだからこそ、アイメガネの保証・補償で安心してお使いいただけます。</p>
+    <p class="sec-lead" style="margin-bottom:0">近視ケアレンズは成長期のお子さまが長く使うレンズだからこそ、<br>アイメガネの保証・補償で安心してお使いいただけます。</p>
     <p class="warranty-program-name">アイキッズ＆ジュニア保証・補償（近視ケアレンズ対応）</p>
     <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。詳細条件は店舗スタッフにご確認ください。</p>
-    <div class="warranty-cards">
-      <div class="warranty-card">
-        <p class="warranty-card-eyebrow">長く使うものだから</p>
-        <p class="warranty-card-title">1年間の<span>品質保証</span></p>
-        <div class="warranty-card-icon">
-          <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-            <circle cx="13" cy="13" r="9" stroke="#3aadd4" stroke-width="1.8"/>
+
+    <div class="warranty-radial">
+      <svg class="warranty-radial-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="50" y1="50" x2="50" y2="15" style="stroke:var(--rule)" stroke-width="1"/>
+        <line x1="50" y1="50" x2="19" y2="70" style="stroke:var(--rule)" stroke-width="1"/>
+        <line x1="50" y1="50" x2="81" y2="70" style="stroke:var(--rule)" stroke-width="1"/>
+      </svg>
+      <div class="warranty-radial-center">
+        <div class="warranty-radial-blob" aria-hidden="true"></div>
+        <p class="warranty-radial-center-text">ずっと安心して<br>使っていただくために</p>
+      </div>
+      <div class="warranty-radial-item wr-top">
+        <div class="warranty-radial-icon">
+          <svg width="56" height="56" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="9" stroke="#3aadd4" stroke-width="1.6"/>
             <circle cx="10" cy="11" r="1" fill="#3aadd4"/>
             <circle cx="16" cy="11" r="1" fill="#3aadd4"/>
-            <path d="M9 16C9 16 10.5 18 13 18C15.5 18 17 16 17 16" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M9 16C9 16 10.5 18 13 18C15.5 18 17 16 17 16" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </div>
-        <p class="warranty-card-desc">不良があったら取り替えます。</p>
+        <p class="warranty-radial-title">①品質保証</p>
+        <p class="warranty-radial-desc">1年間、不良は<br>無料で交換します。</p>
       </div>
-      <div class="warranty-card">
-        <p class="warranty-card-eyebrow">度数が変わっても大丈夫！</p>
-        <p class="warranty-card-title">1年間以内の<span>視え方保証</span></p>
-        <div class="warranty-card-icon">
-          <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-            <circle cx="7.5" cy="14.5" r="5.2" stroke="#3aadd4" stroke-width="1.8"/>
-            <circle cx="18.5" cy="14.5" r="5.2" stroke="#3aadd4" stroke-width="1.8"/>
-            <path d="M12.9 13C12.9 13 13 11.8 13.5 11.3C14 10.8 14 10.6 14 10.6" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M2.4 12.5C2.4 12.5 1 10.8 2.8 8.5" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M23.6 12.5C23.6 12.5 25 10.8 23.2 8.5" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+      <div class="warranty-radial-item wr-left">
+        <div class="warranty-radial-icon">
+          <svg width="56" height="56" viewBox="0 0 26 26" fill="none">
+            <circle cx="7.5" cy="14.5" r="5.2" stroke="#3aadd4" stroke-width="1.6"/>
+            <circle cx="18.5" cy="14.5" r="5.2" stroke="#3aadd4" stroke-width="1.6"/>
+            <path d="M12.9 13C12.9 13 13 11.8 13.5 11.3C14 10.8 14 10.6 14 10.6" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M2.4 12.5C2.4 12.5 1 10.8 2.8 8.5" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M23.6 12.5C23.6 12.5 25 10.8 23.2 8.5" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </div>
-        <p class="warranty-card-desc">1年間何度でも度数交換。<br>処方箋で購入した場合は、再度眼科を受診し、処方箋をご持参ください。</p>
+        <p class="warranty-radial-title">②視え方保証</p>
+        <p class="warranty-radial-desc">1年間、度数交換は<br>何度でも無料です。</p>
       </div>
-      <div class="warranty-card">
-        <p class="warranty-card-eyebrow">壊した！なくした！あわてずに</p>
-        <p class="warranty-card-title">1年間以内の<span>アイ情補償</span></p>
-        <div class="warranty-card-icon">
-          <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-            <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+      <div class="warranty-radial-item wr-right">
+        <div class="warranty-radial-icon">
+          <svg width="56" height="56" viewBox="0 0 26 26" fill="none">
+            <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#3aadd4" stroke-width="1.6" stroke-linejoin="round"/>
           </svg>
         </div>
-        <p class="warranty-card-desc">お客様の不注意による損傷は、同一商品を1回目無料・2回目は50％引き。紛失の場合も50％引きでお求めいただけます。</p>
+        <p class="warranty-radial-title">③アイ情補償</p>
+        <p class="warranty-radial-desc">破損・紛失も<br>50％引きで安心。</p>
       </div>
     </div>
+
     <div class="warranty-checkup">
       <p class="warranty-checkup-title">さらに、3か月ごとの無料定期点検も</p>
       <p class="warranty-checkup-list">掛け心地調整・フレーム型直し・視力チェック・クリーニング・消耗品点検・交換・ご相談</p>

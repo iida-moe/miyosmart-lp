@@ -194,15 +194,14 @@
   .warranty-program-name { font-size: 16px; font-weight: 700; color: var(--deep); margin-top: 4px; }
   .warranty-age-note { font-size: 13px; color: var(--muted); margin-top: 6px; margin-bottom: 28px; }
   .warranty-radial { position: relative; max-width: 640px; margin: 56px auto 0; aspect-ratio: 1; }
-  .warranty-radial-lines { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
-  .warranty-radial-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 172px; height: 172px; display: flex; align-items: center; justify-content: center; text-align: center; z-index: 1; }
-  .warranty-radial-blob { position: absolute; inset: 0; border-radius: 62% 38% 55% 45% / 45% 55% 45% 55%; background: rgba(191,232,248,.75); z-index: -1; }
+  .warranty-radial-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 190px; height: 190px; display: flex; align-items: center; justify-content: center; text-align: center; z-index: 1; }
+  .warranty-radial-blob { position: absolute; inset: 0; border-radius: 62% 38% 55% 45% / 45% 55% 45% 55%; background: rgba(191,232,248,.85); box-shadow: 0 12px 32px rgba(58,173,212,.18); z-index: -1; }
   .warranty-radial-center-text { font-size: 15px; font-weight: 700; color: var(--deep); line-height: 1.5; padding: 0 14px; }
   .warranty-radial-item { position: absolute; width: 190px; text-align: center; transform: translate(-50%,-50%); z-index: 1; }
-  .warranty-radial-item.wr-top   { top: 15%; left: 50%; }
-  .warranty-radial-item.wr-left  { top: 70%; left: 19%; }
-  .warranty-radial-item.wr-right { top: 70%; left: 81%; }
-  .warranty-radial-icon  { display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+  .warranty-radial-item.wr-top   { top: 12%; left: 50%; }
+  .warranty-radial-item.wr-left  { top: 72%; left: 16%; }
+  .warranty-radial-item.wr-right { top: 72%; left: 84%; }
+  .warranty-radial-icon  { width: 92px; height: 92px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
   .warranty-radial-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
   .warranty-radial-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
   .warranty-checkup { margin-top: 48px; background: var(--pale); border-radius: var(--r-sm); padding: 20px 26px; text-align: center; }
@@ -297,7 +296,6 @@
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
     .warranty-radial { position: static; max-width: none; aspect-ratio: auto; margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
-    .warranty-radial-lines { display: none; }
     .warranty-radial-center { position: static; transform: none; width: 100%; height: auto; margin: 0 0 4px; padding: 20px; }
     .warranty-radial-blob { border-radius: var(--r); }
     .warranty-radial-item { position: static; transform: none; width: 100%; text-align: left; display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); padding: 18px 20px; }
@@ -495,11 +493,6 @@
     <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。詳細条件は店舗スタッフにご確認ください。</p>
 
     <div class="warranty-radial">
-      <svg class="warranty-radial-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <line x1="50" y1="50" x2="50" y2="15" style="stroke:var(--rule)" stroke-width="1"/>
-        <line x1="50" y1="50" x2="19" y2="70" style="stroke:var(--rule)" stroke-width="1"/>
-        <line x1="50" y1="50" x2="81" y2="70" style="stroke:var(--rule)" stroke-width="1"/>
-      </svg>
       <div class="warranty-radial-center">
         <div class="warranty-radial-blob" aria-hidden="true"></div>
         <p class="warranty-radial-center-text">ずっと安心して<br>使っていただくために</p>

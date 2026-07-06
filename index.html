@@ -193,14 +193,16 @@
   .sec-warranty { background: var(--sky); }
   .warranty-program-name { font-size: 16px; font-weight: 700; color: var(--deep); margin-top: 4px; }
   .warranty-age-note { font-size: 13px; color: var(--muted); margin-top: 6px; margin-bottom: 28px; }
-  .warranty-radial { position: relative; max-width: 640px; margin: 56px auto 0; aspect-ratio: 1; }
-  .warranty-radial-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 190px; height: 190px; display: flex; align-items: center; justify-content: center; text-align: center; z-index: 1; }
-  .warranty-radial-blob { position: absolute; inset: 0; border-radius: 62% 38% 55% 45% / 45% 55% 45% 55%; background: rgba(191,232,248,.85); box-shadow: 0 12px 32px rgba(58,173,212,.18); z-index: -1; }
-  .warranty-radial-center-text { font-size: 15px; font-weight: 700; color: var(--deep); line-height: 1.5; padding: 0 14px; }
+  .warranty-radial { position: relative; max-width: 620px; margin: 56px auto 0; aspect-ratio: 1; }
+  .warranty-radial::before { content: ""; position: absolute; inset: 8%; border-radius: 50%; background: radial-gradient(circle, rgba(191,232,248,.55) 0%, rgba(191,232,248,0) 68%); z-index: 0; pointer-events: none; }
+  .warranty-radial-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 210px; height: 210px; z-index: 1; }
+  .warranty-radial-glow { position: absolute; inset: -18px; border-radius: 50%; background: rgba(255,255,255,.9); box-shadow: 0 16px 40px rgba(58,173,212,.28); z-index: -1; }
+  .warranty-radial-photo { width: 100%; height: 100%; border-radius: 50%; overflow: hidden; border: 6px solid var(--white); box-shadow: 0 4px 14px rgba(36,74,107,.15); }
+  .warranty-radial-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 72% 30%; display: block; }
   .warranty-radial-item { position: absolute; width: 190px; text-align: center; transform: translate(-50%,-50%); z-index: 1; }
-  .warranty-radial-item.wr-top   { top: 12%; left: 50%; }
-  .warranty-radial-item.wr-left  { top: 72%; left: 16%; }
-  .warranty-radial-item.wr-right { top: 72%; left: 84%; }
+  .warranty-radial-item.wr-top   { top: 8%;  left: 50%; }
+  .warranty-radial-item.wr-left  { top: 76%; left: 13%; }
+  .warranty-radial-item.wr-right { top: 76%; left: 87%; }
   .warranty-radial-icon  { width: 92px; height: 92px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
   .warranty-radial-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
   .warranty-radial-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
@@ -295,9 +297,9 @@
     .brand-card-point p { font-size: 14px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
-    .warranty-radial { position: static; max-width: none; aspect-ratio: auto; margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
-    .warranty-radial-center { position: static; transform: none; width: 100%; height: auto; margin: 0 0 4px; padding: 20px; }
-    .warranty-radial-blob { border-radius: var(--r); }
+    .warranty-radial { position: static; max-width: none; aspect-ratio: auto; margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .warranty-radial::before { display: none; }
+    .warranty-radial-center { position: static; transform: none; width: 140px; height: 140px; margin: 0 0 8px; }
     .warranty-radial-item { position: static; transform: none; width: 100%; text-align: left; display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); padding: 18px 20px; }
     .warranty-radial-icon { margin: 0; flex-shrink: 0; }
     .warranty-radial-title { margin-bottom: 2px; }
@@ -494,8 +496,10 @@
 
     <div class="warranty-radial">
       <div class="warranty-radial-center">
-        <div class="warranty-radial-blob" aria-hidden="true"></div>
-        <p class="warranty-radial-center-text">ずっと安心して<br>使っていただくために</p>
+        <div class="warranty-radial-glow" aria-hidden="true"></div>
+        <div class="warranty-radial-photo">
+          <img src="images/hero-girl.png" alt="メガネをかけた笑顔の女の子">
+        </div>
       </div>
       <div class="warranty-radial-item wr-top">
         <div class="warranty-radial-icon">

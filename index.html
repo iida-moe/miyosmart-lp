@@ -200,10 +200,12 @@
   .warranty-shield { width: 52px; height: 52px; background: var(--white); border-radius: 50%; border: 1.5px solid var(--rule); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm); }
   .warranty-title { font-size: 17px; font-weight: 700; color: var(--deep); line-height: 1.4; }
   .warranty-sub   { font-size: 12px; color: var(--muted); margin-top: 3px; }
-  .warranty-items { display: grid; grid-template-columns: 1fr; gap: 16px; }
-  .w-item  { display: flex; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.55; }
-  .w-check { color: var(--blue); font-weight: 700; flex-shrink: 0; }
-  .w-note  { font-size: 12px; color: var(--muted); display: block; }
+  .warranty-points { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 8px 0 20px; }
+  .warranty-point  { text-align: center; flex: 1; min-width: 150px; max-width: 220px; }
+  .warranty-point-icon { width: 68px; height: 68px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+  .warranty-point-title { font-size: 15px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
+  .warranty-point-desc  { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .warranty-note { font-size: 12px; color: var(--muted); text-align: center; border-top: 1px solid var(--rule); padding-top: 16px; }
 
   /* ── PRICE ── */
   .sec-price  { background: var(--sky); }
@@ -290,7 +292,8 @@
     .brand-card-point-icon { width: 72px; height: 72px; }
     .brand-card-point p { font-size: 14px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
-    .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
+    .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
+    .warranty-points { gap: 14px; }
     .price-band      { grid-template-columns: 1fr; padding: 28px 22px; }
     .flow-item       { grid-template-columns: 40px 1fr; }
     .flow-num-circle { width: 40px; height: 40px; font-size: 18px; }
@@ -490,11 +493,40 @@
           <p class="warranty-sub">詳細条件は店舗スタッフにご確認ください</p>
         </div>
       </div>
-      <div class="warranty-items">
-        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">①1年間の品質保証</strong><br>通常のお取り扱いにおいてフレームまたはレンズに損傷が生じた場合、無料で交換いたします。</div></div>
-        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">②1年間の視え方保証</strong><br>度数が変わっても、1年間何度でもレンズを度数交換いたします。<span class="w-note">※度数交換は再度眼科を受診のうえ、発行された処方箋をご持参ください。</span></div></div>
-        <div class="w-item"><span class="w-check">✓</span><div><strong style="color:var(--deep)">③1年間のアイ情補償</strong><br>お客様の不注意による損傷は、同一商品を1回目無料・2回目は50％引きでお求めいただけます。紛失の場合も50％引きでお求めいただけます。</div></div>
+      <div class="warranty-points">
+        <div class="warranty-point">
+          <div class="warranty-point-icon">
+            <svg width="30" height="30" viewBox="0 0 26 26" fill="none">
+              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 12.5L11.5 15L17 10" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="warranty-point-title">①品質保証</p>
+          <p class="warranty-point-desc">1年間、損傷時は<br>無料で交換</p>
+        </div>
+        <div class="warranty-point">
+          <div class="warranty-point-icon">
+            <svg width="30" height="30" viewBox="0 0 26 26" fill="none">
+              <path d="M2 13C2 13 6 6 13 6C20 6 24 13 24 13C24 13 20 20 13 20C6 20 2 13 2 13Z" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+              <circle cx="13" cy="13" r="3.2" stroke="#3aadd4" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <p class="warranty-point-title">②視え方保証</p>
+          <p class="warranty-point-desc">1年間、度数交換は<br>何度でも無料</p>
+        </div>
+        <div class="warranty-point">
+          <div class="warranty-point-icon">
+            <svg width="30" height="30" viewBox="0 0 26 26" fill="none">
+              <circle cx="8" cy="8" r="2.6" stroke="#3aadd4" stroke-width="1.8"/>
+              <circle cx="18" cy="18" r="2.6" stroke="#3aadd4" stroke-width="1.8"/>
+              <line x1="19.5" y1="6.5" x2="6.5" y2="19.5" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="warranty-point-title">③アイ情補償</p>
+          <p class="warranty-point-desc">不注意な損傷は1回目無料<br>2回目以降・紛失は50％引き</p>
+        </div>
       </div>
+      <p class="warranty-note">※視え方保証による度数交換は、再度眼科を受診のうえ、発行された処方箋をご持参ください。</p>
     </div>
   </div>
 </section>

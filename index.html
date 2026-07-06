@@ -114,8 +114,8 @@
   /* ── BRAND CARDS(ブランド別レンズの比較カード。ABOUT/PRODUCTセクション共通) ── */
   .brand-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
   .brand-card  { background: var(--white); border-radius: var(--r); padding: 28px 26px; box-shadow: var(--shadow-sm); }
-  .brand-card-badge { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--deep); margin-bottom: 10px; }
-  .brand-card-badge span { font-size: 12px; vertical-align: super; }
+  .brand-card-tab { display: block; text-align: center; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 24px; line-height: 1.3; padding: 16px 20px; border-radius: var(--r-pill); margin-bottom: 20px; }
+  .brand-card-tab span { font-size: 13px; vertical-align: super; }
   .brand-card-tag  { display: inline-block; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 4px 12px; border-radius: var(--r-pill); margin-bottom: 14px; }
   .brand-card-body { font-size: 13.5px; color: var(--muted); line-height: 1.85; margin-bottom: 16px; }
   .brand-card-facts { list-style: none; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--rule); padding-top: 14px; }
@@ -274,6 +274,7 @@
     .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
     .about-points { gap: 12px; }
+    .brand-card-tab { font-size: 19px; padding: 13px 16px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
     .brand-cards     { grid-template-columns: 1fr; }
@@ -354,7 +355,7 @@
     <p class="sec-lead">単なる視力補正にとどまらない、小児の近視のために開発された特殊なメガネレンズです。ブランドごとに異なる独自技術を採用しており、購入には眼科が発行する眼鏡処方箋が必要です。</p>
     <div class="brand-cards">
       <div class="brand-card">
-        <p class="brand-card-badge">MiYOSMART<span>&reg;</span></p>
+        <p class="brand-card-tab">MiYOSMART<span>&reg;</span></p>
         <span class="brand-card-tag">HOYA・DIMSテクノロジー（Defocus Incorporated Multiple Segments）</span>
         <p class="brand-card-body">レンズの中央には遠くをはっきり見るための度数を配置。その周囲に、高密度に配置された<strong style="color:var(--deep)">多数の「小玉」を含むゾーン</strong>を設けることで、クリアな視界を確保しながら、お子さまの瞳をサポートする特殊な光学構造を作り出しています。</p>
         <ul class="brand-card-facts">
@@ -363,7 +364,7 @@
         </ul>
       </div>
       <div class="brand-card">
-        <p class="brand-card-badge">Essilor<span>&reg;</span>Stellest<span>&reg;</span></p>
+        <p class="brand-card-tab">Essilor<span>&reg;</span>Stellest<span>&reg;</span></p>
         <span class="brand-card-tag">ニコン・エシロール&reg;・H.A.L.T.テクノロジー（Highly Aspherical Lenslet Target）</span>
         <p class="brand-card-body">レンズ表面に、<strong style="color:var(--deep)">1,021個の微小な非球面レンズレット</strong>を同心円状に配置した特殊設計。目の前方に光のボリュームを作り出し、眼軸の伸長を抑えることで近視進行の抑制が期待されています。</p>
         <ul class="brand-card-facts">

@@ -114,8 +114,8 @@
   .lead-note-line { display: inline-block; font-size: 13px; white-space: nowrap; }
 
   /* ── BRAND CARDS(ブランド別レンズの比較カード。ABOUT/PRODUCTセクション共通) ── */
-  .brand-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; align-items: start; }
-  .brand-card  { background: var(--white); border-radius: var(--r); padding: 48px 40px; box-shadow: var(--shadow-sm); min-height: 640px; }
+  .brand-cards { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+  .brand-card  { background: var(--white); border-radius: var(--r); padding: 48px 40px; box-shadow: var(--shadow-sm); }
   .brand-card-tab { display: block; text-align: center; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 30px; line-height: 1.3; padding: 20px 24px; border-radius: var(--r-pill); margin-bottom: 8px; }
   .brand-card-tab span { font-size: 16px; vertical-align: super; }
   .brand-card-points { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; padding: 40px 0; }
@@ -281,12 +281,11 @@
     .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
     .about-h2 { font-size: 26px; }
-    .brand-cards { grid-template-columns: 1fr; }
     .lead-note-line { white-space: normal; font-size: 12px; }
     .about-points { gap: 12px; }
     .brand-card     { padding: 26px 20px; }
     .brand-card-tab { font-size: 19px; padding: 13px 16px; }
-    .brand-card { min-height: 0; padding: 32px 24px; }
+    .brand-card { padding: 32px 24px; }
     .brand-card-points { gap: 14px; padding: 20px 0; }
     .brand-card-point-icon { width: 72px; height: 72px; }
     .brand-card-point p { font-size: 14px; }

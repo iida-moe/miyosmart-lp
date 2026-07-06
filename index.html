@@ -110,9 +110,9 @@
   .about-footnote { font-size: 11px; color: var(--muted); }
 
   .about-lens-row { display: flex; align-items: center; gap: 28px; }
-  .dims-visual { position: relative; width: 220px; height: 220px; border-radius: 50%; background: var(--white); overflow: hidden; flex-shrink: 0; box-shadow: 0 8px 32px rgba(36,74,107,.14); }
-  .dims-visual::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(var(--blue) 1.4px, transparent 1.6px); background-size: 9px 9px; }
-  .dims-visual::after  { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 32% 32%, transparent 0%, transparent 25%, var(--white) 78%); }
+  .dims-visual { position: relative; width: 260px; flex-shrink: 0; border-radius: var(--r); overflow: hidden; background: var(--white); box-shadow: 0 8px 32px rgba(36,74,107,.14); }
+  .dims-visual img { width: 100%; display: block; }
+  .dims-visual-caption { position: absolute; right: 10px; bottom: 8px; font-size: 10px; color: var(--muted); background: rgba(255,255,255,.72); padding: 2px 8px; border-radius: var(--r-pill); }
   .about-logo-en  { font-family: var(--serif); font-size: 27px; font-weight: 700; color: var(--deep); letter-spacing: .01em; }
   .about-logo-en span { font-size: 14px; vertical-align: super; }
   .about-logo-jp  { font-size: 13px; color: var(--muted); margin-top: 4px; letter-spacing: .08em; }
@@ -282,7 +282,7 @@
     .about-grid   { grid-template-columns: 1fr; gap: 36px; }
     .about-points { gap: 12px; }
     .about-lens-row { gap: 16px; }
-    .dims-visual  { width: 150px; height: 150px; }
+    .dims-visual  { width: 130px; }
     .about-logo-en { font-size: 21px; }
     .stat-grid, .why-grid { grid-template-columns: 1fr; }
     .concerns-grid, .feature-grid, .warranty-items { grid-template-columns: 1fr; }
@@ -400,16 +400,19 @@
     </div>
     <div>
       <div class="about-lens-row">
-        <div class="dims-visual" aria-hidden="true"></div>
+        <div class="dims-visual">
+          <img src="images/dims-lens.png" alt="ミヨスマートのレンズイメージ。中央に近視進行を抑制する特殊構造のドットパターンがある">
+          <span class="dims-visual-caption">※画像はイメージです</span>
+        </div>
         <div>
           <p class="about-logo-en">MiYOSMART<span>&reg;</span></p>
           <p class="about-logo-jp">ミヨスマート</p>
         </div>
       </div>
       <div class="about-clinical">
-        <p class="about-clinical-title">臨床試験で近視進行抑制効果が示されています</p>
-        <p class="about-clinical-body">6〜18歳を対象とした臨床試験において、単焦点レンズと比較し、近視の進行を平均60％抑制したことが報告されています。</p>
-        <p class="about-clinical-source">※出典：Hoo et al. Br J Ophthalmol. 2017</p>
+        <p class="about-clinical-title">世界50か国以上で選ばれているレンズです</p>
+        <p class="about-clinical-body">「周辺遠視性焦点ぼけ理論」に基づいた特殊なレンズ設計。非常に高い耐衝撃性を持ちながら、薄くて軽い素材を採用しています。</p>
+        <p class="about-clinical-source">※出典：HOYA公式サイト</p>
       </div>
     </div>
   </div>

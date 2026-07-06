@@ -192,13 +192,15 @@
   /* ── WARRANTY ── */
   .sec-warranty { background: var(--sky); }
   .sec-warranty .wrap { max-width: 1160px; }
-  .warranty-age-note { font-size: 13px; color: var(--muted); margin-top: 6px; margin-bottom: 28px; }
+  .warranty-age-note { display: block; width: fit-content; margin: 16px auto 32px; background: var(--white); color: var(--muted); font-size: 12.5px; padding: 8px 20px; border-radius: var(--r-pill); box-shadow: var(--shadow-sm); }
   .warranty-scards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 12px; }
   .warranty-scard  { background: var(--white); border-radius: var(--r); padding: 52px 32px; box-shadow: var(--shadow-sm); text-align: center; }
   .warranty-scard-icon { width: 96px; height: 96px; border-radius: 50%; background: var(--sky); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
   .warranty-scard-icon svg { width: 50px; height: 50px; }
-  .warranty-scard-title { font-size: 19px; font-weight: 700; color: var(--deep); padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1.5px dashed var(--rule); }
-  .warranty-scard-desc  { font-size: 14.5px; color: var(--muted); line-height: 1.9; }
+  .warranty-scard-title { font-size: 19px; font-weight: 700; color: var(--deep); padding-bottom: 20px; margin-bottom: 20px; position: relative; }
+  .warranty-scard-title::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 32px; height: 3px; border-radius: 2px; background: var(--blue); }
+  .warranty-scard-desc  { font-size: 14.5px; color: var(--muted); line-height: 1.9; text-align: left; }
+  .warranty-scard-desc strong { color: var(--blue); font-weight: 700; }
   .warranty-scard-note  { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
   .warranty-cta-banner { margin-top: 24px; background: var(--pale); border-radius: var(--r); padding: 24px 28px; display: flex; align-items: center; gap: 20px; }
   .warranty-cta-icon  { width: 56px; height: 56px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -488,7 +490,7 @@
     <span class="sec-tag" style="display:block; width:fit-content; margin-left:auto; margin-right:auto; background:none; padding:0;">アイメガネだからできること</span>
     <h2 class="sec-h2" style="text-align:center;">3つの保証・補償</h2>
     <p class="sec-lead" style="text-align:center; max-width:520px; margin:0 auto 8px;">お子さまのメガネを安心してお使いいただけるよう、<br>ご購入後もずっとサポートいたします。</p>
-    <p class="warranty-age-note" style="text-align:center;">※ご購入時、中学生以下が対象となります。詳細条件は店舗スタッフにご確認ください。</p>
+    <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。詳細条件は店舗スタッフにご確認ください。</p>
 
     <div class="warranty-scards">
       <div class="warranty-scard">
@@ -499,7 +501,7 @@
           </svg>
         </div>
         <h3 class="warranty-scard-title">品質保証</h3>
-        <p class="warranty-scard-desc">通常のお取り扱いでフレーム・レンズに損傷が生じた場合、1年間無料で交換いたします。</p>
+        <p class="warranty-scard-desc">通常のお取り扱いでフレーム・レンズに損傷が生じた場合、<strong>1年間無料で交換</strong>いたします。</p>
       </div>
       <div class="warranty-scard">
         <div class="warranty-scard-icon">
@@ -520,7 +522,7 @@
           </svg>
         </div>
         <h3 class="warranty-scard-title">見え方保証</h3>
-        <p class="warranty-scard-desc">度数が変わっても、1年間は何度でも無料でレンズの度数交換ができます。<span class="warranty-scard-note">※眼科を受診し、発行された処方箋をご持参ください。</span></p>
+        <p class="warranty-scard-desc">度数が変わっても、<strong>1年間は何度でも無料</strong>でレンズの度数交換ができます。<span class="warranty-scard-note">※眼科を受診し、発行された処方箋をご持参ください。</span></p>
       </div>
       <div class="warranty-scard">
         <div class="warranty-scard-icon">
@@ -529,7 +531,7 @@
           </svg>
         </div>
         <h3 class="warranty-scard-title">アイ情補償</h3>
-        <p class="warranty-scard-desc">お客様の不注意による損傷は、同一商品を1回目無料・2回目は50%引きでお求めいただけます。紛失の場合も50%引きです。</p>
+        <p class="warranty-scard-desc">お客様の不注意による損傷は、同一商品を<strong>1回目無料・2回目は50%引き</strong>でお求めいただけます。紛失の場合も<strong>50%引き</strong>です。</p>
       </div>
     </div>
 

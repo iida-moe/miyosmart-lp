@@ -248,9 +248,7 @@
   /* ── WHY ── */
   .sec-why  { background: var(--sky); }
   .why-grid4 { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 28px; padding-top: 20px; }
-  .why-grid4-photo, .why-grid4-photo-ph, .why-grid4-illust { border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 5/4; box-shadow: var(--shadow-sm); }
-  .why-grid4-illust { background: linear-gradient(135deg, var(--pale), var(--sky)); display: flex; align-items: center; justify-content: center; padding: 20px; }
-  .why-grid4-illust svg { width: 100%; height: 100%; max-width: 220px; }
+  .why-grid4-photo, .why-grid4-photo-ph { border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 5/4; box-shadow: var(--shadow-sm); }
   .why-grid4-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; display: block; }
   .why-grid4-photo-ph { background: linear-gradient(135deg, var(--pale), var(--sky)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--muted); font-size: 13px; }
   .why-grid4-cam { font-size: 26px; opacity: .6; }
@@ -654,28 +652,8 @@
     <p class="sec-lead">良いレンズでも、掛け続けてもらわなければ意味がありません。<br>アイメガネでは、レンズ以外の部分でもお子様と保護者様を支えます。</p>
     <div class="why-grid4">
       <div class="why-grid4-item">
-        <div class="why-grid4-illust">
-          <svg viewBox="0 0 200 160" fill="none">
-            <rect x="0" y="0" width="200" height="160" fill="none"/>
-            <circle cx="42" cy="86" r="30" fill="#bfe8f8" opacity=".5"/>
-            <circle cx="158" cy="86" r="30" fill="#bfe8f8" opacity=".5"/>
-            <g stroke="#5faed8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-              <rect x="26" y="76" width="32" height="22" rx="9"/>
-              <rect x="142" y="76" width="32" height="22" rx="9"/>
-              <line x1="58" y1="87" x2="142" y2="87"/>
-              <line x1="18" y1="84" x2="26" y2="82"/>
-              <line x1="182" y1="84" x2="174" y2="82"/>
-            </g>
-            <circle cx="100" cy="70" r="34" fill="#5faed8"/>
-            <g stroke="#ffffff" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
-              <rect x="84" y="60" width="32" height="22" rx="9"/>
-              <path d="M116 71 h14" stroke-opacity="0"/>
-            </g>
-            <path d="M100 30 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#f58220"/>
-            <path d="M60 40 l2.5 5.5 5.5 2.5 -5.5 2.5 -2.5 5.5 -2.5 -5.5 -5.5 -2.5 5.5 -2.5z" fill="#f58220" opacity=".8"/>
-            <path d="M35 130c8-10 20-14 30-8" stroke="#244a6b" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <path d="M58 118l-3 8 8-3" fill="#244a6b"/>
-          </svg>
+        <div class="why-grid4-photo">
+          <img src="images/illust-frame-select.png" alt="フレームを選ぶ男の子のイラスト" loading="lazy">
         </div>
         <p class="why-grid4-cap">好きなフレームを一緒に選ぶ</p>
         <p class="why-grid4-sub">軽くてズレにくい専用フレームを豊富に用意しています。</p>

@@ -167,6 +167,7 @@
   .flow-row { position: relative; display: flex; align-items: center; gap: 22px; background: var(--white); border: 2px solid var(--blue); border-radius: 0 var(--r-sm) var(--r-sm) var(--r-sm); padding: 24px 28px; margin-top: 26px; }
   .flow-row-tab { position: absolute; top: -22px; left: 0; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 14px; letter-spacing: .02em; padding: 8px 22px; border-radius: var(--r-sm) var(--r-sm) 0 0; box-shadow: 0 -2px 4px rgba(36,74,107,.08); }
   .flow-row-icon { flex-shrink: 0; width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; }
+  .icon-mask { display: inline-block; background-color: #3aadd4; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; }
   .flow-row-text { flex: 1; min-width: 0; }
   .flow-row-title { font-size: 24px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
   .flow-row-desc  { font-size: 15px; color: var(--muted); line-height: 1.7; }
@@ -690,7 +691,7 @@
       <div class="flow-row">
         <span class="flow-row-tab">STEP 1</span>
         <div class="flow-row-icon">
-          <img src="images/icon-eye-exam.png" alt="眼科受診" width="52" height="52">
+          <span class="icon-mask" style="width:52px;height:52px;-webkit-mask-image:url(images/icon-eye-exam.png);mask-image:url(images/icon-eye-exam.png);" role="img" aria-label="眼科受診"></span>
         </div>
         <div class="flow-row-text">
           <h3 class="flow-row-title">眼科受診</h3>
@@ -738,10 +739,10 @@
         <span class="flow-row-tab">STEP 4</span>
         <div class="flow-row-icon">
           <svg width="40" height="40" viewBox="0 0 26 26" fill="none">
-            <circle cx="7.5" cy="14.5" r="5" stroke="#244a6b" stroke-width="2.2"/>
-            <circle cx="18.5" cy="14.5" r="5" stroke="#244a6b" stroke-width="2.2"/>
-            <path d="M12.5 13C12.5 13 13 11.8 13.5 11.3" stroke="#244a6b" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M20 5l1 2.6 2.6 1-2.6 1L20 12l-1-2.4L16.4 8.6l2.6-1L20 5z" fill="#244a6b"/>
+            <circle cx="7.5" cy="14.5" r="5" stroke="#3aadd4" stroke-width="2.2"/>
+            <circle cx="18.5" cy="14.5" r="5" stroke="#3aadd4" stroke-width="2.2"/>
+            <path d="M12.5 13C12.5 13 13 11.8 13.5 11.3" stroke="#3aadd4" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 5l1 2.6 2.6 1-2.6 1L20 12l-1-2.4L16.4 8.6l2.6-1L20 5z" fill="#3aadd4"/>
           </svg>
         </div>
         <div class="flow-row-text">
@@ -754,9 +755,9 @@
         <span class="flow-row-tab">STEP 5</span>
         <div class="flow-row-icon">
           <svg width="40" height="40" viewBox="0 0 26 26" fill="none">
-            <circle cx="13" cy="9" r="4" stroke="#244a6b" stroke-width="2.2"/>
-            <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#244a6b" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M18 16l1.5 1.5L23 14" stroke="#244a6b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="13" cy="9" r="4" stroke="#3aadd4" stroke-width="2.2"/>
+            <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#3aadd4" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M18 16l1.5 1.5L23 14" stroke="#3aadd4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div class="flow-row-text">
@@ -768,7 +769,7 @@
       <div class="flow-row">
         <span class="flow-row-tab">STEP 6</span>
         <div class="flow-row-icon">
-          <img src="images/icon-eye-exam.png" alt="眼科受診" width="52" height="52">
+          <span class="icon-mask" style="width:52px;height:52px;-webkit-mask-image:url(images/icon-eye-exam.png);mask-image:url(images/icon-eye-exam.png);" role="img" aria-label="眼科受診"></span>
         </div>
         <div class="flow-row-text">
           <h3 class="flow-row-title">眼科受診</h3>

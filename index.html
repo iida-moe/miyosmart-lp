@@ -163,17 +163,14 @@
 
   /* ── FLOW ── */
   .sec-flow  { background: var(--cream); }
-  .flow-steps-v { display: flex; flex-direction: column; align-items: center; margin-top: 40px; }
-  .flow-step-v { position: relative; width: 100%; max-width: 720px; background: var(--pale); border-radius: var(--r); padding: 40px 32px 30px; }
-  .flow-step-v-badge { position: absolute; top: 0; left: 32px; transform: translateY(-50%); background: var(--blue); color: #fff; padding: 9px 30px; border-radius: var(--r-pill); display: flex; align-items: baseline; gap: 8px; box-shadow: var(--shadow-sm); white-space: nowrap; }
-  .flow-step-v-badge .step-label { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
-  .flow-step-v-badge .step-num   { font-family: var(--serif); font-size: 22px; font-weight: 700; }
-  .flow-step-v-body { display: flex; align-items: center; gap: 26px; }
-  .flow-step-v-icon { width: 84px; height: 84px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .flow-step-v-text { flex: 1; min-width: 0; }
-  .flow-step-v-title { font-size: 18px; font-weight: 700; color: var(--deep); margin-bottom: 8px; }
-  .flow-step-v-desc  { font-size: 13.5px; color: var(--muted); line-height: 1.85; }
-  .flow-rail { text-align: center; color: var(--blue); font-size: 40px; line-height: 1; padding: 10px 0; opacity: .6; }
+  .flow-rows { display: flex; flex-direction: column; margin-top: 32px; }
+  .flow-row { display: flex; align-items: center; gap: 16px; background: var(--pale); border-radius: var(--r-sm); padding: 16px 22px; }
+  .flow-row-badge { flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+  .flow-row-icon { flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; }
+  .flow-row-text { flex: 1; min-width: 0; }
+  .flow-row-title { font-size: 15.5px; font-weight: 700; color: var(--deep); margin-bottom: 2px; }
+  .flow-row-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .flow-rail { text-align: center; color: var(--blue); font-size: 22px; line-height: 1; padding: 2px 0; opacity: .6; }
   .flow-note  { margin-top: 32px; background: var(--pale); border-radius: var(--r-sm); padding: 18px 24px; }
   .flow-note p { font-size: 13px; color: var(--deep); line-height: 1.8; }
 
@@ -391,12 +388,12 @@
     .warranty-cta-body { flex-direction: column; text-align: center; padding: 24px; }
     .warranty-cta-btn { width: 100%; }
     .price-band      { grid-template-columns: 1fr; padding: 28px 22px; }
-    .flow-step-v { padding: 32px 20px 24px; }
-    .flow-step-v-body { gap: 16px; }
-    .flow-step-v-icon { width: 64px; height: 64px; }
-    .flow-step-v-icon svg { width: 26px; height: 26px; }
-    .flow-step-v-title { font-size: 16px; }
-    .flow-step-v-desc  { font-size: 13px; }
+    .flow-row { padding: 12px 14px; gap: 12px; }
+    .flow-row-badge { width: 32px; height: 32px; font-size: 12.5px; }
+    .flow-row-icon { width: 38px; height: 38px; }
+    .flow-row-icon svg { width: 20px; height: 20px; }
+    .flow-row-title { font-size: 14.5px; }
+    .flow-row-desc  { font-size: 12px; }
     .stats-inner     { grid-template-columns: 1fr; gap: 24px; }
     .s-divider       { display: none; }
     .s-stat          { text-align: left; }
@@ -688,114 +685,102 @@
     <span class="sec-tag">How to get started</span>
     <h2 class="sec-h2">ご相談・ご購入までの流れ</h2>
     <p class="sec-lead" style="margin-bottom:0">眼科での受診から、お渡しまでの6ステップ。</p>
-    <div class="flow-steps-v">
-      <div class="flow-step-v">
-        <span class="flow-step-v-badge"><span class="step-label">STEP</span><span class="step-num">01</span></span>
-        <div class="flow-step-v-body">
-          <div class="flow-step-v-icon">
-            <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-              <circle cx="8" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <circle cx="16" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <circle cx="8" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <circle cx="16" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <line x1="19" y1="19" x2="24" y2="24" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="flow-step-v-text">
-            <p class="flow-step-v-title">眼科受診</p>
-            <p class="flow-step-v-desc">近視ケアレンズをお求めの場合は、必ず眼科医の処方箋が必要です。レンズの詳細については眼科にてお尋ねください。</p>
-          </div>
+    <div class="flow-rows">
+      <div class="flow-row">
+        <div class="flow-row-badge">01</div>
+        <div class="flow-row-icon">
+          <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+            <circle cx="8" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <circle cx="16" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <circle cx="8" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <circle cx="16" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <line x1="19" y1="19" x2="24" y2="24" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="flow-row-text">
+          <h3 class="flow-row-title">眼科受診</h3>
+          <p class="flow-row-desc">近視ケアレンズには、眼科医の処方箋が必要です。</p>
         </div>
       </div>
       <div class="flow-rail" aria-hidden="true">▽</div>
-      <div class="flow-step-v">
-        <span class="flow-step-v-badge"><span class="step-label">STEP</span><span class="step-num">02</span></span>
-        <div class="flow-step-v-body">
-          <div class="flow-step-v-icon">
-            <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-              <rect x="2" y="4" width="10" height="14" rx="1.5" stroke="#3aadd4" stroke-width="1.6"/>
-              <line x1="4.5" y1="8" x2="9.5" y2="8" stroke="#3aadd4" stroke-width="1.4" stroke-linecap="round"/>
-              <line x1="4.5" y1="11" x2="9.5" y2="11" stroke="#3aadd4" stroke-width="1.4" stroke-linecap="round"/>
-              <path d="M14 11h8m-3-3l3 3-3 3" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="flow-step-v-text">
-            <p class="flow-step-v-title">処方箋を持ってアイメガネへ</p>
-            <p class="flow-step-v-desc">眼科での受診後、眼鏡処方箋を持って、お近くのアイメガネ店舗へお持ちください。</p>
-          </div>
+      <div class="flow-row">
+        <div class="flow-row-badge">02</div>
+        <div class="flow-row-icon">
+          <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+            <rect x="2" y="4" width="10" height="14" rx="1.5" stroke="#3aadd4" stroke-width="1.6"/>
+            <line x1="4.5" y1="8" x2="9.5" y2="8" stroke="#3aadd4" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="4.5" y1="11" x2="9.5" y2="11" stroke="#3aadd4" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M14 11h8m-3-3l3 3-3 3" stroke="#3aadd4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="flow-row-text">
+          <h3 class="flow-row-title">処方箋を持ってアイメガネへ</h3>
+          <p class="flow-row-desc">眼鏡処方箋を、お近くのアイメガネ店舗へお持ちください。</p>
         </div>
       </div>
       <div class="flow-rail" aria-hidden="true">▽</div>
-      <div class="flow-step-v">
-        <span class="flow-step-v-badge"><span class="step-label">STEP</span><span class="step-num">03</span></span>
-        <div class="flow-step-v-body">
-          <div class="flow-step-v-icon">
-            <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-              <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
-              <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
-              <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
-              <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="flow-step-v-text">
-            <p class="flow-step-v-title">フレーム・レンズを選ぶ</p>
-            <p class="flow-step-v-desc">子どものメガネは、お子さまの顔にフィットしたフレームを選ぶことが大切です。眼鏡作製技能士が用途やシーンをお伺いし、フレームとレンズをご提案いたします。</p>
-          </div>
+      <div class="flow-row">
+        <div class="flow-row-badge">03</div>
+        <div class="flow-row-icon">
+          <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+            <rect x="3" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+            <rect x="15" y="10" width="8" height="6" rx="2.5" stroke="#3aadd4" stroke-width="1.8"/>
+            <line x1="11" y1="13" x2="15" y2="13" stroke="#3aadd4" stroke-width="1.8"/>
+            <line x1="1" y1="13" x2="3" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="23" y1="13" x2="25" y2="13" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="flow-row-text">
+          <h3 class="flow-row-title">フレーム・レンズを選ぶ</h3>
+          <p class="flow-row-desc">眼鏡作製技能士が、お子さまに合うフレームをご提案。</p>
         </div>
       </div>
       <div class="flow-rail" aria-hidden="true">▽</div>
-      <div class="flow-step-v">
-        <span class="flow-step-v-badge"><span class="step-label">STEP</span><span class="step-num">04</span></span>
-        <div class="flow-step-v-body">
-          <div class="flow-step-v-icon">
-            <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-              <circle cx="7.5" cy="14.5" r="5" stroke="#3aadd4" stroke-width="1.8"/>
-              <circle cx="18.5" cy="14.5" r="5" stroke="#3aadd4" stroke-width="1.8"/>
-              <path d="M12.5 13C12.5 13 13 11.8 13.5 11.3" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M20 5l1 2.6 2.6 1-2.6 1L20 12l-1-2.4L16.4 8.6l2.6-1L20 5z" fill="#3aadd4"/>
-            </svg>
-          </div>
-          <div class="flow-step-v-text">
-            <p class="flow-step-v-title">フィッティング</p>
-            <p class="flow-step-v-desc">お子さまのお顔に合わせて、かかり具合や鼻パッドの細かい調整を行います。最適な見え方のためにも、プロによるきちんとした調整が大切です。</p>
-          </div>
+      <div class="flow-row">
+        <div class="flow-row-badge">04</div>
+        <div class="flow-row-icon">
+          <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+            <circle cx="7.5" cy="14.5" r="5" stroke="#3aadd4" stroke-width="1.8"/>
+            <circle cx="18.5" cy="14.5" r="5" stroke="#3aadd4" stroke-width="1.8"/>
+            <path d="M12.5 13C12.5 13 13 11.8 13.5 11.3" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M20 5l1 2.6 2.6 1-2.6 1L20 12l-1-2.4L16.4 8.6l2.6-1L20 5z" fill="#3aadd4"/>
+          </svg>
+        </div>
+        <div class="flow-row-text">
+          <h3 class="flow-row-title">フィッティング</h3>
+          <p class="flow-row-desc">お子さまのお顔に合わせて、細かく調整します。</p>
         </div>
       </div>
       <div class="flow-rail" aria-hidden="true">▽</div>
-      <div class="flow-step-v">
-        <span class="flow-step-v-badge"><span class="step-label">STEP</span><span class="step-num">05</span></span>
-        <div class="flow-step-v-body">
-          <div class="flow-step-v-icon">
-            <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-              <circle cx="13" cy="9" r="4" stroke="#3aadd4" stroke-width="1.8"/>
-              <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M18 16l1.5 1.5L23 14" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="flow-step-v-text">
-            <p class="flow-step-v-title">お渡し(納品)</p>
-            <p class="flow-step-v-desc">完成したメガネは、再度フィッティングを行い、最適な状態でお渡しします。お渡し後も、アイメガネ全店舗にて無料メンテナンスを承っております。</p>
-          </div>
+      <div class="flow-row">
+        <div class="flow-row-badge">05</div>
+        <div class="flow-row-icon">
+          <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="9" r="4" stroke="#3aadd4" stroke-width="1.8"/>
+            <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M18 16l1.5 1.5L23 14" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="flow-row-text">
+          <h3 class="flow-row-title">お渡し(納品)</h3>
+          <p class="flow-row-desc">再度フィッティングを行い、最適な状態でお渡しします。</p>
         </div>
       </div>
       <div class="flow-rail" aria-hidden="true">▽</div>
-      <div class="flow-step-v">
-        <span class="flow-step-v-badge"><span class="step-label">STEP</span><span class="step-num">06</span></span>
-        <div class="flow-step-v-body">
-          <div class="flow-step-v-icon">
-            <svg width="34" height="34" viewBox="0 0 26 26" fill="none">
-              <circle cx="8" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <circle cx="16" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <circle cx="8" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <circle cx="16" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
-              <line x1="19" y1="19" x2="24" y2="24" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="flow-step-v-text">
-            <p class="flow-step-v-title">眼科受診</p>
-            <p class="flow-step-v-desc">処方箋を発行した眼科で、完成したメガネの見え方を確認してもらいましょう。</p>
-          </div>
+      <div class="flow-row">
+        <div class="flow-row-badge">06</div>
+        <div class="flow-row-icon">
+          <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+            <circle cx="8" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <circle cx="16" cy="8" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <circle cx="8" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <circle cx="16" cy="16" r="3" stroke="#3aadd4" stroke-width="1.6"/>
+            <line x1="19" y1="19" x2="24" y2="24" stroke="#3aadd4" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="flow-row-text">
+          <h3 class="flow-row-title">眼科受診</h3>
+          <p class="flow-row-desc">処方箋を出した眼科で、仕上がりを確認してもらいましょう。</p>
         </div>
       </div>
     </div>

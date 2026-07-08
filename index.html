@@ -107,11 +107,11 @@
   .stat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
   /* ── ABOUT(取り扱いレンズについて) ── */
-  .sec-about  { background: var(--cream); padding-bottom: 40px; }
-  .brand-cards-arrow { display: flex; justify-content: center; margin-top: 32px; }
-  .brand-cards-arrow svg { transition: transform .2s; }
-  .brand-cards-arrow:hover svg { transform: translateY(3px); }
+  .sec-about  { background: var(--cream); }
   .sec-about .wrap { max-width: 1160px; }
+  .section-gap-transition { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 40px; }
+  .section-gap-transition span { font-size: 20px; font-weight: 700; color: var(--deep); }
+  .section-gap-transition svg { transition: transform .2s; }
   .about-h2   { font-family: var(--serif); font-size: 38px; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; }
   .highlight-marker { background: none; color: var(--deep); font-weight: 700; border-bottom: 5px solid #ffd93d; padding-bottom: 2px; }
   .lead-emphasis { font-size: 1.3em; }
@@ -268,7 +268,7 @@
   .wave-divider-to-cream { background: linear-gradient(to bottom, var(--sky), var(--cream)); }
 
   /* ── WARRANTY ── */
-  .sec-warranty { background: radial-gradient(140% 90% at 50% -10%, #f2fbfd 0%, var(--sky) 55%); padding-top: 40px; }
+  .sec-warranty { background: radial-gradient(140% 90% at 50% -10%, #f2fbfd 0%, var(--sky) 55%); }
   .sec-warranty .wrap { max-width: 1160px; }
   .warranty-age-note { display: block; text-align: center; color: var(--muted); font-size: 12.5px; margin: 6px auto 32px; }
   .warranty-scards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 12px; }
@@ -478,16 +478,16 @@
         <a class="brand-card-link" href="https://stellest.jp/" target="_blank" rel="noopener">エシロール公式サイトで詳しく見る ›</a>
       </div>
     </div>
+    <div class="section-gap-transition">
+      <span>アイメガネだからできること</span>
+      <svg width="60" height="34" viewBox="0 0 28 16" fill="none"><path d="M2 2l12 12L26 2" stroke="#5faed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
   </div>
 </section>
 
 <!-- ── WARRANTY ── -->
 <section class="sec-warranty" id="warranty">
   <div class="wrap">
-    <span class="sec-tag" style="display:block; width:fit-content; margin-left:auto; margin-right:auto; background:none; padding:0;">アイメガネだからできること</span>
-    <div class="brand-cards-arrow">
-      <svg width="60" height="34" viewBox="0 0 28 16" fill="none"><path d="M2 2l12 12L26 2" stroke="#5faed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
     <h2 class="sec-h2" style="text-align:center;">3つの保証・補償</h2>
     <p class="sec-lead" style="text-align:center; max-width:520px; margin:0 auto 8px;">お子さまのメガネを安心してお使いいただけるよう、<br>ご購入後もずっとサポートいたします。</p>
     <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。詳細条件は店舗スタッフにご確認ください。</p>

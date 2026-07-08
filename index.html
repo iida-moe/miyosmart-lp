@@ -119,7 +119,12 @@
   .brand-card  { background: var(--white); border-radius: var(--r); padding: 36px 40px 64px; box-shadow: var(--shadow-sm); }
   .brand-card-tab { display: block; text-align: center; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.3; padding: 16px 20px; border-radius: var(--r-pill); margin-bottom: 8px; }
   .brand-card-tab span { font-size: 16px; vertical-align: super; }
+  .brand-card-badge { display: inline-block; background: var(--pale); color: var(--deep); font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 14px; }
   .brand-card-note { font-size: 15.5px; color: var(--text); line-height: 1.9; text-align: left; max-width: 560px; margin: 0 auto 20px; }
+  .brand-cards-cta { margin-top: 28px; background: var(--pale); border-radius: var(--r-sm); padding: 22px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .brand-cards-cta p { font-size: 14.5px; color: var(--deep); }
+  .brand-cards-cta-btn { flex-shrink: 0; background: var(--orange); color: #fff; font-size: 13.5px; font-weight: 700; padding: 12px 24px; border-radius: var(--r-pill); text-decoration: none; white-space: nowrap; }
+  .brand-cards-cta-btn:hover { background: var(--orange-d); }
   .brand-card-footnote { display: block; text-align: right; font-size: 11px; color: var(--muted); margin-top: 4px; }
   .brand-card-link { display: block; text-align: right; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; }
   .brand-card-link:hover { text-decoration: underline; }
@@ -464,14 +469,20 @@
     <div class="brand-cards">
       <div class="brand-card">
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>
+        <span class="brand-card-badge">HOYA正規取扱店</span>
         <p class="brand-card-note">お子さまの視力はかけがえのないものです。<br>ミヨスマートは、現在世界50か国以上&#8251;で販売されている小児向けの近視に対応する特殊な構造のメガネレンズです。<span class="brand-card-footnote">&#8251;2025年9月時点</span></p>
         <a class="brand-card-link" href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">HOYA公式サイトで詳しく見る ›</a>
       </div>
       <div class="brand-card">
         <p class="brand-card-tab">Essilor<span>&reg;</span>Stellest<span>&reg;</span>&nbsp;&nbsp;(エシロール ステレスト)</p>
+        <span class="brand-card-badge">ニコン・エシロール正規取扱店</span>
         <p class="brand-card-note">ニコン・エシロール&reg;が開発したH.A.L.T.テクノロジーは、直径約1.1mmの微小な非球面レンズレット1,021個を11周のリング状に配置した設計です。1日12時間以上の装用が推奨されています。</p>
         <a class="brand-card-link" href="https://stellest.jp/" target="_blank" rel="noopener">エシロール公式サイトで詳しく見る ›</a>
       </div>
+    </div>
+    <div class="brand-cards-cta">
+      <p>アイメガネなら、購入後も安心の<strong>保証・補償</strong>とアフターサポートつき。</p>
+      <a href="#warranty" class="brand-cards-cta-btn">保証・補償について見る ›</a>
     </div>
   </div>
 </section>

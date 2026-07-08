@@ -121,11 +121,10 @@
   .brand-card-tab span { font-size: 16px; vertical-align: super; }
   .brand-card-badge { display: inline-block; background: var(--pale); color: var(--deep); font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 14px; }
   .brand-card-note { font-size: 15.5px; color: var(--text); line-height: 1.9; text-align: left; max-width: 560px; margin: 0 auto 20px; }
-  .brand-cards-cta { position: relative; margin-top: 28px; background: var(--pale); border-radius: var(--r-sm); padding: 22px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-  .brand-cards-cta::after { content: ""; position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid var(--pale); }
-  .brand-cards-cta p { font-size: 14.5px; color: var(--deep); }
-  .brand-cards-cta-btn { flex-shrink: 0; background: var(--orange); color: #fff; font-size: 13.5px; font-weight: 700; padding: 12px 24px; border-radius: var(--r-pill); text-decoration: none; white-space: nowrap; }
-  .brand-cards-cta-btn:hover { background: var(--orange-d); }
+  .brand-cards-transition { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 40px; text-decoration: none; }
+  .brand-cards-transition span { font-size: 16px; font-weight: 700; color: var(--deep); }
+  .brand-cards-transition:hover svg { transform: translateY(3px); }
+  .brand-cards-transition svg { transition: transform .2s; }
   .brand-card-footnote { display: block; text-align: right; font-size: 11px; color: var(--muted); margin-top: 4px; }
   .brand-card-note strong { color: var(--blue); font-weight: 700; }
   .brand-card-link { display: block; text-align: right; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; }
@@ -480,10 +479,10 @@
         <a class="brand-card-link" href="https://stellest.jp/" target="_blank" rel="noopener">エシロール公式サイトで詳しく見る ›</a>
       </div>
     </div>
-    <div class="brand-cards-cta">
-      <p>アイメガネなら、購入後も安心の<strong>保証・補償</strong>とアフターサポートつき。</p>
-      <a href="#warranty" class="brand-cards-cta-btn">保証・補償について見る ›</a>
-    </div>
+    <a href="#warranty" class="brand-cards-transition">
+      <span>アイメガネだからできること</span>
+      <svg width="28" height="16" viewBox="0 0 28 16" fill="none"><path d="M2 2l12 12L26 2" stroke="#5faed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </div>
 </section>
 

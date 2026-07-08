@@ -185,6 +185,13 @@
   .sec-shop { background: var(--cream); }
   .sec-shop .wrap { text-align: center; }
   .shop-intro { font-size: 15px; color: var(--muted); line-height: 1.8; margin: 0 auto 24px; max-width: 560px; }
+  .shop-geo-wrap { max-width: 420px; margin: 0 auto; }
+  .shop-geo-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 16px 20px; background: var(--deep); color: #fff; font-size: 16px; font-weight: 700; border: none; border-radius: var(--r-sm); cursor: pointer; transition: background .2s; font-family: var(--sans); }
+  .shop-geo-btn:hover { background: var(--blue); }
+  .shop-geo-btn:disabled { opacity: .6; cursor: default; }
+  .shop-geo-icon { font-size: 18px; }
+  .shop-divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: var(--muted); font-size: 13px; }
+  .shop-divider::before, .shop-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
   .shop-search-form { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
   .shop-zip-label { font-size: 18px; font-weight: 700; color: var(--deep); }
   .shop-zip-input { width: 80px; padding: 12px 16px; font-size: 18px; font-weight: 700; text-align: center; border: 2px solid var(--rule); border-radius: var(--r-sm); font-family: inherit; color: var(--deep); transition: border-color .2s; }
@@ -706,7 +713,12 @@
     <span class="sec-tag">Find a store</span>
     <h2 class="sec-h2">お近くの店舗を探す</h2>
     <p class="shop-draft-note">※店舗一覧は公式サイト(aimegane.com/shop/)の全38店舗に基づいています。</p>
-    <p class="shop-intro">郵便番号(上3桁)で近くの店舗を探せます。</p>
+    <p class="shop-intro">現在地、または郵便番号で近くの店舗を探せます。</p>
+
+    <div class="shop-geo-wrap">
+      <button type="button" class="shop-geo-btn" id="shopGeoBtn" onclick="searchByLocation()"><span class="shop-geo-icon">&#9678;</span> 現在地から探す</button>
+      <div class="shop-divider"><span>または</span></div>
+    </div>
 
     <div class="shop-search-form">
       <span class="shop-zip-label">〒</span>
@@ -1216,6 +1228,31 @@ function renderSearchResult(userLat,userLng,labelHtml){
     </div>
     `:''}
   `;
+}
+function searchByLocation(){
+  const btn=document.getElementById('shopGeoBtn');
+  const countEl=document.getElementById('shop-count');
+  const resEl=document.getElementById('shop-results');
+  if(!navigator.geolocation){
+    countEl.style.display='block';
+    countEl.textContent='お使いの環境では現在地の取得に対応していません。郵便番号で検索してください。';
+    return;
+  }
+  btn.disabled=true;
+  countEl.style.display='block';
+  countEl.textContent='現在地を取得中…';
+  resEl.innerHTML='';
+  navigator.geolocation.getCurrentPosition(
+    pos=>{
+      btn.disabled=false;
+      renderSearchResult(pos.coords.latitude,pos.coords.longitude,'現在地から近い順');
+    },
+    ()=>{
+      btn.disabled=false;
+      countEl.textContent='現在地を取得できませんでした。郵便番号で検索してください。';
+    },
+    {timeout:10000}
+  );
 }
 async function searchShop(){
   const z1=document.getElementById('zip1').value.trim();

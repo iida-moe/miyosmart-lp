@@ -97,8 +97,10 @@
   section { padding: var(--py) 0; }
   .sec-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 12px; }
   .sec-h2  { font-family: var(--serif); font-size: 47px; font-weight: 700; color: var(--deep); line-height: 1.4; text-wrap: balance; margin-bottom: 14px; }
-  .warranty-h2-row { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 14px; }
-  .warranty-mascot { width: 110px; height: auto; flex-shrink: 0; }
+  .warranty-h2-row { display: flex; align-items: center; justify-content: center; gap: 24px; margin-bottom: 8px; }
+  .warranty-h2-text { text-align: left; }
+  .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
+  .warranty-mascot { height: 130px; width: auto; flex-shrink: 0; }
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
 
   /* ── PROBLEM ── */
@@ -491,10 +493,12 @@
 <section class="sec-warranty" id="warranty">
   <div class="wrap">
     <div class="warranty-h2-row">
-      <h2 class="sec-h2" style="margin-bottom:0;">3つの保証・補償</h2>
+      <div class="warranty-h2-text">
+        <h2 class="sec-h2" style="text-align:left;">3つの保証・補償</h2>
+        <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0;">お子さまのメガネを安心してお使いいただけるよう、<br>ご購入後もずっとサポートいたします。</p>
+      </div>
       <img src="images/kiririn.png" alt="キッズ保証マスコット" class="warranty-mascot">
     </div>
-    <p class="sec-lead" style="text-align:center; max-width:520px; margin:0 auto 8px;">お子さまのメガネを安心してお使いいただけるよう、<br>ご購入後もずっとサポートいたします。</p>
     <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。詳細条件は店舗スタッフにご確認ください。</p>
 
     <div class="warranty-scards">

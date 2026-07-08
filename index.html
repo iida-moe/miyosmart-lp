@@ -295,6 +295,12 @@
   .warranty-scard-desc  { font-size: 14.5px; color: var(--muted); line-height: 1.9; text-align: left; }
   .warranty-scard-desc strong { color: var(--blue); font-weight: 700; }
   .warranty-scard-note  { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .warranty-formula { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; margin-top: 32px; padding: 28px 20px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); }
+  .warranty-formula-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .warranty-formula-icon { height: 44px; display: flex; align-items: center; justify-content: center; }
+  .warranty-formula-icon-round { width: 56px; height: 56px; border-radius: 50%; background: var(--sky); }
+  .warranty-formula-label { font-size: 13px; font-weight: 700; color: var(--deep); white-space: nowrap; }
+  .warranty-formula-op { font-size: 26px; font-weight: 700; color: var(--muted); }
   .warranty-cta-banner { margin-top: 24px; background: #f8f2e8; border-radius: var(--r); display: flex; align-items: stretch; overflow: hidden; }
   .warranty-cta-photo { flex-shrink: 0; width: 200px; }
   .warranty-cta-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }
@@ -552,6 +558,49 @@
         </div>
         <h3 class="warranty-scard-title">アイ情補償</h3>
         <p class="warranty-scard-desc">お客様の不注意による破損・紛失は、<strong>1回目は無料</strong>、2回目以降は同一商品を<strong>50%引き</strong>でお求めいただけます。</p>
+      </div>
+    </div>
+
+    <div class="warranty-formula">
+      <div class="warranty-formula-item">
+        <div class="warranty-formula-icon">
+          <svg width="44" height="22" viewBox="0 0 44 22" fill="none">
+            <rect x="2" y="3" width="16" height="14" rx="5" fill="#dcf1f8" stroke="#3aadd4" stroke-width="2"/>
+            <rect x="26" y="3" width="16" height="14" rx="5" fill="#dcf1f8" stroke="#3aadd4" stroke-width="2"/>
+            <line x1="18" y1="9" x2="26" y2="9" stroke="#3aadd4" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="warranty-formula-label">メガネ</span>
+      </div>
+      <span class="warranty-formula-op">=</span>
+      <div class="warranty-formula-item">
+        <div class="warranty-formula-icon">
+          <svg width="44" height="22" viewBox="0 0 44 22" fill="none">
+            <rect x="2" y="3" width="16" height="14" rx="5" stroke="#3aadd4" stroke-width="2"/>
+            <rect x="26" y="3" width="16" height="14" rx="5" stroke="#3aadd4" stroke-width="2"/>
+            <line x1="18" y1="9" x2="26" y2="9" stroke="#3aadd4" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="warranty-formula-label">フレーム</span>
+      </div>
+      <span class="warranty-formula-op">+</span>
+      <div class="warranty-formula-item">
+        <div class="warranty-formula-icon">
+          <svg width="44" height="26" viewBox="0 0 44 26" fill="none">
+            <circle cx="16" cy="13" r="11" fill="#bfe8f8"/>
+            <circle cx="28" cy="13" r="11" fill="#bfe8f8" fill-opacity=".7"/>
+          </svg>
+        </div>
+        <span class="warranty-formula-label">レンズ</span>
+      </div>
+      <span class="warranty-formula-op">+</span>
+      <div class="warranty-formula-item">
+        <div class="warranty-formula-icon warranty-formula-icon-round">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="warranty-formula-label">3つの保証・補償</span>
       </div>
     </div>
 

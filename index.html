@@ -57,7 +57,7 @@
   .sticky-cta-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .sticky-cta-text { font-size: 13px; font-weight: 700; color: var(--deep); line-height: 1.5; }
   .sticky-cta-btns { display: flex; gap: 10px; flex-shrink: 0; }
-  .sticky-btn-primary { background: var(--orange); color: #fff; border: none; padding: 12px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; white-space: nowrap; }
+  .sticky-btn-primary { display: inline-block; background: var(--orange); color: #fff; border: none; padding: 12px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .12s; white-space: nowrap; }
   .sticky-btn-primary:hover  { background: var(--orange-d); }
   .sticky-btn-primary:active { transform: scale(.97); }
 
@@ -88,7 +88,7 @@
   .hero-v3-sub { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 30px; }
   .hero-v3-corner-blob { position: absolute; z-index: -1; width: 120px; height: 112px; bottom: -60px; right: -30px; background: var(--pale); clip-path: url(#heroBlobSmallClip); pointer-events: none; }
 
-  .btn-primary { background: var(--orange); color: #fff; border: none; padding: 19px 42px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 18px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 18px rgba(245,130,32,.32); }
+  .btn-primary { display: inline-block; background: var(--orange); color: #fff; border: none; padding: 19px 42px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 18px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 18px rgba(245,130,32,.32); }
   .btn-primary:hover  { background: var(--orange-d); }
   .btn-primary:active { transform: scale(.97); }
   .btn-primary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
@@ -459,7 +459,7 @@
         <p class="hero-v3-kicker">お子さまの近視が気になり始めた方へ</p>
         <h1>子ども近視レンズ</h1>
         <p class="hero-v3-sub">「ミヨスマート」「エシロール® ステレスト®」など近視ケアレンズを、<br>アイメガネ全店でご相談いただけます。</p>
-        <button class="btn-primary">まずは無料相談から&#9654;</button>
+        <a href="#shop-search" class="btn-primary">まずは無料相談から&#9654;</a>
       </div>
     </div>
   </div>
@@ -1021,7 +1021,7 @@
   <div class="sticky-cta-inner">
     <span class="sticky-cta-text">お子さまの近視、まずはご相談ください</span>
     <div class="sticky-cta-btns">
-      <button class="sticky-btn-primary">来店予約</button>
+      <a href="#shop-search" class="sticky-btn-primary">来店予約</a>
     </div>
   </div>
 </div>

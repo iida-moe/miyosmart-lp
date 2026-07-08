@@ -122,15 +122,15 @@
   .lead-note-line { display: inline-block; font-size: 13px; white-space: nowrap; }
 
   /* ── BRAND CARDS(ブランド別レンズの比較カード。ABOUT/PRODUCTセクション共通) ── */
-  .brand-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-top: 32px; align-items: start; }
-  .brand-card  { background: var(--white); border-radius: var(--r); padding: 28px 32px 32px; box-shadow: var(--shadow-sm); }
-  .brand-card-tab { display: block; text-align: center; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.3; padding: 16px 20px; border-radius: var(--r-sm); margin-bottom: 8px; }
+  .brand-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-top: 32px; }
+  .brand-card  { background: var(--white); border-radius: var(--r); padding: 28px 32px 32px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+  .brand-card-tab { display: block; text-align: center; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.3; padding: 16px 20px; border-radius: var(--r-sm); margin-bottom: 20px; }
   .brand-card-tab span { font-size: 16px; vertical-align: super; }
   .brand-card-badge { display: inline-block; background: var(--pale); color: var(--deep); font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 14px; }
   .brand-card-note { font-size: 15.5px; color: var(--text); line-height: 1.9; text-align: left; max-width: 560px; margin: 0 auto 20px; }
   .brand-card-footnote { display: block; text-align: right; font-size: 11px; color: var(--muted); margin-top: 4px; }
   .brand-card-note strong { color: var(--blue); font-weight: 700; }
-  .brand-card-link { display: block; text-align: right; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; }
+  .brand-card-link { display: block; text-align: right; margin-top: auto; padding-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; }
   .brand-card-link:hover { text-decoration: underline; }
 
   /* ── CONCERNS ── */

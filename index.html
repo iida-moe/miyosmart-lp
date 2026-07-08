@@ -53,7 +53,8 @@
   .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
 
   /* ── 追尾CTA(スクロール追従バー) ── */
-  .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--white); border-top: 1px solid var(--rule); box-shadow: 0 -4px 20px rgba(36,74,107,.12); padding: 12px 20px; }
+  .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--white); border-top: 1px solid var(--rule); box-shadow: 0 -4px 20px rgba(36,74,107,.12); padding: 12px 20px; transition: transform .25s, opacity .25s; }
+  .sticky-cta.is-hidden { transform: translateY(100%); opacity: 0; pointer-events: none; }
   .sticky-cta-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .sticky-cta-text { font-size: 13px; font-weight: 700; color: var(--deep); line-height: 1.5; }
   .sticky-cta-btns { display: flex; gap: 10px; flex-shrink: 0; }
@@ -1186,6 +1187,19 @@ function checkBackBtnVisibility(){
 }
 window.addEventListener('scroll',checkBackBtnVisibility,{passive:true});
 window.addEventListener('resize',updateBackBtnPos);
+
+// FV表示中はスティッキーCTAを隠す
+(function(){
+  const stickyCta=document.querySelector('.sticky-cta');
+  const hero=document.querySelector('.hero-v3');
+  if(!stickyCta||!hero)return;
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      stickyCta.classList.toggle('is-hidden',entry.isIntersecting);
+    });
+  },{threshold:0});
+  io.observe(hero);
+})();
 // HeartRails APIで7桁郵便番号→緯度経度を取得(建物レベル精度)
 async function fetchZipCoord(zip7){
   try{

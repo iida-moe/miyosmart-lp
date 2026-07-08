@@ -108,6 +108,9 @@
 
   /* ── ABOUT(取り扱いレンズについて) ── */
   .sec-about  { background: var(--cream); padding-bottom: 40px; }
+  .brand-cards-arrow { display: flex; justify-content: center; margin-top: 32px; }
+  .brand-cards-arrow svg { transition: transform .2s; }
+  .brand-cards-arrow:hover svg { transform: translateY(3px); }
   .sec-about .wrap { max-width: 1160px; }
   .about-h2   { font-family: var(--serif); font-size: 38px; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; }
   .highlight-marker { background: none; color: var(--deep); font-weight: 700; border-bottom: 5px solid #ffd93d; padding-bottom: 2px; }
@@ -475,6 +478,9 @@
         <a class="brand-card-link" href="https://stellest.jp/" target="_blank" rel="noopener">エシロール公式サイトで詳しく見る ›</a>
       </div>
     </div>
+    <a href="#warranty" class="brand-cards-arrow" aria-label="保証・補償を見る">
+      <svg width="60" height="34" viewBox="0 0 28 16" fill="none"><path d="M2 2l12 12L26 2" stroke="#5faed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </div>
 </section>
 

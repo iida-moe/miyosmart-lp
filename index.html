@@ -259,12 +259,14 @@
 
   /* ── WHY ── */
   .sec-why  { background: var(--sky); }
-  .why-grid4 { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 28px; padding-top: 20px; }
-  .why-grid4-photo, .why-grid4-photo-ph { border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 1/1; box-shadow: var(--shadow-sm); }
+  .sec-why .wrap { max-width: 1160px; }
+  .why-grid4 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 28px; padding-top: 20px; }
+  .why-grid4-item { background: var(--white); border-radius: var(--r); padding: 20px 20px 24px; box-shadow: var(--shadow-sm); }
+  .why-grid4-photo, .why-grid4-photo-ph { border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 1/1; }
   .why-grid4-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; display: block; }
   .why-grid4-photo-ph { background: linear-gradient(135deg, var(--pale), var(--sky)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--muted); font-size: 13px; }
   .why-grid4-cam { font-size: 26px; opacity: .6; }
-  .why-grid4-cap { margin-top: 8px; font-size: 15px; font-weight: 700; color: var(--deep); line-height: 1.5; }
+  .why-grid4-cap { margin-top: 14px; font-size: 15px; font-weight: 700; color: var(--deep); line-height: 1.5; }
   .why-grid4-sub { margin-top: 6px; font-size: 12.5px; color: var(--muted); line-height: 1.7; }
   .featured-label { position: absolute; top: -14px; left: 22px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 4px 14px; border-radius: var(--r-pill); }
   .w-icon    { width: 60px; height: 60px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }

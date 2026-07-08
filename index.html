@@ -126,6 +126,12 @@
   .brand-cards-cta-btn { flex-shrink: 0; background: var(--orange); color: #fff; font-size: 13.5px; font-weight: 700; padding: 12px 24px; border-radius: var(--r-pill); text-decoration: none; white-space: nowrap; }
   .brand-cards-cta-btn:hover { background: var(--orange-d); }
   .brand-card-footnote { display: block; text-align: right; font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .brand-card-recommend { border: 1.5px solid var(--rule); border-radius: var(--r-sm); padding: 20px 24px; max-width: 560px; margin: 0 auto 20px; }
+  .brand-card-recommend-title { font-size: 15px; font-weight: 700; color: var(--deep); text-align: center; margin-bottom: 12px; }
+  .brand-card-recommend-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .brand-card-recommend-list li { position: relative; padding-left: 26px; font-size: 14px; color: var(--text); line-height: 1.6; }
+  .brand-card-recommend-list li::before { content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px; border-radius: 50%; background: var(--blue); }
+  .brand-card-recommend-list li::after { content: ""; position: absolute; left: 5px; top: 6px; width: 8px; height: 4px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); }
   .brand-card-link { display: block; text-align: right; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; }
   .brand-card-link:hover { text-decoration: underline; }
 
@@ -470,11 +476,26 @@
       <div class="brand-card">
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>
         <p class="brand-card-note">お子さまの視力はかけがえのないものです。<br>ミヨスマートは、現在世界50か国以上&#8251;で販売されている小児向けの近視に対応する特殊な構造のメガネレンズです。<span class="brand-card-footnote">&#8251;2025年9月時点</span></p>
+        <div class="brand-card-recommend">
+          <p class="brand-card-recommend-title">おすすめポイント</p>
+          <ul class="brand-card-recommend-list">
+            <li>通常のメガネレンズとほぼ変わらない自然な見た目</li>
+            <li>お子さまの日常使いにも配慮した素材</li>
+          </ul>
+        </div>
         <a class="brand-card-link" href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">HOYA公式サイトで詳しく見る ›</a>
       </div>
       <div class="brand-card">
         <p class="brand-card-tab">Essilor<span>&reg;</span>Stellest<span>&reg;</span>&nbsp;&nbsp;(エシロール ステレスト)</p>
-        <p class="brand-card-note">スマートフォンやタブレット端末の普及、屋外活動時間の変化などにより、子どもの目を取り巻く環境は大きく変化しています。<br>エシロール&reg;ステレスト&reg;は、エシロール社が長年培ってきた光学設計技術をもとに、独自のH.A.L.T.&reg;(Highly Aspherical Lenslet Target)テクノロジーを採用した眼鏡レンズです。UV・グレア対策や、耐キズ・防汚のハイスペックコートも備えています。</p>
+        <p class="brand-card-note">スマートフォンやタブレット端末の普及、屋外活動時間の変化などにより、子どもの目を取り巻く環境は大きく変化しています。<br>エシロール&reg;ステレスト&reg;は、エシロール社が長年培ってきた光学設計技術をもとに、独自のH.A.L.T.&reg;(Highly Aspherical Lenslet Target)テクノロジーを採用した眼鏡レンズです。</p>
+        <div class="brand-card-recommend">
+          <p class="brand-card-recommend-title">おすすめポイント</p>
+          <ul class="brand-card-recommend-list">
+            <li>UV・グレア対策で、屋外でも快適な視界</li>
+            <li>耐キズ・防汚のハイスペックコート採用</li>
+            <li>カラーは全6色、好きな色を選べる楽しさ</li>
+          </ul>
+        </div>
         <a class="brand-card-link" href="https://stellest.jp/" target="_blank" rel="noopener">エシロール公式サイトで詳しく見る ›</a>
       </div>
     </div>

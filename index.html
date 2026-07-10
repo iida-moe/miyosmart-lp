@@ -102,10 +102,10 @@
   .warranty-h2-text { text-align: left; }
   .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; }
-  .warranty-catchbubble { position: absolute; top: -76px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blue); z-index: 2; }
-  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); border-style: solid; }
-  .warranty-catchbubble::before { bottom: -14px; border-width: 14px 8px 0 8px; border-color: var(--blue) transparent transparent transparent; }
-  .warranty-catchbubble::after { bottom: -10.5px; border-width: 11px 6px 0 6px; border-color: #fff transparent transparent transparent; }
+  .warranty-catchbubble { position: absolute; top: 6px; right: 100%; margin-right: 16px; white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blue); z-index: 2; }
+  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-style: solid; }
+  .warranty-catchbubble::before { left: 100%; border-width: 8px 0 8px 14px; border-color: transparent transparent transparent var(--blue); }
+  .warranty-catchbubble::after { left: 100%; margin-left: -3.5px; border-width: 6px 0 6px 11px; border-color: transparent transparent transparent #fff; }
   .warranty-mascot { height: 260px; width: auto; flex-shrink: 0; display: block; }
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
 

@@ -98,14 +98,14 @@
   section { padding: var(--py) 0; }
   .sec-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 12px; }
   .sec-h2  { font-family: var(--serif); font-size: 52px; font-weight: 700; color: var(--deep); line-height: 1.4; text-wrap: balance; margin-bottom: 14px; }
-  .warranty-h2-row { display: flex; align-items: flex-start; justify-content: flex-start; gap: 8px; margin-bottom: 8px; }
-  .warranty-h2-text { text-align: left; margin-top: 62px; }
+  .warranty-h2-row { display: flex; align-items: center; justify-content: flex-start; gap: 8px; margin-bottom: 8px; }
+  .warranty-h2-text { text-align: left; }
   .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; }
-  .warranty-catchbubble { position: absolute; top: 6px; right: 100%; margin-right: 16px; white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blue); z-index: 2; }
-  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-style: solid; }
-  .warranty-catchbubble::before { left: 100%; border-width: 8px 0 8px 14px; border-color: transparent transparent transparent var(--blue); }
-  .warranty-catchbubble::after { left: 100%; margin-left: -3.5px; border-width: 6px 0 6px 11px; border-color: transparent transparent transparent #fff; }
+  .warranty-catchbubble { position: absolute; top: -74px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blue); z-index: 2; }
+  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); border-style: solid; }
+  .warranty-catchbubble::before { bottom: -14px; border-width: 14px 8px 0 8px; border-color: var(--blue) transparent transparent transparent; }
+  .warranty-catchbubble::after { bottom: -10.5px; border-width: 11px 6px 0 6px; border-color: #fff transparent transparent transparent; }
   .warranty-mascot { height: 260px; width: auto; flex-shrink: 0; display: block; }
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
 
@@ -532,7 +532,7 @@
       </div>
       <div class="warranty-mascot-wrap">
         <span class="warranty-catchbubble">壊れても、度が変わっても大丈夫！</span>
-        <img src="images/kiririn/kiririn-thumbsup2.png" alt="キッズ保証マスコット" class="warranty-mascot">
+        <img src="images/kiririn/kiririn-thumbsup.png" alt="キッズ保証マスコット" class="warranty-mascot">
       </div>
     </div>
 

@@ -101,11 +101,12 @@
   .warranty-h2-row { display: flex; align-items: center; justify-content: flex-start; gap: 8px; margin-bottom: 8px; }
   .warranty-h2-text { text-align: left; }
   .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
-  .warranty-catchbubble { position: relative; display: inline-block; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blue); margin-bottom: 16px; }
-  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-style: solid; }
-  .warranty-catchbubble::before { right: -14px; border-width: 8px 0 8px 14px; border-color: transparent transparent transparent var(--blue); }
-  .warranty-catchbubble::after { right: -10px; border-width: 6px 0 6px 11px; border-color: transparent transparent transparent #fff; }
-  .warranty-mascot { height: 260px; width: auto; flex-shrink: 0; }
+  .warranty-mascot-wrap { position: relative; flex-shrink: 0; }
+  .warranty-catchbubble { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blue); z-index: 2; }
+  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); border-style: solid; }
+  .warranty-catchbubble::before { bottom: -14px; border-width: 14px 8px 0 8px; border-color: var(--blue) transparent transparent transparent; }
+  .warranty-catchbubble::after { bottom: -10.5px; border-width: 11px 6px 0 6px; border-color: #fff transparent transparent transparent; }
+  .warranty-mascot { height: 260px; width: auto; flex-shrink: 0; display: block; }
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
 
   /* ── PROBLEM ── */
@@ -525,12 +526,14 @@
   <div class="wrap">
     <div class="warranty-h2-row">
       <div class="warranty-h2-text">
-        <span class="warranty-catchbubble">壊れても、度が変わっても大丈夫！</span>
         <h2 class="sec-h2" style="text-align:left;">3つの保証・補償</h2>
         <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0;">お子さまのメガネを安心してお使いいただけるよう、<br>ご購入後もずっとサポートいたします。</p>
         <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。</p>
       </div>
-      <img src="images/kiririn/kiririn-thumbsup2.png" alt="キッズ保証マスコット" class="warranty-mascot">
+      <div class="warranty-mascot-wrap">
+        <span class="warranty-catchbubble">壊れても、度が変わっても大丈夫！</span>
+        <img src="images/kiririn/kiririn-thumbsup2.png" alt="キッズ保証マスコット" class="warranty-mascot">
+      </div>
     </div>
 
     <div class="warranty-scards">

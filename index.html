@@ -102,10 +102,14 @@
   .warranty-h2-text { text-align: left; }
   .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; margin-bottom: 24px; }
-  .warranty-catchbubble { position: absolute; top: -24px; left: 100%; margin-left: 10px; white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 9px 18px; border-radius: 18px; border: 2px solid var(--blue); z-index: 2; }
+  .warranty-catchbubble { position: absolute; white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 9px 18px; border-radius: 18px; border: 2px solid var(--blue); z-index: 2; }
   .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-style: solid; }
-  .warranty-catchbubble::before { right: 100%; border-width: 7px 10px 7px 0; border-color: transparent var(--blue) transparent transparent; }
-  .warranty-catchbubble::after { right: 100%; margin-right: -3px; border-width: 5.5px 8px 5.5px 0; border-color: transparent #fff transparent transparent; }
+  .warranty-catchbubble-left { top: -66px; right: 100%; margin-right: 10px; }
+  .warranty-catchbubble-left::before { left: 100%; border-width: 7px 0 7px 10px; border-color: transparent transparent transparent var(--blue); }
+  .warranty-catchbubble-left::after { left: 100%; margin-left: -3px; border-width: 5.5px 0 5.5px 8px; border-color: transparent transparent transparent #fff; }
+  .warranty-catchbubble-right { top: -8px; left: 100%; margin-left: 10px; font-size: 14px; padding: 7px 16px; }
+  .warranty-catchbubble-right::before { right: 100%; border-width: 6px 9px 6px 0; border-color: transparent var(--blue) transparent transparent; }
+  .warranty-catchbubble-right::after { right: 100%; margin-right: -3px; border-width: 4.5px 7px 4.5px 0; border-color: transparent #fff transparent transparent; }
   .warranty-mascot { height: 230px; width: auto; flex-shrink: 0; display: block; }
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
 
@@ -293,17 +297,18 @@
   .sec-warranty { background: radial-gradient(140% 90% at 50% -10%, #f2fbfd 0%, var(--sky) 55%); }
   .sec-warranty .wrap { max-width: 1160px; }
   .warranty-age-note { display: block; text-align: left; color: var(--muted); font-size: 12.5px; margin: 6px 0 32px; }
-  .warranty-scards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 12px; }
+  .warranty-scards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 28px; }
   .warranty-scard  { position: relative; background: var(--white); border-radius: var(--r); padding: 32px 28px; box-shadow: var(--shadow-sm); text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
-  .warranty-scard-arrow { position: absolute; top: -32px; left: 26px; font-size: 22px; font-weight: 700; color: var(--blue); }
+  .warranty-scard-ribbon { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: var(--blue); color: #fff; font-size: 13px; font-weight: 700; padding: 7px 18px; border-radius: var(--r-pill); box-shadow: 0 4px 10px rgba(95,174,216,.4); }
   .warranty-scard-head { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; margin-bottom: 20px; border-bottom: 1px solid var(--rule); }
-  .warranty-scard-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 2px solid var(--blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .warranty-scard-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .warranty-scard-icon svg { width: 28px; height: 28px; }
   .warranty-scard-titlewrap { display: flex; flex-direction: column; gap: 2px; }
   .warranty-scard-title { font-size: 22px; font-weight: 700; color: var(--deep); line-height: 1.2; margin: 0; }
   .warranty-scard-scene { font-size: 13.5px; font-weight: 700; color: var(--blue); line-height: 1.2; }
   .warranty-scard-stat { margin-bottom: 14px; }
-  .warranty-scard-stat-num { font-family: var(--serif); font-size: 26px; font-weight: 800; color: var(--blue); }
+  .warranty-scard-stat-num { position: relative; font-family: var(--serif); font-size: 26px; font-weight: 800; color: var(--blue); }
+  .warranty-scard-stat-sparkle { position: relative; top: -14px; margin-left: 2px; }
   .warranty-scard-stat-sub { font-family: var(--serif); font-size: 15px; font-weight: 700; color: var(--deep); margin-left: 8px; }
   .warranty-scard-desc  { font-size: 14.5px; color: var(--muted); line-height: 1.9; text-align: left; }
   .warranty-scard-note  { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
@@ -527,25 +532,25 @@
 <section class="sec-warranty" id="warranty">
   <div class="wrap">
     <div class="warranty-h2-row">
-      <div class="warranty-mascot-wrap">
-        <img src="images/kiririn/kiririn-point.png" alt="キッズ保証マスコット" class="warranty-mascot">
-        <span class="warranty-catchbubble">壊れても、度が変わっても大丈夫！</span>
-      </div>
       <div class="warranty-h2-text">
         <h2 class="sec-h2" style="text-align:left;">3つの保証・補償</h2>
         <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0;">お子さまのメガネを安心してお使いいただけるよう、ご購入後もずっとサポートいたします。</p>
         <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。</p>
       </div>
+      <div class="warranty-mascot-wrap">
+        <span class="warranty-catchbubble warranty-catchbubble-left">壊れても、度が変わっても大丈夫！</span>
+        <img src="images/kiririn/kiririn-point.png" alt="キッズ保証マスコット" class="warranty-mascot">
+        <span class="warranty-catchbubble warranty-catchbubble-right">まかせてね！</span>
+      </div>
     </div>
 
     <div class="warranty-scards">
       <div class="warranty-scard">
-        <span class="warranty-scard-arrow">↓</span>
         <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
             <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
-              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#5faed8" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M9 12.5L11.5 15L17 10" stroke="#5faed8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 12.5L11.5 15L17 10" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="warranty-scard-titlewrap">
@@ -553,13 +558,14 @@
             <span class="warranty-scard-scene">通常使用で壊れたとき</span>
           </div>
         </div>
-        <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1年間</span><span class="warranty-scard-stat-sub">無料で交換</span></div>
+        <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1年間<svg class="warranty-scard-stat-sparkle" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 0C7 4 10 7 14 7C10 7 7 10 7 14C7 10 4 7 0 7C4 7 7 4 7 0Z" fill="#ffd93d"/></svg></span><span class="warranty-scard-stat-sub">無料で交換</span></div>
         <p class="warranty-scard-desc">通常のお取り扱いでフレーム・レンズに損傷が生じた場合に対応いたします。</p>
       </div>
       <div class="warranty-scard">
+        <span class="warranty-scard-ribbon">度数が変わっても安心！</span>
         <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
-            <svg width="22" height="22" viewBox="0 0 512 512" fill="#5faed8">
+            <svg width="22" height="22" viewBox="0 0 512 512" fill="#ffffff">
               <path d="M512,220.891h-20.453c-5.531-16.641-14.797-31.594-26.891-43.656c-20.094-20.125-48.063-32.625-78.75-32.625
                 c-49.438,0.016-91.266,32.219-105.828,76.766c-7.641-2.25-15.703-3.5-24.078-3.5c-8.359,0-16.438,1.25-24.078,3.5
                 c-14.563-44.547-56.391-76.75-105.828-76.766c-30.688,0-58.656,12.5-78.75,32.625c-12.094,12.063-21.359,27.016-26.891,43.656H0
@@ -580,14 +586,14 @@
             <span class="warranty-scard-scene">度数が変わったとき</span>
           </div>
         </div>
-        <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1年間</span><span class="warranty-scard-stat-sub">何度でも無料</span></div>
+        <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1年間<svg class="warranty-scard-stat-sparkle" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 0C7 4 10 7 14 7C10 7 7 10 7 14C7 10 4 7 0 7C4 7 7 4 7 0Z" fill="#ffd93d"/></svg></span><span class="warranty-scard-stat-sub">何度でも無料</span></div>
         <p class="warranty-scard-desc">度数が変わっても、レンズの度数交換ができます。<span class="warranty-scard-note">※眼科を受診し、発行された処方箋をご持参ください。</span></p>
       </div>
       <div class="warranty-scard">
         <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
             <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
-              <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#5faed8" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="warranty-scard-titlewrap">
@@ -595,7 +601,7 @@
             <span class="warranty-scard-scene">壊した・なくしたとき</span>
           </div>
         </div>
-        <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1回目</span><span class="warranty-scard-stat-sub">無料</span></div>
+        <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1回目<svg class="warranty-scard-stat-sparkle" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 0C7 4 10 7 14 7C10 7 7 10 7 14C7 10 4 7 0 7C4 7 7 4 7 0Z" fill="#ffd93d"/></svg></span><span class="warranty-scard-stat-sub">無料</span></div>
         <p class="warranty-scard-desc">お客様の不注意による破損・紛失に対応します。2回目以降も同一商品を50%引きでお求めいただけます。</p>
       </div>
     </div>

@@ -98,15 +98,15 @@
   section { padding: var(--py) 0; }
   .sec-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 12px; }
   .sec-h2  { font-family: var(--serif); font-size: 52px; font-weight: 700; color: var(--deep); line-height: 1.4; text-wrap: balance; margin-bottom: 14px; }
-  .warranty-h2-row { display: flex; align-items: flex-end; justify-content: flex-start; gap: 8px; margin-bottom: 4px; }
+  .warranty-h2-row { display: flex; align-items: flex-end; justify-content: flex-start; gap: 24px; margin-bottom: 4px; }
   .warranty-h2-text { text-align: left; }
   .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; }
-  .warranty-catchbubble { position: absolute; top: -74px; left: calc(50% + 14px); transform: translateX(-50%); white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blue); z-index: 2; }
-  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); border-style: solid; }
-  .warranty-catchbubble::before { bottom: -14px; border-width: 14px 8px 0 8px; border-color: var(--blue) transparent transparent transparent; }
-  .warranty-catchbubble::after { bottom: -10.5px; border-width: 11px 6px 0 6px; border-color: #fff transparent transparent transparent; }
-  .warranty-mascot { height: 260px; width: auto; flex-shrink: 0; display: block; }
+  .warranty-catchbubble { position: absolute; top: 2px; left: 100%; margin-left: 10px; white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 9px 18px; border-radius: 18px; border: 2px solid var(--blue); z-index: 2; }
+  .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-style: solid; }
+  .warranty-catchbubble::before { right: 100%; border-width: 7px 10px 7px 0; border-color: transparent var(--blue) transparent transparent; }
+  .warranty-catchbubble::after { right: 100%; margin-right: -3px; border-width: 5.5px 8px 5.5px 0; border-color: transparent #fff transparent transparent; }
+  .warranty-mascot { height: 230px; width: auto; flex-shrink: 0; display: block; }
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
 
   /* ── PROBLEM ── */
@@ -526,14 +526,14 @@
 <section class="sec-warranty" id="warranty">
   <div class="wrap">
     <div class="warranty-h2-row">
+      <div class="warranty-mascot-wrap">
+        <img src="images/kiririn/kiririn-point.png" alt="キッズ保証マスコット" class="warranty-mascot">
+        <span class="warranty-catchbubble">壊れても、度が変わっても大丈夫！</span>
+      </div>
       <div class="warranty-h2-text">
         <h2 class="sec-h2" style="text-align:left;">3つの保証・補償</h2>
-        <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0;">お子さまのメガネを安心してお使いいただけるよう、<br>ご購入後もずっとサポートいたします。</p>
+        <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0;">お子さまのメガネを安心してお使いいただけるよう、ご購入後もずっとサポートいたします。</p>
         <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。</p>
-      </div>
-      <div class="warranty-mascot-wrap">
-        <span class="warranty-catchbubble">壊れても、度が変わっても大丈夫！</span>
-        <img src="images/kiririn/kiririn-thumbsup.png" alt="キッズ保証マスコット" class="warranty-mascot">
       </div>
     </div>
 

@@ -265,15 +265,14 @@
   /* ── WHY ── */
   .sec-why  { background: var(--sky); }
   .sec-why .wrap { max-width: 1160px; }
-  .why-grid4 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 28px; padding-top: 20px; }
-  .why-grid4-item { background: var(--white); border-radius: var(--r); padding: 20px 20px 24px; box-shadow: var(--shadow-sm); }
-  .why-grid4-photo, .why-grid4-photo-ph { border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 1/1; }
-  .why-grid4-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; display: block; }
-  .why-grid4-photo-ph { background: linear-gradient(135deg, var(--pale), var(--sky)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--muted); font-size: 13px; }
-  .why-grid4-cam { font-size: 26px; opacity: .6; }
-  .why-grid4-cap { margin-top: 14px; font-size: 15px; font-weight: 700; color: var(--deep); line-height: 1.5; }
-  .why-grid4-sub { margin-top: 6px; font-size: 12.5px; color: var(--muted); line-height: 1.7; }
   .why-grid4-imgnote { text-align: right; font-size: 11px; color: var(--muted); margin-top: 10px; }
+  .why-split-new { display: flex; align-items: center; gap: 48px; margin-top: 28px; padding-top: 20px; }
+  .why-split-photo { flex-shrink: 0; width: 320px; height: 320px; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .why-split-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; display: block; }
+  .why-split-list { flex: 1; display: flex; flex-direction: column; gap: 28px; }
+  .why-split-title { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; color: var(--blue); margin: 0; }
+  .why-split-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+  .why-split-desc { margin: 6px 0 0 18px; font-size: 14px; color: var(--text); line-height: 1.8; }
   .featured-label { position: absolute; top: -14px; left: 22px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 4px 14px; border-radius: var(--r-pill); }
   .w-icon    { width: 60px; height: 60px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
   .why-title { font-size: 17px; font-weight: 700; color: var(--deep); line-height: 1.45; margin-bottom: 10px; }
@@ -413,7 +412,9 @@
     .brand-card-tab { font-size: 19px; padding: 13px 16px; }
     .brand-card { padding: 32px 24px; }
     .stat-grid { grid-template-columns: 1fr; }
-    .why-grid4 { grid-template-columns: 1fr; gap: 24px; }
+    .why-split-new { flex-direction: column; gap: 24px; }
+    .why-split-photo { width: 220px; height: 220px; }
+    .why-split-title { font-size: 18px; }
     .shop-hero-card { flex-direction: column; }
     .shop-hero-photo { width: 100%; min-height: 180px; }
     .shop-hero-body { text-align: center; }
@@ -671,27 +672,23 @@
   <div class="wrap">
     <h2 class="sec-h2">子ども向けトータルサポート</h2>
     <p class="sec-lead">良いレンズでも、掛け続けてもらわなければ意味がありません。<br>アイメガネでは、レンズ以外の部分でもお子様と保護者様を支えます。</p>
-    <div class="why-grid4">
-      <div class="why-grid4-item">
-        <div class="why-grid4-photo">
-          <img src="images/frame-select-photo.png" alt="並んだメガネフレーム" loading="lazy" style="object-position: center;">
-        </div>
-        <p class="why-grid4-cap">君だけの、自分らしい一本を見つけよう</p>
-        <p class="why-grid4-sub">軽量・安全な子ども専用ブランドを複数取り扱い。デザイン・カラーも豊富だから、楽しみながらメガネ選びができます。</p>
+    <div class="why-split-new">
+      <div class="why-split-photo">
+        <img src="images/fitting-scene.png" alt="スタッフがお子さまにメガネを合わせている様子" loading="lazy">
       </div>
-      <div class="why-grid4-item">
-        <div class="why-grid4-photo">
-          <img src="images/fitting-scene.png" alt="スタッフがお子さまにメガネを合わせている様子" loading="lazy">
+      <div class="why-split-list">
+        <div class="why-split-item">
+          <p class="why-split-title"><span class="why-split-dot"></span>君だけの、自分らしい一本を見つけよう</p>
+          <p class="why-split-desc">軽量・安全な子ども専用ブランドを複数取り扱い。デザイン・カラーも豊富だから、楽しみながらメガネ選びができます。</p>
         </div>
-        <p class="why-grid4-cap">眼鏡作製技能士が対応</p>
-        <p class="why-grid4-sub">眼鏡作製技能士が、お子さまの顔に合わせて調整します。</p>
-      </div>
-      <div class="why-grid4-item">
-        <div class="why-grid4-photo">
-          <img src="images/lens.png" alt="透明なレンズ" loading="lazy">
+        <div class="why-split-item">
+          <p class="why-split-title"><span class="why-split-dot"></span>眼鏡作製技能士が対応</p>
+          <p class="why-split-desc">アイメガネでは眼鏡作製技能士(国家資格)が在籍しています。子どもの成長に合わせてかけ心地を調整。</p>
         </div>
-        <p class="why-grid4-cap">無料メンテナンス</p>
-        <p class="why-grid4-sub">STX撥水膜コートを標準装備。調整も何度でも無料です。</p>
+        <div class="why-split-item">
+          <p class="why-split-title"><span class="why-split-dot"></span>いつでも安心、無料メンテナンス</p>
+          <p class="why-split-desc">転んだりして汚れたり、フレームが曲がったりしても大丈夫。アイメガネにお持ちいただければ何度でも無料で調整します。</p>
+        </div>
       </div>
     </div>
     <p class="why-grid4-imgnote">※画像はイメージです。</p>

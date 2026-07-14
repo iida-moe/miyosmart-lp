@@ -307,6 +307,7 @@
   .warranty-scard-note  { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; text-wrap: pretty; }
   .warranty-formula { margin: 24px auto 0; max-width: 760px; padding: 14px 32px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); }
   .warranty-formula-lead { text-align: center; font-size: 15px; color: var(--deep); line-height: 1.6; margin-bottom: 6px; }
+  .warranty-formula-sparkle { vertical-align: middle; margin: 0 6px; }
   .warranty-formula-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; }
   .warranty-formula-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
   .warranty-formula-icon { height: 62px; display: flex; align-items: center; justify-content: center; }
@@ -612,35 +613,25 @@
     </div>
 
     <div class="warranty-formula">
-      <p class="warranty-formula-lead">アイメガネでは、お好きなフレーム・レンズ・保証/補償がすべてセットでご提供しています。</p>
+      <p class="warranty-formula-lead"><svg class="warranty-formula-sparkle" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M7 0C7 4 10 7 14 7C10 7 7 10 7 14C7 10 4 7 0 7C4 7 7 4 7 0Z" fill="#5faed8"/></svg>アイメガネでは、メガネ一式に以下が含まれています。<svg class="warranty-formula-sparkle" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M7 0C7 4 10 7 14 7C10 7 7 10 7 14C7 10 4 7 0 7C4 7 7 4 7 0Z" fill="#5faed8"/></svg></p>
       <div class="warranty-formula-row">
       <div class="warranty-formula-item">
-        <div class="warranty-formula-icon">
-          <svg width="62" height="31" viewBox="0 0 44 22" fill="none">
-            <rect x="2" y="3" width="16" height="14" rx="5" fill="#dcf1f8" stroke="#3aadd4" stroke-width="2"/>
-            <rect x="26" y="3" width="16" height="14" rx="5" fill="#dcf1f8" stroke="#3aadd4" stroke-width="2"/>
-            <line x1="18" y1="9" x2="26" y2="9" stroke="#3aadd4" stroke-width="2"/>
-          </svg>
-        </div>
-        <span class="warranty-formula-label">メガネ</span>
-      </div>
-      <span class="warranty-formula-op">=</span>
-      <div class="warranty-formula-item">
-        <div class="warranty-formula-icon">
-          <svg width="62" height="31" viewBox="0 0 44 22" fill="none">
-            <rect x="2" y="3" width="16" height="14" rx="5" stroke="#3aadd4" stroke-width="2"/>
-            <rect x="26" y="3" width="16" height="14" rx="5" stroke="#3aadd4" stroke-width="2"/>
-            <line x1="18" y1="9" x2="26" y2="9" stroke="#3aadd4" stroke-width="2"/>
+        <div class="warranty-formula-icon warranty-formula-icon-round">
+          <svg width="36" height="36" viewBox="0 0 26 26" fill="none">
+            <circle cx="7" cy="15.5" r="4.2" stroke="#5faed8" stroke-width="2.2"/>
+            <circle cx="19" cy="15.5" r="4.2" stroke="#5faed8" stroke-width="2.2"/>
+            <path d="M11.2 14.5C11.6 13 12.3 12 13 12C13.7 12 14.4 13 14.8 14.5" stroke="#5faed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2.8 14.5V12.3C2.8 11.6 3.3 11 4 11H4.8M23.2 14.5V12.3C23.2 11.6 22.7 11 22 11H21.2" stroke="#5faed8" stroke-width="2.2" stroke-linecap="round"/>
           </svg>
         </div>
         <span class="warranty-formula-label">フレーム</span>
       </div>
       <span class="warranty-formula-op">+</span>
       <div class="warranty-formula-item">
-        <div class="warranty-formula-icon">
-          <svg width="62" height="37" viewBox="0 0 44 26" fill="none">
-            <circle cx="16" cy="13" r="11" fill="#bfe8f8"/>
-            <circle cx="28" cy="13" r="11" fill="#bfe8f8" fill-opacity=".7"/>
+        <div class="warranty-formula-icon warranty-formula-icon-round">
+          <svg width="36" height="36" viewBox="0 0 44 26" fill="none">
+            <circle cx="16" cy="13" r="11" stroke="#5faed8" stroke-width="2.2"/>
+            <circle cx="28" cy="13" r="11" stroke="#5faed8" stroke-width="2.2"/>
           </svg>
         </div>
         <span class="warranty-formula-label">レンズ</span>
@@ -649,7 +640,8 @@
       <div class="warranty-formula-item">
         <div class="warranty-formula-icon warranty-formula-icon-round">
           <svg width="36" height="36" viewBox="0 0 26 26" fill="none">
-            <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#3aadd4" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#5faed8" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M9 12.5L11.5 15L17 10" stroke="#5faed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <span class="warranty-formula-label">3つの保証・補償</span>

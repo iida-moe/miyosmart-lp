@@ -100,13 +100,11 @@
   .sec-h2  { font-family: var(--serif); font-size: 52px; font-weight: 700; color: var(--deep); line-height: 1.4; text-wrap: balance; margin-bottom: 14px; }
   .warranty-h2-row { display: flex; align-items: flex-end; justify-content: flex-start; gap: 24px; margin-bottom: 4px; }
   .warranty-h2-text { text-align: left; }
+  .warranty-subtitle { display: block; font-size: 15px; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
   .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; margin-bottom: 24px; }
   .warranty-catchbubble { position: absolute; white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 9px 18px; border-radius: 18px; border: 2px solid var(--blue); z-index: 2; }
   .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-style: solid; }
-  .warranty-catchbubble-left { top: -66px; right: 100%; margin-right: 10px; }
-  .warranty-catchbubble-left::before { left: 100%; border-width: 7px 0 7px 10px; border-color: transparent transparent transparent var(--blue); }
-  .warranty-catchbubble-left::after { left: 100%; margin-left: -3px; border-width: 5.5px 0 5.5px 8px; border-color: transparent transparent transparent #fff; }
   .warranty-catchbubble-right { top: -8px; left: 100%; margin-left: 10px; font-size: 14px; padding: 7px 16px; }
   .warranty-catchbubble-right::before { right: 100%; border-width: 6px 9px 6px 0; border-color: transparent var(--blue) transparent transparent; }
   .warranty-catchbubble-right::after { right: 100%; margin-right: -3px; border-width: 4.5px 7px 4.5px 0; border-color: transparent #fff transparent transparent; }
@@ -533,13 +531,13 @@
   <div class="wrap">
     <div class="warranty-h2-row">
       <div class="warranty-h2-text">
+        <span class="warranty-subtitle">壊れても、度が変わっても大丈夫！</span>
         <h2 class="sec-h2" style="text-align:left;">3つの保証・補償</h2>
         <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0;">お子さまのメガネを安心してお使いいただけるよう、ご購入後もずっとサポートいたします。</p>
         <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。</p>
       </div>
       <div class="warranty-mascot-wrap">
-        <span class="warranty-catchbubble warranty-catchbubble-left">壊れても、度が変わっても大丈夫！</span>
-        <img src="images/kiririn/kiririn-point.png" alt="キッズ保証マスコット" class="warranty-mascot">
+        <img src="images/kiririn/kiririn-thumbsup.png" alt="キッズ保証マスコット" class="warranty-mascot">
         <span class="warranty-catchbubble warranty-catchbubble-right">まかせてね！</span>
       </div>
     </div>

@@ -102,7 +102,7 @@
   .warranty-h2-text { text-align: left; }
   .warranty-subtitle { display: block; font-size: 15px; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
   .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
-  .warranty-h2-accent { color: var(--orange); }
+  .warranty-h2-accent { color: var(--orange); font-size: 1.5em; line-height: 1; vertical-align: -0.08em; display: inline-block; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; margin-bottom: 24px; }
   .warranty-catchbubble { position: absolute; white-space: nowrap; background: #fff; color: var(--deep); font-weight: 700; font-size: 15px; padding: 9px 18px; border-radius: 999px; border: 2px solid var(--blue); z-index: 2; }
   .warranty-catchbubble::before, .warranty-catchbubble::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-style: solid; }
@@ -300,15 +300,15 @@
   .warranty-scard  { position: relative; background: var(--white); border-radius: var(--r); padding: 32px 28px; box-shadow: var(--shadow-sm); text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
   .warranty-scard-ribbon { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: var(--blue); color: #fff; font-size: 13px; font-weight: 700; padding: 7px 18px; border-radius: var(--r-pill); box-shadow: 0 4px 10px rgba(95,174,216,.4); }
   .warranty-scard-head { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; margin-bottom: 20px; border-bottom: 1px solid var(--rule); }
-  .warranty-scard-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .warranty-scard-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .warranty-scard-icon svg { width: 28px; height: 28px; }
   .warranty-scard-titlewrap { display: flex; flex-direction: column; gap: 2px; }
   .warranty-scard-title { font-size: 22px; font-weight: 700; color: var(--deep); line-height: 1.2; margin: 0; }
   .warranty-scard-scene { font-size: 13.5px; font-weight: 700; color: var(--blue); line-height: 1.2; }
   .warranty-scard-stat { margin-bottom: 14px; }
-  .warranty-scard-stat-num { position: relative; font-family: var(--serif); font-size: 26px; font-weight: 800; color: var(--blue); }
-  .warranty-scard-stat-sparkle { position: relative; top: -14px; margin-left: 2px; }
-  .warranty-scard-stat-sub { font-family: var(--serif); font-size: 15px; font-weight: 700; color: var(--deep); margin-left: 8px; }
+  .warranty-scard-stat-num { position: relative; font-family: var(--serif); font-size: 42px; font-weight: 800; color: var(--blue); line-height: 1; }
+  .warranty-scard-stat-sparkle { position: relative; top: -22px; margin-left: 2px; }
+  .warranty-scard-stat-sub { display: block; font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--deep); margin-top: 2px; }
   .warranty-scard-desc  { font-size: 14.5px; color: var(--muted); line-height: 1.9; text-align: left; }
   .warranty-scard-note  { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
   .warranty-formula { margin: 24px auto 0; max-width: 760px; padding: 14px 32px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); }
@@ -547,8 +547,8 @@
       <div class="warranty-scard">
         <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
-            <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
-              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" fill="#5faed8"/>
               <path d="M9 12.5L11.5 15L17 10" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
@@ -564,7 +564,7 @@
         <span class="warranty-scard-ribbon">度数が変わっても安心！</span>
         <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
-            <svg width="22" height="22" viewBox="0 0 512 512" fill="#ffffff">
+            <svg width="26" height="26" viewBox="0 0 512 512" fill="#5faed8">
               <path d="M512,220.891h-20.453c-5.531-16.641-14.797-31.594-26.891-43.656c-20.094-20.125-48.063-32.625-78.75-32.625
                 c-49.438,0.016-91.266,32.219-105.828,76.766c-7.641-2.25-15.703-3.5-24.078-3.5c-8.359,0-16.438,1.25-24.078,3.5
                 c-14.563-44.547-56.391-76.75-105.828-76.766c-30.688,0-58.656,12.5-78.75,32.625c-12.094,12.063-21.359,27.016-26.891,43.656H0
@@ -591,8 +591,8 @@
       <div class="warranty-scard">
         <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
-            <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
-              <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" fill="#5faed8"/>
             </svg>
           </div>
           <div class="warranty-scard-titlewrap">

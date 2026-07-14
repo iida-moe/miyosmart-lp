@@ -294,7 +294,8 @@
   .sec-warranty .wrap { max-width: 1160px; }
   .warranty-age-note { display: block; text-align: left; color: var(--muted); font-size: 12.5px; margin: 6px 0 32px; }
   .warranty-scards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 12px; }
-  .warranty-scard  { background: var(--white); border-radius: var(--r); padding: 32px 28px; box-shadow: var(--shadow-sm); text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
+  .warranty-scard  { position: relative; background: var(--white); border-radius: var(--r); padding: 32px 28px; box-shadow: var(--shadow-sm); text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
+  .warranty-scard-arrow { position: absolute; top: -32px; left: 26px; font-size: 22px; font-weight: 700; color: var(--blue); }
   .warranty-scard-head { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; margin-bottom: 20px; border-bottom: 1px solid var(--rule); }
   .warranty-scard-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 2px solid var(--blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .warranty-scard-icon svg { width: 28px; height: 28px; }
@@ -539,6 +540,7 @@
 
     <div class="warranty-scards">
       <div class="warranty-scard">
+        <span class="warranty-scard-arrow">↓</span>
         <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
             <svg width="22" height="22" viewBox="0 0 26 26" fill="none">

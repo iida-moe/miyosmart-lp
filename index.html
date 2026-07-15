@@ -107,6 +107,8 @@
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; margin-bottom: 24px; }
   .warranty-mascot { height: 230px; width: auto; flex-shrink: 0; display: block; }
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
+  .about-h2-break-mobile, .about-lead-break-mobile { display: none; }
+  .jp-bracket-hang { margin-left: -0.5em; }
 
   /* ── PROBLEM ── */
   .sec-problem { background: var(--cream); }
@@ -410,6 +412,7 @@
     .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
     .about-h2 { font-size: 26px; }
+    .about-h2-break-mobile, .about-lead-break-mobile { display: inline; }
     .lead-note-line { white-space: normal; font-size: 12px; }
     .about-points { gap: 12px; }
     .brand-cards    { grid-template-columns: 1fr; }
@@ -516,8 +519,8 @@
 <!-- ── ABOUT: 取り扱いレンズについて(旧sec-product内容を統合) ── -->
 <section class="sec-about" id="product">
   <div class="wrap">
-    <h2 class="about-h2">アイメガネ全店で<br>「子ども近視レンズ」を取り扱っています</h2>
-    <p class="sec-lead" style="color:var(--text); max-width:900px;">アイメガネ全店でご相談いただけます。本レンズは、眼科医が発行する<mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずはかかりつけの眼科、または取り扱い眼科にご相談ください。</p>
+    <h2 class="about-h2">アイメガネ全店で<br><span class="jp-bracket-hang">「</span>子ども近視レンズ」を<br class="about-h2-break-mobile">取り扱っています</h2>
+    <p class="sec-lead" style="color:var(--text); max-width:900px;">アイメガネ全店でご相談いただけます。<br class="about-lead-break-mobile">本レンズは、眼科医が発行する<mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずはかかりつけの眼科、または取り扱い眼科にご相談ください。</p>
     <div class="brand-cards">
       <div class="brand-card">
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>

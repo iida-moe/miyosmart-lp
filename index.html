@@ -323,7 +323,7 @@
   .warranty-cta-text  { flex: 1; }
   .warranty-cta-title { font-size: 25px; font-weight: 700; color: var(--deep); margin-bottom: 4px; }
   .warranty-cta-desc  { font-size: 12.5px; color: var(--text); line-height: 1.6; }
-  .warranty-cta-btn   { flex-shrink: 0; background: var(--orange); color: #fff; border: none; padding: 15px 30px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 16px rgba(245,130,32,.3); white-space: nowrap; }
+  .warranty-cta-btn   { display: inline-block; flex-shrink: 0; background: var(--orange); color: #fff; border: none; padding: 15px 30px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 16px rgba(245,130,32,.3); white-space: nowrap; }
   .warranty-cta-btn:hover  { background: var(--orange-d); }
   .warranty-cta-btn:active { transform: scale(.97); }
 
@@ -375,12 +375,11 @@
   .cta-h2   { font-family: var(--serif); font-size: 43px; font-weight: 700; color: #fff; line-height: 1.5; text-wrap: balance; margin-bottom: 14px; }
   .cta-body { font-size: 15px; color: rgba(255,255,255,.65); line-height: 1.95; max-width: 520px; margin: 0 auto 40px; }
   .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-cta { background: var(--orange); color: #fff; border: none; padding: 18px 52px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 17px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 22px rgba(245,130,32,.38); transition: background .2s, transform .12s; }
+  .btn-cta { display: inline-block; background: var(--orange); color: #fff; border: none; padding: 18px 52px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 17px; font-weight: 700; text-decoration: none; cursor: pointer; box-shadow: 0 4px 22px rgba(245,130,32,.38); transition: background .2s, transform .12s; }
   .btn-cta:hover  { background: var(--orange-d); }
   .btn-cta:active { transform: scale(.97); }
-  .btn-cta-tel { background: transparent; color: rgba(255,255,255,.85); border: 2px solid rgba(255,255,255,.3); padding: 16px 38px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; cursor: pointer; transition: border-color .2s, color .2s; }
+  .btn-cta-tel { display: inline-block; background: transparent; color: rgba(255,255,255,.85); border: 2px solid rgba(255,255,255,.3); padding: 16px 38px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: border-color .2s, color .2s; }
   .btn-cta-tel:hover { border-color: rgba(255,255,255,.75); color: #fff; }
-  .cta-note { margin-top: 18px; font-size: 12px; color: rgba(255,255,255,.35); }
 
   /* ── FOOTER ── */
   .footer { background: #0e3a6e; padding: 28px 0; border-top: 1px solid rgba(255,255,255,.06); }
@@ -709,7 +708,7 @@
           <p class="warranty-cta-title">いつでも、お気軽にご相談ください</p>
           <p class="warranty-cta-desc">定期的な視力チェックやメンテナンスも無料で行っています。お子さまの「見る」を、私たちがずっと見守ります。</p>
         </div>
-        <button class="warranty-cta-btn">無料相談する ›</button>
+        <a href="#shop-search" class="warranty-cta-btn">無料相談する ›</a>
       </div>
     </div>
   </div>
@@ -890,10 +889,9 @@
     <h2 class="cta-h2">子どもの目のことを、<br>まずは相談してみてください。</h2>
     <p class="cta-body">近視ケアレンズは、いずれも眼科医の処方箋がないと販売できません。まずは処方箋がなくてもご相談いただけます。</p>
     <div class="cta-btns">
-      <button class="btn-cta">無料相談</button>
-      <button class="btn-cta-tel">店舗予約</button>
+      <a href="#shop-search" class="btn-cta">無料相談</a>
+      <a href="#shop-search" class="btn-cta-tel">店舗予約</a>
     </div>
-    <p class="cta-note">※電話番号・予約フォームURLは後ほど設定</p>
   </div>
 </section>
 
@@ -1154,7 +1152,7 @@
 </div>
 
 <script>
-// 店舗検索(埼玉・関東近郊の店舗リストは仮データ・確定リストが決まったら差し替え)
+// 店舗検索(アイメガネ全店・公式サイトで確認済みの確定データ)
 const SHOPS = [
   { name:'アイメガネ本店', photo:'https://www.aimegane.com/wp-content/uploads/2024/03/01_honten.webp', zip:'331', addr:'〒331-8760 埼玉県さいたま市北区宮原町1-505-1', web:'https://www.aimegane.com/qualification/6395/', tel:'048-668-0001', lat:35.937226, lng:139.613603 },
   { name:'アイメガネ与野イオン店', photo:'https://www.aimegane.com/wp-content/uploads/2024/03/02_yono_aeon.webp', zip:'338', addr:'〒338-0004 埼玉県さいたま市中央区本町西5-2-9', web:'https://www.aimegane.com/qualification/6938/', tel:'048-851-0001', lat:35.890863, lng:139.612513 },

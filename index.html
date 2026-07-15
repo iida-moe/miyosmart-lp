@@ -77,6 +77,12 @@
   .pg-nav a { font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none; position: relative; padding-bottom: 2px; }
   .pg-nav a:hover { color: var(--blue); }
   .pg-topbar-right { display: flex; align-items: center; gap: 28px; }
+  .pg-hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0; }
+  .pg-hamburger span { display: block; width: 22px; height: 2px; background: var(--deep); border-radius: 1px; transition: transform .25s ease, opacity .2s ease; }
+  .pg-hamburger.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .pg-hamburger.is-active span:nth-child(2) { opacity: 0; }
+  .pg-hamburger.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .pg-mobile-menu { display: none; }
 
   .hero-v3 { position: relative; z-index: 1; margin: 0 -22px; display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
   .hero-v3-photo { position: relative; overflow: hidden; }
@@ -398,6 +404,13 @@
     .pg-frame        { padding: 16px 16px 0; }
     .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
     .pg-nav          { display: none; }
+    .pg-topbar-right { display: none; }
+    .pg-hamburger    { display: flex; }
+    .pg-mobile-menu.is-open { display: flex; }
+    .pg-mobile-menu  { flex-direction: column; position: relative; z-index: 3; margin: 0 4px 14px; background: var(--white); border-radius: var(--r-sm); box-shadow: var(--shadow-sm); overflow: hidden; }
+    .pg-mobile-menu a { padding: 15px 20px; font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--rule); }
+    .pg-mobile-menu a:last-child { border-bottom: none; }
+    .pg-mobile-menu-cta { color: var(--orange) !important; }
     .sticky-cta-text { display: none; }
     .sticky-cta-inner { justify-content: center; }
     .hero-v3          { margin: 0 -16px; grid-template-columns: 1fr; min-height: 0; }
@@ -499,7 +512,18 @@
       </nav>
       <a href="#shop-search" class="btn-nav">お近くの店舗を探す</a>
     </div>
+    <button type="button" class="pg-hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="pgMobileMenu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+
+  <nav class="pg-mobile-menu" id="pgMobileMenu">
+    <a href="#product">取り扱い商品</a>
+    <a href="#warranty">キッズ保証</a>
+    <a href="#flow">購入の流れ</a>
+    <a href="#faq">よくある質問</a>
+    <a href="#shop-search" class="pg-mobile-menu-cta">お近くの店舗を探す</a>
+  </nav>
 
   <div class="hero-v3">
     <div class="hero-v3-photo">
@@ -1162,6 +1186,24 @@
 </div>
 
 <script>
+// ハンバーガーメニュー(スマホ版)
+(() => {
+  const btn = document.querySelector('.pg-hamburger');
+  const menu = document.getElementById('pgMobileMenu');
+  if (!btn || !menu) return;
+  const closeMenu = () => {
+    btn.classList.remove('is-active');
+    btn.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('is-open');
+  };
+  btn.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('is-open');
+    btn.classList.toggle('is-active', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+})();
+
 // 店舗検索(アイメガネ全店・公式サイトで確認済みの確定データ)
 const SHOPS = [
   { name:'アイメガネ本店', photo:'https://www.aimegane.com/wp-content/uploads/2024/03/01_honten.webp', zip:'331', addr:'〒331-8760 埼玉県さいたま市北区宮原町1-505-1', web:'https://www.aimegane.com/qualification/6395/', tel:'048-668-0001', lat:35.937226, lng:139.613603 },

@@ -115,6 +115,8 @@
   .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
   .about-h2-break-mobile, .about-lead-break-mobile { display: none; }
   .jp-bracket-hang { margin-left: -0.5em; }
+  .warranty-lead-break-mobile, .warranty-lead-break-mobile2 { display: none; }
+  .why-lead-break-mobile { display: none; }
 
   /* ── PROBLEM ── */
   .sec-problem { background: var(--cream); }
@@ -402,30 +404,33 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 740px) {
     :root { --py: 56px; }
+    .sec-lead { font-size: 19px; }
+    .sec-flow .sec-lead { font-size: 17px; }
+    .sec-why .sec-lead { font-size: 15px; }
     .pg-frame        { padding: 16px 16px 0; }
     .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
     .pg-nav          { display: none; }
     .pg-topbar-right { display: none; }
     .pg-hamburger    { display: flex; }
     .pg-mobile-menu.is-open { display: flex; }
-    .pg-mobile-menu  { flex-direction: column; position: relative; z-index: 3; margin: 0 4px 14px; background: var(--white); border-radius: var(--r-sm); box-shadow: var(--shadow-sm); overflow: hidden; }
+    .pg-mobile-menu  { flex-direction: column; position: relative; z-index: 3; margin: 0 4px 14px; background: var(--white); border-radius: var(--r-sm); border: 1px solid #eeeeee;box-shadow: 0 6px 20px rgba(0,0,0,0.08);overflow: hidden; }
     .pg-mobile-menu a { padding: 15px 20px; font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--rule); }
     .pg-mobile-menu a:last-child { border-bottom: none; }
     .pg-mobile-menu-cta { color: var(--orange) !important; }
     .sticky-cta-text { display: none; }
     .sticky-cta-inner { justify-content: center; }
     .hero-v3          { margin: 0 -16px; grid-template-columns: 1fr; min-height: 0; }
-    .hero-v3-photo    { height: 260px; }
-    .hero-v3-photo::after { background: linear-gradient(to bottom, rgba(250,250,248,0) 55%, var(--cream) 98%); }
+    .hero-v3-photo { height: 230px; }
+    .hero-v3-content { padding-top: 16px; }
     .hero-v3-text     { padding: 28px 20px 40px; }
     .hero-v3-blob     { padding: 12px 8px; text-align: center; }
-    .hero-v3-blob h1  { font-size: 38px; }
+    .hero-v3-blob h1 {font-size: 38px;line-height: 1.15;}
     .hero-v3-sub      { font-size: 14px; margin-bottom: 22px; }
     .hero-v3-sub .sub-break { display: none; }
     .hero-v3-sub .sub-break-mobile { display: inline; }
     .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
-    .about-h2 { font-size: 26px; }
+    .about-h2 {font-size: 32px;line-height: 1.3;font-weight: 800;letter-spacing: -0.02em;margin-bottom: 32px;}
     .about-h2-break-mobile, .about-lead-break-mobile { display: inline; }
     .lead-note-line { white-space: normal; font-size: 12px; }
     .about-points { gap: 12px; }
@@ -434,29 +439,41 @@
     .brand-card-tab { font-size: 19px; padding: 13px 16px; }
     .brand-card { padding: 32px 24px; }
     .stat-grid { grid-template-columns: 1fr; }
-    .why-grid4 { grid-template-columns: 1fr; gap: 24px; }
+    .sec-why .sec-lead { margin-bottom: 20px; }
+    .why-grid4 { grid-template-columns: 1fr; gap: 24px; margin-top: 8px; padding-top: 0; }
     .shop-hero-card { flex-direction: column; }
     .shop-hero-photo { width: 100%; min-height: 180px; }
     .shop-hero-body { text-align: center; }
     .shop-others-grid, .shop-initial, .shop-more-list-outer .shop-more-list { grid-template-columns: 1fr !important; gap: 12px !important; }
     .shop-back-top-fixed { display: none; }
     .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
-    .warranty-h2-row { flex-direction: column; align-items: center; gap: 20px; }
-    .warranty-h2-text { text-align: center; }
-    .warranty-h2-text .sec-h2, .warranty-h2-text .sec-lead, .warranty-age-note { text-align: center !important; }
-    .warranty-mascot { height: 170px; }
-    .warranty-scards { grid-template-columns: 1fr; gap: 24px; }
-    .warranty-scard { padding: 28px 24px; }
+    .warranty-h2-row { flex-direction: row; align-items: flex-start; gap: 10px; }
+    .warranty-h2-text { text-align: left; flex: 1; min-width: 0; }
+    .warranty-h2-text .sec-h2, .warranty-h2-text .sec-lead, .warranty-age-note { text-align: left !important; }
+    .warranty-h2-text .sec-h2 { font-size: 34px; white-space: nowrap; }
+    .sec-why .sec-h2 { font-size: 34px; }
+    .sec-flow .sec-h2 { font-size: 38px; white-space: nowrap; }
+    .warranty-h2-text .sec-lead { font-size: 13.5px; }
+    .why-lead-break-mobile { display: inline; }
+    .warranty-lead-break-mobile { display: inline; }
+    .warranty-mascot-wrap { margin-bottom: 0; margin-top: -8px; margin-left: -40px; }
+    .warranty-mascot { height: 125px; }
+    .warranty-age-note { margin: 6px 0 14px; }
+    .warranty-scards { grid-template-columns: 1fr; gap: 24px; margin-top: 8px; }
+    .warranty-scard { padding: 28px 24px; min-height: 262px; }
+    .warranty-scard-stat { text-align: left; display: flex; align-items: flex-end; }
     .warranty-scard-stat-num { font-size: 38px; }
-    .warranty-formula { padding: 20px 20px; }
+    .warranty-formula { padding: 16px 12px; }
+    .warranty-formula-lead { font-size: 12px; white-space: nowrap; }
+    .warranty-formula-sparkle { margin: 0 3px; }
     .warranty-formula-row { gap: 12px; }
-    .warranty-cta-banner { flex-direction: column; }
-    .warranty-cta-photo { width: 100%; height: 140px; }
-    .warranty-cta-photo img.warranty-cta-mascot { width: auto; height: 74%; }
-    .warranty-cta-body { flex-direction: column; text-align: center; padding: 24px; }
+    .warranty-cta-banner { position: relative; flex-direction: column; }
+    .warranty-cta-photo { display: none; }
+    .warranty-cta-body { flex-direction: column; align-items: stretch; text-align: left; padding: 20px 16px; gap: 14px; }
+    .warranty-cta-title { line-height: 1.25; }
     .warranty-cta-text { flex: 0 1 auto; }
     .warranty-cta-desc .cta-desc-break { display: none; }
-    .warranty-cta-btn { width: 100%; }
+    .warranty-cta-btn { width: 100%; text-align: center; font-size: 14px; padding: 15px 30px; align-self: center; }
     .price-band      { grid-template-columns: 1fr; padding: 28px 22px; }
     .flow-row { padding: 16px 16px; gap: 14px; }
     .flow-row-tab { padding: 6px 16px; font-size: 12.5px; top: -20px; }
@@ -533,8 +550,8 @@
     <div class="hero-v3-text">
       <div class="hero-v3-blob">
         <p class="hero-v3-kicker">お子さまの近視が気になり始めた方へ</p>
-        <h1>子ども近視レンズ</h1>
-        <p class="hero-v3-sub">「ミヨスマート」「エシロール® ステレスト®」など<br class="sub-break-mobile">近視レンズを、<br class="sub-break">アイメガネ全店で取り扱っています。</p>
+        <h1>子どもの近視用<br>メガネレンズ</h1>
+        <p class="hero-v3-sub">「ミヨスマート」「エシロール® ステレスト®」など<br class="sub-break-mobile">お子さまの近視用レンズを<br class="sub-break">アイメガネ全店で取り扱っています。</p>
         <a href="#shop-search" class="btn-primary">まずは無料相談から&#9654;</a>
       </div>
     </div>
@@ -544,24 +561,28 @@
 <!-- ── ABOUT: 取り扱いレンズについて(旧sec-product内容を統合) ── -->
 <section class="sec-about" id="product">
   <div class="wrap">
-    <h2 class="about-h2">アイメガネ全店で<br><span class="jp-bracket-hang">「</span>子ども近視レンズ」を<br class="about-h2-break-mobile">取り扱っています</h2>
-    <p class="sec-lead" style="color:var(--text); max-width:900px;">アイメガネ全店でご相談いただけます。<br class="about-lead-break-mobile">本レンズは、眼科医が発行する<mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずはかかりつけの眼科、または取り扱い眼科にご相談ください。</p>
+    <h2 class="about-h2">子どもの近視レンズは<br>アイメガネへ</h2>
+    <p class="sec-lead">アイメガネ全店でご相談いただけます。<br>本レンズは、眼科医が発行する<mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずは眼科を受診のうえ、処方箋をご持参ください。</p>
     <div class="brand-cards">
       <div class="brand-card">
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>
         <p class="brand-card-note">お子さまの視力はかけがえのないものです。<br>ミヨスマートは、現在世界50か国以上&#8251;で販売されている小児向けの近視に対応する特殊な構造のメガネレンズです。<span class="brand-card-footnote">&#8251;2025年9月時点</span></p>
-        <img src="images/miyosmart-official-banner.jpg" alt="ミヨスマート(MiYOSMART) HOYA公式バナー" class="brand-card-banner" loading="lazy">
+        <a href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">
+          <img src="images/miyosmart-official-banner.jpg" alt="ミヨスマート(MiYOSMART) HOYA公式バナー" class="brand-card-banner" loading="lazy">
+        </a>
         <a class="brand-card-link" href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">HOYA公式サイトで詳しく見る ›</a>
       </div>
       <div class="brand-card">
         <p class="brand-card-tab">Essilor<span>&reg;</span>Stellest<span>&reg;</span>&nbsp;&nbsp;(エシロール ステレスト)</p>
         <p class="brand-card-note">エシロール&reg;ステレスト&reg;は、エシロール社が長年培ってきた光学設計技術をもとに、独自のH.A.L.T.&reg;(Highly Aspherical Lenslet Target)テクノロジーを採用した眼鏡レンズです。</p>
-        <img src="images/stellest-official-banner.jpg" alt="エシロール ステレスト(Essilor Stellest) 公式バナー" class="brand-card-banner" loading="lazy">
+        <a href="https://stellest.jp/" target="_blank" rel="noopener">
+          <img src="images/stellest-official-banner.jpg" alt="エシロール ステレスト(Essilor Stellest) 公式バナー" class="brand-card-banner" loading="lazy">
+        </a>
         <a class="brand-card-link" href="https://stellest.jp/" target="_blank" rel="noopener">エシロール公式サイトで詳しく見る ›</a>
       </div>
     </div>
     <div class="section-gap-transition">
-      <span>アイメガネだからできること</span>
+      <span>アイメガネが選ばれる理由</span>
       <svg width="60" height="34" viewBox="0 0 28 16" fill="none"><path d="M2 2l12 12L26 2" stroke="#5faed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
   </div>
@@ -574,7 +595,7 @@
       <div class="warranty-h2-text">
         <span class="warranty-subtitle">壊れても、度が変わっても大丈夫！</span>
         <h2 class="sec-h2" style="text-align:left;"><span class="warranty-h2-accent">3</span>つの保証・補償</h2>
-        <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0; line-height:1.6;">お子さまのメガネを安心してお使いいただけるよう、ご購入後も<br>ずっとサポートいたします。</p>
+        <p class="sec-lead" style="text-align:left; max-width:520px; margin-bottom:0; line-height:1.6;">お子さまのメガネを安心して使えるよう、<br>ご購入後もずっとサポートいたします。</p>
         <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。</p>
       </div>
       <div class="warranty-mascot-wrap">
@@ -588,8 +609,8 @@
           <div class="warranty-scard-head">
             <div class="warranty-scard-icon">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#5faed8" stroke-width="2.5" stroke-linejoin="round"/>
-                <path d="M9 12.5L11.5 15L17 10" stroke="#5faed8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#244a6b" stroke-width="2.8" stroke-linejoin="round"/>
+                <path d="M9 12.5L11.5 15L17 10" stroke="#244a6b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
             <div class="warranty-scard-titlewrap">
@@ -599,13 +620,13 @@
           </div>
           <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1年間</span><span class="warranty-scard-stat-sub">無料で交換</span></div>
         </div>
-        <p class="warranty-scard-desc">不良があったら交換いたします。</p>
+        <p class="warranty-scard-desc">通常のお取り扱いで、フレームのメッキ・カラー不良や溶接部分の剥離、レンズのコート剥げ・ヒビ割れなどが生じた場合は無料で交換いたします。<span class="warranty-scard-note">※現品とお取り替えとなりますので、ご持参ください。</span></p>
       </div>
       <div class="warranty-scard">
         <div class="warranty-scard-top">
           <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
-            <svg width="26" height="26" viewBox="0 0 512 512" fill="#5faed8">
+            <svg width="26" height="26" viewBox="0 0 512 512" fill="#244a6b">
               <path d="M512,220.891h-20.453c-5.531-16.641-14.797-31.594-26.891-43.656c-20.094-20.125-48.063-32.625-78.75-32.625
                 c-49.438,0.016-91.266,32.219-105.828,76.766c-7.641-2.25-15.703-3.5-24.078-3.5c-8.359,0-16.438,1.25-24.078,3.5
                 c-14.563-44.547-56.391-76.75-105.828-76.766c-30.688,0-58.656,12.5-78.75,32.625c-12.094,12.063-21.359,27.016-26.891,43.656H0
@@ -635,7 +656,7 @@
           <div class="warranty-scard-head">
           <div class="warranty-scard-icon">
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#5faed8" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M13 22C13 22 3 15.5 3 8.8C3 5.6 5.5 3.5 8.3 3.5C10.3 3.5 12 4.6 13 6.2C14 4.6 15.7 3.5 17.7 3.5C20.5 3.5 23 5.6 23 8.8C23 15.5 13 22 13 22Z" stroke="#244a6b" stroke-width="2.8" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="warranty-scard-titlewrap">
@@ -654,7 +675,7 @@
       <div class="warranty-formula-row">
       <div class="warranty-formula-item">
         <div class="warranty-formula-icon warranty-formula-icon-round">
-          <svg width="36" height="36" viewBox="0 0 512 512" fill="#5faed8">
+          <svg width="36" height="36" viewBox="0 0 512 512" fill="#244a6b">
             <path d="M512,220.891h-20.453c-5.531-16.641-14.797-31.594-26.891-43.656c-20.094-20.125-48.063-32.625-78.75-32.625
               c-49.438,0.016-91.266,32.219-105.828,76.766c-7.641-2.25-15.703-3.5-24.078-3.5c-8.359,0-16.438,1.25-24.078,3.5
               c-14.563-44.547-56.391-76.75-105.828-76.766c-30.688,0-58.656,12.5-78.75,32.625c-12.094,12.063-21.359,27.016-26.891,43.656H0
@@ -675,7 +696,10 @@
       <span class="warranty-formula-op">+</span>
       <div class="warranty-formula-item">
         <div class="warranty-formula-icon warranty-formula-icon-round">
-          <img src="images/lens-icon.png" alt="レンズ" width="36" style="height:auto;">
+          <svg width="36" height="36" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="9" stroke="#244a6b" stroke-width="2.8"/>
+            <path d="M9 9.5C10 8 12 7.5 13.5 8.5" stroke="#244a6b" stroke-width="2" stroke-linecap="round"/>
+          </svg>
         </div>
         <span class="warranty-formula-label">レンズ</span>
       </div>
@@ -683,8 +707,8 @@
       <div class="warranty-formula-item">
         <div class="warranty-formula-icon warranty-formula-icon-round">
           <svg width="36" height="36" viewBox="0 0 26 26" fill="none">
-            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#5faed8" stroke-width="2.2" stroke-linejoin="round"/>
-            <path d="M9 12.5L11.5 15L17 10" stroke="#5faed8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 2L4 6.5V12C4 17.5 8 22.5 13 24C18 22.5 22 17.5 22 12V6.5L13 2Z" stroke="#244a6b" stroke-width="2.8" stroke-linejoin="round"/>
+            <path d="M9 12.5L11.5 15L17 10" stroke="#244a6b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <span class="warranty-formula-label">3つの保証・補償</span>
@@ -703,8 +727,8 @@
 <!-- ── WHY(子ども向けトータルサポート) ── -->
 <section class="sec-why">
   <div class="wrap">
-    <h2 class="sec-h2">子ども向けトータルサポート</h2>
-    <p class="sec-lead">良いレンズでも、掛け続けてもらわなければ意味がありません。<br>アイメガネでは、レンズ以外の部分でもお子様と保護者様を支えます。</p>
+    <h2 class="sec-h2">子ども向け<br>トータルサポート</h2>
+    <p class="sec-lead">良いレンズも、掛け続けてこそ意味があります。<br class="why-lead-break-mobile">アイメガネは、レンズ以外の面でも<br class="why-lead-break-mobile">お子さまとご家族を支えます。</p>
     <div class="why-grid4">
       <div class="why-grid4-item">
         <div class="why-grid4-photo">
@@ -742,7 +766,7 @@
       </div>
       <div class="warranty-cta-body">
         <div class="warranty-cta-text">
-          <p class="warranty-cta-title">いつでも、お気軽にご相談ください</p>
+          <p class="warranty-cta-title">いつでも、<br class="why-lead-break-mobile">お気軽にご相談ください</p>
           <p class="warranty-cta-desc">定期的な視力チェックやメンテナンスも無料で行っています。<br class="cta-desc-break">お子さまの「見る」を、私たちがずっと見守ります。</p>
         </div>
         <a href="#shop-search" class="warranty-cta-btn">無料相談する ›</a>
@@ -760,7 +784,7 @@
 <!-- ── FLOW(流れ) ── -->
 <section class="sec-flow" id="flow">
   <div class="wrap">
-    <h2 class="sec-h2">ご相談・ご購入までの流れ</h2>
+    <h2 class="sec-h2">ご購入までの流れ</h2>
     <p class="sec-lead" style="margin-bottom:0">眼科での受診から、お渡しまでの6ステップ。</p>
     <div class="flow-rows">
       <div class="flow-row">

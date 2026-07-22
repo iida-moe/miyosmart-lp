@@ -134,7 +134,8 @@
   .sec-about .wrap { max-width: 1160px; }
   .section-gap-transition { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 64px; }
   .section-gap-transition span { font-size: 26px; font-weight: 700; color: var(--deep); }
-  .section-gap-transition svg { transition: transform .2s; }
+  .section-gap-arrow { position: relative; width: 100vw; margin: 0 calc(50% - 50vw); height: 120px; background: var(--sky); }
+  .section-gap-arrow::before { content: ""; position: absolute; inset: 0; background: var(--cream); clip-path: polygon(0 0, 100% 0, 50% 100%); }
   .about-h2   { font-family: var(--serif); font-size: 38px; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; }
   .highlight-marker { background: none; color: var(--deep); font-weight: 700; border-bottom: 5px solid #ffd93d; padding-bottom: 2px; }
   .lead-emphasis { font-size: 1.3em; }
@@ -452,6 +453,7 @@
     .about-h2-break-mobile, .about-lead-break-mobile { display: inline; }
     .lead-note-line { white-space: normal; font-size: 12px; }
     .about-points { gap: 12px; }
+    .section-gap-arrow { height: 70px; }
     .brand-cards    { grid-template-columns: 1fr; }
     .brand-card     { padding: 26px 20px; }
     .brand-card-tab { font-size: 19px; padding: 13px 16px; }
@@ -632,10 +634,10 @@
     </div>
     <div class="section-gap-transition">
       <span>アイメガネが選ばれる理由</span>
-      <svg width="60" height="34" viewBox="0 0 28 16" fill="none"><path d="M2 2l12 12L26 2" stroke="#5faed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
   </div>
 </section>
+<div class="section-gap-arrow"></div>
 
 <!-- ── WARRANTY ── -->
 <section class="sec-warranty" id="warranty">

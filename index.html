@@ -122,6 +122,7 @@
   .jp-bracket-hang { margin-left: -0.5em; }
   .warranty-lead-break-mobile, .warranty-lead-break-mobile2 { display: none; }
   .why-lead-break-mobile { display: none; }
+  .mobile-break { display: none; }
 
   /* ── PROBLEM ── */
   .sec-problem { background: var(--cream); }
@@ -474,10 +475,10 @@
     .shop-others-grid, .shop-initial, .shop-more-list-outer .shop-more-list { grid-template-columns: 1fr !important; gap: 12px !important; }
     .shop-back-top-fixed { display: none; }
     .concerns-grid, .feature-grid { grid-template-columns: 1fr; }
-    .warranty-h2-row { flex-direction: row; align-items: flex-start; gap: 10px; }
-    .warranty-h2-text { text-align: left; flex: 1; min-width: 0; }
+    .warranty-h2-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .warranty-h2-text { text-align: left; width: 100%; }
     .warranty-h2-text .sec-h2, .warranty-h2-text .sec-lead, .warranty-age-note { text-align: left !important; }
-    .warranty-h2-text .sec-h2 { font-size: 34px; white-space: nowrap; }
+    .warranty-h2-text .sec-h2 { font-size: 30px; white-space: nowrap; }
     .sec-why .sec-h2 { font-size: 34px; }
     .sec-flow .sec-h2 { font-size: 38px; white-space: nowrap; }
     .cta-h2 { font-size: 24px; }
@@ -487,8 +488,9 @@
     .warranty-h2-text .sec-lead { font-size: 13.5px; }
     .why-lead-break-mobile { display: inline; }
     .warranty-lead-break-mobile { display: inline; }
-    .warranty-mascot-wrap { margin-bottom: 0; margin-top: -8px; margin-left: -40px; }
-    .warranty-mascot { height: 125px; }
+    .mobile-break { display: inline; }
+    .warranty-mascot-wrap { margin: 4px 0 0; align-self: center; }
+    .warranty-mascot { height: 110px; }
     .warranty-age-note { margin: 6px 0 14px; }
     .warranty-scards { grid-template-columns: 1fr; gap: 24px; margin-top: 8px; }
     .warranty-scard { padding: 28px 24px; min-height: 262px; }
@@ -630,7 +632,7 @@
     <div class="brand-cards">
       <div class="brand-card">
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>
-        <p class="brand-card-note">お子さまの視力はかけがえのないものです。<br>ミヨスマートは、現在世界50か国以上&#8251;で販売されている小児向けの近視に対応する特殊な構造のメガネレンズです。<span class="brand-card-footnote">&#8251;2025年9月時点</span></p>
+        <p class="brand-card-note">お子さまの視力はかけがえのない<br class="mobile-break">ものです。<br>ミヨスマートは、現在世界50か国以上&#8251;で販売されている小児向けの近視に対応する特殊な構造のメガネレンズです。<span class="brand-card-footnote">&#8251;2025年9月時点</span></p>
         <a href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">
           <img src="images/miyosmart-official-banner.jpg" alt="ミヨスマート(MiYOSMART) HOYA公式バナー" class="brand-card-banner" loading="lazy">
         </a>
@@ -684,7 +686,7 @@
           <span class="warranty-scard-scene">通常使用で壊れたとき</span>
           <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1年間</span><span class="warranty-scard-stat-sub">無料で交換</span></div>
         </div>
-        <p class="warranty-scard-desc">通常のお取り扱いで、フレームのメッキ・カラー不良や溶接部分の剥離、レンズのコート剥げ・ヒビ割れなどが生じた場合は無料で交換いたします。<span class="warranty-scard-note">※現品とお取り替えとなりますので、ご持参ください。</span></p>
+        <p class="warranty-scard-desc">通常のお取り扱いで、フレームのメッキ・カラー不良や溶接部分の剥離、レンズのコート剥げ・ヒビ割れなどが生じた場合は無料で交換<br class="mobile-break">いたします。<span class="warranty-scard-note">※現品とお取り替えとなりますので、ご持参ください。</span></p>
       </div>
       <div class="warranty-scard">
         <div class="warranty-scard-top">
@@ -726,7 +728,7 @@
           <span class="warranty-scard-scene">壊した・なくしたとき</span>
           <div class="warranty-scard-stat"><span class="warranty-scard-stat-num">1回目</span><span class="warranty-scard-stat-sub">無料</span></div>
         </div>
-        <p class="warranty-scard-desc">レンズにキズがついた等、お客様の不注意による損傷は同一商品を1回目無料・2回目以降は50%引きでお求めいただけます。<span class="warranty-scard-note">※紛失の場合は50%引きとなります。</span></p>
+        <p class="warranty-scard-desc">レンズにキズがついた等、お客様の不注意による損傷は同一商品を1回目無料・2回目以降は<br class="mobile-break">50%引きでお求めいただけます。<span class="warranty-scard-note">※紛失の場合は50%引きとなります。</span></p>
       </div>
     </div>
 
@@ -806,7 +808,7 @@
         </div>
         <div class="why-grid4-text">
           <p class="why-grid4-cap">自分らしい一本を見つけよう</p>
-          <p class="why-grid4-sub">軽量・安全な子ども専用ブランドを複数取り扱い。デザイン・カラーも豊富だから、楽しみながらメガネ選びができます。</p>
+          <p class="why-grid4-sub">軽量・安全な子ども専用ブランドを複数<br class="mobile-break">取り扱い。デザイン・カラーも豊富だから、<br class="mobile-break">楽しみながらメガネ選びができます。</p>
         </div>
       </div>
       <div class="why-grid4-item">
@@ -824,7 +826,7 @@
         </div>
         <div class="why-grid4-text">
           <p class="why-grid4-cap">いつでも安心、無料メンテナンス</p>
-          <p class="why-grid4-sub">転んだりして汚れたり、フレームが曲がったりしても大丈夫。アイメガネにお持ちいただければ何度でも無料で調整します。</p>
+          <p class="why-grid4-sub">転んだりして汚れたり、フレームが曲がったりしても大丈夫。アイメガネにお持ちいただければ<br class="mobile-break">何度でも無料で調整します。</p>
         </div>
       </div>
     </div>
@@ -837,7 +839,7 @@
       <div class="warranty-cta-body">
         <div class="warranty-cta-text">
           <p class="warranty-cta-title">いつでも、<br class="why-lead-break-mobile">お気軽にご相談<span style="white-space:nowrap;">ください</span></p>
-          <p class="warranty-cta-desc">定期的な視力チェックやメンテナンスも無料で行っています。お子さまの「見る」を、私たちがずっと見守ります。</p>
+          <p class="warranty-cta-desc">定期的な視力チェックやメンテナンスも無料で<br class="mobile-break">行っています。お子さまの「見る」を、私たちがずっと見守ります。</p>
         </div>
         <a href="#shop-search" class="warranty-cta-btn">無料相談する ›</a>
       </div>
@@ -900,7 +902,7 @@
         </div>
         <div class="flow-row-text">
           <h3 class="flow-row-title">フレームを選ぶ</h3>
-          <p class="flow-row-desc">眼鏡作製技能士が、お子さまに合うフレームをご提案。</p>
+          <p class="flow-row-desc">眼鏡作製技能士が、お子さまに合う<br class="mobile-break">フレームをご提案。</p>
         </div>
       </div>
       <div class="flow-rail" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#5faed8"><path d="M9 2H15V12H20L12 22L4 12H9V2Z"/></svg></div>
@@ -927,7 +929,7 @@
         </div>
         <div class="flow-row-text">
           <h3 class="flow-row-title">お渡し(納品)</h3>
-          <p class="flow-row-desc">ご注文日から1週間程度でお渡しできます。出来上がり次第、ご連絡することも可能です。<br>購入後も無料でメンテナンスサポートいたします。</p>
+          <p class="flow-row-desc">ご注文日から1週間程度で<br class="mobile-break">お渡しできます。出来上がり次第、ご連絡することも可能です。<br>購入後も無料でメンテナンスサポート<br class="mobile-break">いたします。</p>
         </div>
       </div>
       <div class="flow-rail" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#5faed8"><path d="M9 2H15V12H20L12 22L4 12H9V2Z"/></svg></div>
@@ -958,7 +960,7 @@
     <p class="shop-intro">現在地、または郵便番号で近くの店舗を探せます。</p>
 
     <div class="shop-rx-note">
-      <p>■ご購入には<mark class="highlight-marker">処方箋が必要です。眼科を受診のうえ</mark>、店舗までお越しください。</p>
+      <p>■ご購入には<mark class="highlight-marker">処方箋が必要です。眼科を<br class="mobile-break">受診のうえ</mark>、店舗までお越しください。</p>
     </div>
 
     <div class="shop-geo-wrap">
@@ -1285,7 +1287,7 @@
       </nav>
     </div>
     <p class="footer-company">アイジャパン株式会社　〒331-0812 埼玉県さいたま市北区宮原町1丁目505番地1　お客様相談室：<a href="tel:0120210110">0120-21-0110</a>　© 2026 アイジャパン株式会社</p>
-    <p class="footer-note">MiYOSMART&reg; はHOYA Corporationの登録商標です。Essilor&reg;、Stellest&reg; はEssilorLuxottica系列会社の登録商標です。<br>本ページの製品情報は各社およびアイメガネの公式情報に基づいています。</p>
+    <p class="footer-note">MiYOSMART&reg; はHOYA Corporationの登録商標です。Essilor&reg;、Stellest&reg; はEssilorLuxottica系列会社の登録商標です。<br>本ページの製品情報は各社およびアイメガネの公式情報に<br class="mobile-break">基づいています。</p>
   </div>
 </footer>
 

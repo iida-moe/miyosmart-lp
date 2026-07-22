@@ -442,7 +442,8 @@
     .sticky-cta-text { display: none; }
     .sticky-cta-inner { justify-content: center; }
     .sticky-cta { display: none; }
-    .sticky-cta-vertical { display: flex; align-items: center; justify-content: center; position: fixed; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; text-orientation: mixed; background: var(--orange); color: #fff; font-family: var(--sans); font-size: 14px; font-weight: 700; letter-spacing: .08em; padding: 20px 10px; border-radius: 10px 0 0 10px; box-shadow: -4px 4px 14px rgba(36,74,107,.25); text-decoration: none; z-index: 50; }
+    .sticky-cta-vertical { display: flex; align-items: center; justify-content: center; position: fixed; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; text-orientation: mixed; background: var(--orange); color: #fff; font-family: var(--sans); font-size: 14px; font-weight: 700; letter-spacing: .08em; padding: 20px 10px; border-radius: 10px 0 0 10px; box-shadow: -4px 4px 14px rgba(36,74,107,.25); text-decoration: none; z-index: 50; transition: transform .25s, opacity .25s; }
+    .sticky-cta-vertical.is-hidden { transform: translateY(-50%) translateX(100%); opacity: 0; pointer-events: none; }
     .hero-v3          { margin: 0 -16px; grid-template-columns: 1fr; min-height: 0; }
     .hero-v3-photo { height: 230px; }
     .hero-v3-content { padding-top: 16px; }
@@ -1506,11 +1507,13 @@ window.addEventListener('resize',updateBackBtnPos);
 // FV表示中はスティッキーCTAを隠す
 (function(){
   const stickyCta=document.querySelector('.sticky-cta');
+  const stickyCtaVertical=document.querySelector('.sticky-cta-vertical');
   const hero=document.querySelector('.hero-v3');
-  if(!stickyCta||!hero)return;
+  if((!stickyCta&&!stickyCtaVertical)||!hero)return;
   const io=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
-      stickyCta.classList.toggle('is-hidden',entry.isIntersecting);
+      if(stickyCta)stickyCta.classList.toggle('is-hidden',entry.isIntersecting);
+      if(stickyCtaVertical)stickyCtaVertical.classList.toggle('is-hidden',entry.isIntersecting);
     });
   },{threshold:0});
   io.observe(hero);

@@ -500,7 +500,8 @@
     .warranty-formula { padding: 16px 12px; }
     .warranty-formula-lead { font-size: 12px; white-space: nowrap; }
     .warranty-formula-sparkle { margin: 0 3px; }
-    .warranty-formula-row { gap: 12px; }
+    .warranty-formula-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
+    .warranty-formula-op { display: none; }
     .warranty-cta-banner { position: relative; flex-direction: column; }
     .warranty-cta-photo { display: none; }
     .warranty-cta-body { flex-direction: column; align-items: stretch; text-align: left; padding: 20px 16px; gap: 14px; }

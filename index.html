@@ -65,7 +65,7 @@
   .sticky-cta-vertical { display: none; }
 
   /* ── NAV ── */
-  .btn-nav { display: inline-block; background: var(--orange); color: #fff; border: none; padding: 11px 28px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 3px 12px rgba(245,130,32,.3); white-space: nowrap; }
+  .btn-nav { display: inline-block; background: var(--orange); color: #fff; border: none; padding: 11px 28px; border-radius: 8px; font-family: var(--sans); font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 3px 12px rgba(245,130,32,.3); white-space: nowrap; }
   .btn-nav:hover  { background: var(--orange-d); }
   .btn-nav:active { transform: scale(.97); }
   .btn-nav:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
@@ -74,9 +74,9 @@
   .pg-frame { position: relative; background: var(--cream); padding: 16px 22px 0; overflow: hidden; }
   .pg-topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 6px 10px 12px; flex-wrap: wrap; }
   .pg-logo { display: flex; align-items: center; gap: 12px; }
-  .pg-logo-img { height: 42px; width: auto; display: block; }
-  .pg-nav { display: flex; align-items: center; gap: 28px; }
-  .pg-nav a { font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none; position: relative; padding-bottom: 2px; }
+  .pg-logo-img { height: 54px; width: auto; display: block; }
+  .pg-nav { display: flex; align-items: center; gap: 36px; }
+  .pg-nav a { font-size: 15px; font-weight: 700; color: var(--text); text-decoration: none; position: relative; padding-bottom: 2px; }
   .pg-nav a:hover { color: var(--blue); }
   .pg-topbar-right { display: flex; align-items: center; gap: 28px; }
   .pg-hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0; }
@@ -86,14 +86,14 @@
   .pg-hamburger.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .pg-mobile-menu { display: none; }
 
-  .hero-v3 { position: relative; z-index: 1; margin: 0 -22px; display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
+  .hero-v3 { position: relative; z-index: 1; margin: 0 -22px; display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 96px); }
   .hero-v3-photo { position: relative; overflow: hidden; }
   .hero-v3-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 45%; display: block; }
   .hero-v3-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(250,250,248,0) 50%, var(--cream) 96%); pointer-events: none; }
   .hero-v3-text { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 20px 32px 20px 44px; }
   .hero-v3-blob { position: relative; z-index: 1; padding: 12px 8px; }
   .hero-v3-kicker { font-size: 16px; font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 12px; }
-  .hero-v3-blob h1 { font-family: var(--sans); font-weight: 900; font-size: clamp(42px, 4.6vw, 56px); color: var(--deep); line-height: 1.3; text-wrap: balance; margin-bottom: 18px; }
+  .hero-v3-blob h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(42px, 4.6vw, 56px); letter-spacing: 0.10em; color: var(--deep); line-height: 1.3; text-wrap: balance; margin-bottom: 18px; }
   .hero-v3-sub { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 30px; text-wrap: pretty; }
   .hero-v3-sub .sub-break-mobile { display: none; }
   .hero-v3-corner-blob { position: absolute; z-index: -1; width: 120px; height: 112px; bottom: -60px; right: -30px; background: var(--pale); clip-path: url(#heroBlobSmallClip); pointer-events: none; }
@@ -114,8 +114,9 @@
   .warranty-h2-accent { color: var(--deep); font-size: 1.5em; line-height: 1; vertical-align: -0.08em; display: inline-block; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; margin-bottom: 24px; }
   .warranty-mascot { height: 230px; width: auto; flex-shrink: 0; display: block; }
-  .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 640px; margin-bottom: 48px; }
+  .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 880px; margin-bottom: 48px; }
   .sec-why .sec-lead { max-width: 920px; }
+  .sec-about .sec-lead { color: var(--deep); }
   .about-h2-break-mobile, .about-lead-break-mobile { display: none; }
   .jp-bracket-hang { margin-left: -0.5em; }
   .warranty-lead-break-mobile, .warranty-lead-break-mobile2 { display: none; }
@@ -607,8 +608,8 @@
 <!-- ── ABOUT: 取り扱いレンズについて(旧sec-product内容を統合) ── -->
 <section class="sec-about" id="product">
   <div class="wrap">
-    <h2 class="about-h2">子どもの近視レンズは<br>アイメガネへ</h2>
-    <p class="sec-lead">アイメガネ全店でご相談いただけます。<br>本レンズは、眼科医が発行する<br class="why-lead-break-mobile"><mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずは眼科を受診のうえ、<br class="why-lead-break-mobile">処方箋をご持参ください。</p>
+    <h2 class="about-h2">子どもの近視レンズはアイメガネへ</h2>
+    <p class="sec-lead">アイメガネ全店でご相談いただけます。本レンズは、眼科医が発行する<br class="why-lead-break-mobile"><mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずは眼科を受診のうえ、<br class="why-lead-break-mobile">処方箋をご持参ください。</p>
     <div class="brand-cards">
       <div class="brand-card">
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>

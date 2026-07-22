@@ -517,6 +517,16 @@
     .wrap, .stats-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
   }
 
+  /* ── MEDIUM VIEWPORT(タブレット幅など、3カラムが窮屈になる範囲) ── */
+  @media (min-width: 741px) and (max-width: 1220px) {
+    .warranty-scard-stat { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+    .warranty-scard-stat-num { font-size: 36px; }
+    .warranty-scard-stat-sub { margin-left: 0; }
+  }
+  @media (min-width: 741px) and (max-width: 899px) {
+    .warranty-scards { grid-template-columns: 1fr; gap: 24px; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .feature-card:hover, .concern-card:hover { transform: none; }
     * { transition: none !important; animation: none !important; }

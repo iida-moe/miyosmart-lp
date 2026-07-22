@@ -428,7 +428,7 @@
     .sec-warranty { padding-top: 100px; }
     .sec-lead { font-size: 19px; }
     .sec-flow .sec-lead { font-size: 17px; }
-    .sec-about .sec-lead { font-size: 15.5px; }
+    .sec-about .sec-lead { font-size: 14.5px; }
     .sec-why .sec-lead { font-size: 15px; }
     .pg-frame        { padding: 16px 16px 0; }
     .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
@@ -629,7 +629,7 @@
 <section class="sec-about" id="product">
   <div class="wrap">
     <h2 class="about-h2">子どもの近視レンズは<br class="about-h2-break-mobile">アイメガネへ</h2>
-    <p class="sec-lead">アイメガネ全店でご相談いただけます。<br class="mobile-break">本レンズは、眼科医が発行する<br class="why-lead-break-mobile"><mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずは眼科を受診のうえ、<br class="why-lead-break-mobile">処方箋をご持参ください。</p>
+    <p class="sec-lead">アイメガネ全店でご相談いただけます。<br class="mobile-break">本レンズは、眼科医が発行する<br class="why-lead-break-mobile"><mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずは眼科を受診のうえ、処方箋をご持参ください。</p>
     <div class="brand-cards">
       <div class="brand-card">
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>
@@ -1540,7 +1540,7 @@ function renderSearchResult(userLat,userLng,labelHtml){
     distanceKm:haversineKm(userLat,userLng,s.lat,s.lng)
   })).sort((a,b)=>a.distanceKm-b.distanceKm);
   countEl.style.display='block';
-  countEl.innerHTML=`${labelHtml}<br><small class="shop-count-note">※表示される距離は直線距離です。実際の道のりとは異なる場合があります。</small>`;
+  countEl.innerHTML=`${labelHtml}<br><small class="shop-count-note">※表示される距離は直線距離です。<br class="mobile-break">実際の道のりとは異なる場合があります。</small>`;
   const hero=ranked[0];
   const others=ranked.slice(1,5);
   const rest=ranked.slice(5);

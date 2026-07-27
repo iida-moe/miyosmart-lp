@@ -82,7 +82,7 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .pg-frame { position: relative; background: var(--cream); padding: 16px 22px 0; overflow: hidden; }
   .pg-topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 6px 10px 12px; flex-wrap: wrap; }
   .pg-logo { display: flex; align-items: center; gap: 12px; }
-  .pg-logo-img { height: 54px; width: auto; display: block; }
+  .pg-logo-img { height: clamp(36px, calc(29.66px + 1.69vw), 54px); width: auto; display: block; }
   .pg-nav { display: flex; align-items: center; gap: 36px; }
   .pg-nav a { font-size: 15px; font-weight: 700; color: var(--text); text-decoration: none; position: relative; padding-bottom: 2px; }
   .pg-nav a:hover { color: var(--blue); }
@@ -100,9 +100,9 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .hero-v3-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(250,250,248,0) 50%, var(--cream) 96%); pointer-events: none; }
   .hero-v3-text { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 20px 32px 20px 44px; }
   .hero-v3-blob { position: relative; z-index: 1; padding: 12px 8px; }
-  .hero-v3-kicker { font-size: 16px; font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 12px; }
-  .hero-v3-blob h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(42px, 4.6vw, 56px); letter-spacing: 0.10em; color: var(--deep); line-height: 1.3; text-wrap: balance; margin-bottom: 18px; }
-  .hero-v3-sub { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 30px; text-wrap: pretty; }
+  .hero-v3-kicker { font-size: clamp(14px, calc(13.3px + 0.188vw), 16px); font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 12px; }
+  .hero-v3-blob h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(38px, calc(31.66px + 1.69vw), 56px); letter-spacing: 0.10em; color: var(--deep); line-height: 1.3; text-wrap: balance; margin-bottom: 18px; }
+  .hero-v3-sub { font-size: clamp(14px, calc(13.3px + 0.188vw), 16px); color: var(--muted); line-height: 1.85; margin-bottom: 30px; text-wrap: pretty; }
   .hero-v3-sub .sub-break-mobile { display: none; }
   .hero-v3-corner-blob { position: absolute; z-index: -1; width: 120px; height: 112px; bottom: -60px; right: -30px; background: var(--pale); clip-path: url(#heroBlobSmallClip); pointer-events: none; }
 
@@ -115,20 +115,22 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   section { padding: var(--py) 0; }
   .sec-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 12px; }
   .sec-h2  { font-family: var(--serif); font-size: 52px; font-weight: 700; color: var(--deep); line-height: 1.4; text-wrap: balance; margin-bottom: 14px; }
-  .sec-flow .sec-h2 { margin-left: -14px; margin-bottom: 0; }
+  .sec-flow .sec-h2 { margin-left: -14px; margin-bottom: 0; font-size: clamp(38px, calc(33.07px + 1.31vw), 52px); }
+  .sec-why .sec-h2 { font-size: clamp(34px, calc(27.66px + 1.69vw), 52px); }
   .flow-title-row { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 14px; }
-  .flow-mascot { height: 140px; width: auto; flex-shrink: 0; }
+  .flow-mascot { height: clamp(140px, calc(207.61px - 4.69vw), 190px); width: auto; flex-shrink: 0; }
   .warranty-h2-row { display: flex; align-items: flex-end; justify-content: flex-start; gap: 24px; margin-bottom: 4px; }
   .warranty-h2-text { text-align: left; }
-  .warranty-subtitle { display: block; font-size: 20px; font-weight: 700; color: var(--deep); margin-bottom: -10px; }
-  .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
-  .warranty-h2-text .sec-lead { color: var(--deep); }
+  .warranty-subtitle { display: block; font-size: clamp(14px, calc(11.89px + 0.563vw), 20px); font-weight: 700; color: var(--deep); margin-bottom: -10px; }
+  .warranty-h2-text .sec-h2 { margin-bottom: 10px; font-size: clamp(30px, calc(22.25px + 2.07vw), 52px); }
+  .warranty-h2-text .sec-lead { color: var(--deep); font-size: clamp(13.5px, calc(12.27px + 0.329vw), 17px); }
   .warranty-h2-accent { color: var(--deep); font-size: 1.5em; line-height: 1; vertical-align: -0.08em; display: inline-block; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; margin-bottom: 24px; }
-  .warranty-mascot { height: 160px; width: auto; flex-shrink: 0; display: block; }
-  .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 880px; margin-bottom: 48px; }
-  .sec-why .sec-lead { max-width: 920px; }
-  .sec-about .sec-lead { color: var(--deep); }
+  .warranty-mascot { height: clamp(90px, calc(65.35px + 6.57vw), 160px); width: auto; flex-shrink: 0; display: block; }
+  .sec-lead { font-size: clamp(17px, calc(19.70px - 0.188vw), 19px); color: var(--muted); line-height: 1.95; max-width: 880px; margin-bottom: 48px; }
+  .sec-why .sec-lead { max-width: 920px; font-size: clamp(15px, calc(14.30px + 0.188vw), 17px); color: var(--deep); }
+  .sec-flow .sec-lead { color: var(--deep); }
+  .sec-about .sec-lead { color: var(--deep); font-size: clamp(14.5px, calc(13.62px + 0.235vw), 17px); }
   .about-h2-break-mobile, .about-lead-break-mobile { display: none; }
   .jp-bracket-hang { margin-left: -0.5em; }
   .warranty-lead-break-mobile, .warranty-lead-break-mobile2 { display: none; }
@@ -140,10 +142,10 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .sec-about  { background: var(--cream); }
   .sec-about .wrap { max-width: 1160px; }
   .section-gap-transition { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 90px; }
-  .section-gap-transition span { font-size: 44px; font-weight: 700; color: var(--deep); }
+  .section-gap-transition span { font-size: clamp(27px, calc(21.01px + 1.6vw), 44px); font-weight: 700; color: var(--deep); }
   .section-gap-arrow { position: relative; width: 100vw; margin: -70px calc(50% - 50vw) -160px; height: 160px; z-index: 1; pointer-events: none; }
   .section-gap-arrow::before { content: ""; position: absolute; inset: 0; background: var(--cream); clip-path: polygon(0 0, 100% 0, 50% 100%); }
-  .about-h2   { font-family: var(--serif); font-size: 38px; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; }
+  .about-h2   { font-family: var(--serif); font-size: clamp(32px, calc(29.89px + 0.563vw), 38px); font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; }
   .highlight-marker { background: none; color: var(--deep); font-weight: 700; border-bottom: 5px solid #ffd93d; padding-bottom: 2px; }
   .lead-emphasis { font-size: 1.3em; }
   .lead-note-line { display: inline-block; font-size: 13px; white-space: nowrap; }
@@ -154,7 +156,7 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .brand-card-tab { display: block; text-align: center; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.3; padding: 16px 20px; border-radius: var(--r-sm); margin-bottom: 20px; }
   .brand-card-tab span { font-size: 16px; vertical-align: super; }
   .brand-card-badge { display: inline-block; background: var(--pale); color: var(--deep); font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 14px; }
-  .brand-card-note { font-size: 15.5px; color: var(--text); line-height: 1.9; text-align: left; max-width: 560px; margin: 0 auto 20px; min-height: 115px; }
+  .brand-card-note { font-size: clamp(14px, calc(13.47px + 0.141vw), 15.5px); color: var(--text); line-height: 1.9; text-align: left; max-width: 560px; margin: 0 auto 20px; min-height: 115px; }
   .brand-card-footnote { display: block; text-align: right; font-size: 11px; color: var(--muted); margin-top: 4px; }
   .brand-card-note strong { color: var(--blue); font-weight: 700; }
   .brand-card-link { display: block; text-align: right; margin-top: auto; padding-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; }
@@ -169,10 +171,10 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .flow-row { position: relative; display: flex; align-items: center; gap: 22px; background: var(--white); border: 2px solid var(--blue); border-radius: 0 var(--r-sm) var(--r-sm) var(--r-sm); padding: 24px 28px; }
   .flow-rows > .flow-row:first-child { margin-top: 26px; }
   .flow-row-tab { position: absolute; top: -22px; left: -2px; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 14px; letter-spacing: .02em; padding: 8px 22px; border-radius: var(--r-sm) var(--r-sm) 0 0; box-shadow: 0 -2px 4px rgba(36,74,107,.08); }
-  .flow-row-icon { flex-shrink: 0; width: 84px; height: 84px; display: flex; align-items: center; justify-content: center; }
+  .flow-row-icon { flex-shrink: 0; width: clamp(72px, calc(67.78px + 1.13vw), 84px); height: clamp(72px, calc(67.78px + 1.13vw), 84px); display: flex; align-items: center; justify-content: center; }
   .flow-row-text { flex: 1; min-width: 0; }
-  .flow-row-title { font-size: 24px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
-  .flow-row-desc  { font-size: 15px; color: var(--muted); line-height: 1.7; }
+  .flow-row-title { font-size: clamp(17px, calc(14.54px + 0.657vw), 24px); font-weight: 700; color: var(--deep); margin-bottom: 6px; }
+  .flow-row-desc  { font-size: clamp(13px, calc(12.30px + 0.188vw), 15px); color: var(--muted); line-height: 1.7; }
   .flow-rail { text-align: center; padding: 20px 0; }
   .flow-rail svg { width: 34px; height: 34px; }
   .flow-note  { margin-top: 32px; text-align: center; }
@@ -182,7 +184,7 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .sec-shop { background: var(--cream); }
   .sec-shop .wrap { text-align: center; }
   .shop-h2-row { position: relative; margin-bottom: 14px; }
-  .shop-mascot { position: absolute; top: -20px; left: 50%; margin-left: 235px; height: 170px; width: auto; }
+  .shop-mascot { position: absolute; top: -20px; left: 50%; margin-left: 235px; height: clamp(110px, calc(88.87px + 5.63vw), 170px); width: auto; }
   .shop-intro { font-size: 15px; color: var(--muted); line-height: 1.8; margin: 0 auto 24px; max-width: 560px; }
   .shop-rx-note { text-align: center; margin: 0 auto 28px; }
   .shop-rx-note p { font-size: 15px; color: var(--text); line-height: 1.8; }
@@ -297,17 +299,17 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .warranty-scard-title { font-size: 22px; font-weight: 700; color: var(--deep); line-height: 1.2; margin: 0; }
   .warranty-scard-scene { display: block; font-size: 14px; font-weight: 700; color: var(--blue); line-height: 1.2; margin-bottom: 6px; }
   .warranty-scard-stat { margin-bottom: 4px; text-align: left; }
-  .warranty-scard-stat-num { position: relative; font-family: var(--serif); font-size: 48px; font-weight: 700; color: var(--blue); line-height: 1; }
+  .warranty-scard-stat-num { position: relative; font-family: var(--serif); font-size: clamp(38px, calc(34.48px + 0.939vw), 48px); font-weight: 700; color: var(--blue); line-height: 1; }
   .warranty-scard-stat-sub { font-family: var(--serif); font-size: 14px; font-weight: 700; color: var(--deep); margin-left: 8px; }
   .warranty-scard-desc  { margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.6; text-align: left; text-wrap: pretty; }
   .warranty-scard-note  { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; text-wrap: pretty; }
   .warranty-formula { margin: 24px auto 0; max-width: 760px; padding: 14px 32px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); }
-  .warranty-formula-lead { text-align: center; font-size: 15px; color: var(--deep); line-height: 1.6; margin-bottom: 6px; }
+  .warranty-formula-lead { text-align: center; font-size: clamp(13px, calc(12.30px + 0.188vw), 15px); color: var(--deep); line-height: 1.6; margin-bottom: 6px; }
   .warranty-formula-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; }
   .warranty-formula-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
   .warranty-formula-icon { height: 62px; display: flex; align-items: center; justify-content: center; }
   .warranty-formula-icon-round { width: 78px; height: 78px; border-radius: 50%; background: var(--sky); }
-  .warranty-formula-label { font-size: 13px; font-weight: 700; color: var(--deep); white-space: nowrap; }
+  .warranty-formula-label { font-size: clamp(13px, calc(15.70px - 0.188vw), 15px); font-weight: 700; color: var(--deep); white-space: nowrap; }
   .warranty-formula-op { font-size: 26px; font-weight: 700; color: var(--muted); }
   .warranty-cta-banner { margin-top: 24px; background: #f8f2e8; border-radius: var(--r); display: flex; align-items: stretch; overflow: hidden; }
   .warranty-cta-photo { flex-shrink: 0; width: 220px; display: flex; align-items: center; justify-content: center; padding-left: 18px; }
@@ -316,7 +318,7 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .warranty-cta-body { flex: 1; display: flex; align-items: center; gap: 32px; padding: 22px 32px 22px 12px; min-width: 0; }
   .warranty-cta-icon  { width: 56px; height: 56px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .warranty-cta-text  { flex: 0 1 760px; }
-  .warranty-cta-title { font-size: 29px; font-weight: 700; color: var(--deep); line-height: 1.2; margin-bottom: 10px; }
+  .warranty-cta-title { font-size: clamp(25px, calc(23.59px + 0.376vw), 29px); font-weight: 700; color: var(--deep); line-height: 1.2; margin-bottom: 10px; }
   .warranty-cta-desc  { font-size: 14px; color: var(--text); line-height: 1.6; }
   .warranty-cta-btn   { display: inline-block; flex-shrink: 0; background: var(--orange); color: #fff; border: none; padding: 18px 36px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 16px rgba(245,130,32,.3); white-space: nowrap; }
   .warranty-cta-btn:hover  { background: var(--orange-d); }
@@ -345,8 +347,8 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   .sec-cta::after  { content: ""; position: absolute; bottom: -80px; left: -80px; width: 320px; height: 320px; border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%; background: rgba(255,255,255,.4); pointer-events: none; }
   .cta-inner { position: relative; z-index: 1; }
   .cta-title-row { display: flex; align-items: center; justify-content: flex-start; gap: 24px; margin-bottom: 14px; }
-  .cta-mascot { height: 150px; width: auto; flex-shrink: 0; display: block; filter: drop-shadow(0 8px 14px rgba(36,74,107,.15)); }
-  .cta-h2   { font-family: var(--serif); font-size: 43px; font-weight: 700; color: var(--deep); line-height: 1.5; text-wrap: balance; margin-bottom: 0; text-align: left; }
+  .cta-mascot { height: clamp(130px, calc(122.96px + 1.88vw), 150px); width: auto; flex-shrink: 0; display: block; filter: drop-shadow(0 8px 14px rgba(36,74,107,.15)); }
+  .cta-h2   { font-family: var(--serif); font-size: clamp(24px, calc(17.31px + 1.78vw), 43px); font-weight: 700; color: var(--deep); line-height: 1.5; text-wrap: balance; margin-bottom: 0; text-align: left; }
   .cta-body { font-size: 15px; color: var(--muted); line-height: 1.95; max-width: 520px; margin: 0 0 40px; text-align: left; }
   .cta-btns { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; }
   .btn-cta { display: inline-block; background: var(--orange); color: #fff; border: none; padding: 18px 52px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 17px; font-weight: 700; text-decoration: none; cursor: pointer; box-shadow: 0 4px 22px rgba(245,130,32,.38); transition: background .2s, transform .12s; }
@@ -370,17 +372,12 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
   /* ── RESPONSIVE ── */
   @media (max-width: 740px) {
     :root { --py: 56px; }
-    .section-gap-transition span { font-size: 27px; }
-    .warranty-subtitle { font-size: 14px; margin-bottom: 4px; }
+    .warranty-subtitle { margin-bottom: 4px; }
     .section-gap-arrow { height: 100px; margin-top: -50px; margin-bottom: -100px; }
     .sec-warranty { padding-top: 132px; }
-    .sec-lead { font-size: 19px; }
     .sec-flow .sec-lead { font-size: 17px; }
-    .sec-about .sec-lead { font-size: 14.5px; }
-    .sec-why .sec-lead { font-size: 15px; }
     .pg-frame        { padding: 16px 16px 0; }
     .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
-    .pg-logo-img     { height: 36px; }
     .pg-nav          { display: none; }
     .pg-topbar-right { display: none; }
     .pg-hamburger    { display: flex; }
@@ -399,24 +396,23 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
     .hero-v3-content { padding-top: 16px; }
     .hero-v3-text     { padding: 28px 20px 40px; }
     .hero-v3-blob     { padding: 12px 8px; text-align: center; }
-    .hero-v3-blob h1 {font-size: 38px;line-height: 1.15;}
-    .hero-v3-sub      { font-size: 14px; margin-bottom: 22px; }
+    .hero-v3-blob h1 {line-height: 1.15;}
+    .hero-v3-sub      { margin-bottom: 22px; }
     .hero-v3-sub .sub-break { display: none; }
     .hero-v3-sub .sub-break-mobile { display: inline; }
-    .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
-    .about-h2 {font-size: 32px;line-height: 1.3;font-weight: 800;letter-spacing: -0.02em;margin-bottom: 32px;}
+    .about-h2 {line-height: 1.3;font-weight: 800;letter-spacing: -0.02em;margin-bottom: 32px;}
     .about-h2-break-mobile, .about-lead-break-mobile { display: inline; }
     .lead-note-line { white-space: normal; font-size: 12px; }
     .about-points { gap: 12px; }
     .brand-cards    { grid-template-columns: 1fr; }
     .brand-card-tab { font-size: 19px; padding: 13px 16px; }
     .brand-card { padding: 32px 24px; }
-    .brand-card-note { min-height: 0; font-size: 14px; }
+    .brand-card-note { min-height: 0; }
     .sec-why .sec-lead { margin-bottom: 20px; }
     .why-grid4 { grid-template-columns: 1fr; gap: 24px; margin-top: 8px; padding-top: 0; }
     .shop-hero-card { flex-direction: column; }
-    .shop-mascot { position: static; display: block; margin: -12px auto 4px; height: 110px; }
+    .shop-mascot { position: static; display: block; margin: -12px auto 4px; }
     .shop-hero-photo { width: 100%; min-height: 180px; }
     .shop-hero-body { text-align: center; }
     .shop-others-grid, .shop-initial, .shop-more-list-outer .shop-more-list { grid-template-columns: 1fr !important; gap: 12px !important; }
@@ -425,49 +421,39 @@ $lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
     .warranty-h2-row { flex-direction: row; align-items: flex-start; gap: 10px; }
     .warranty-h2-text { text-align: left; flex: 1; min-width: 0; }
     .warranty-h2-text .sec-h2, .warranty-h2-text .sec-lead, .warranty-age-note { text-align: left !important; }
-    .warranty-h2-text .sec-h2 { font-size: 30px; white-space: nowrap; }
-    .sec-why .sec-h2 { font-size: 34px; }
-    .sec-flow .sec-h2 { font-size: 38px; white-space: nowrap; }
-    .cta-h2 { font-size: 24px; }
+    .warranty-h2-text .sec-h2 { white-space: nowrap; }
+    .sec-flow .sec-h2 { white-space: nowrap; }
     .cta-title-row { flex-direction: column; gap: 8px; }
     .cta-title-row .cta-h2 { text-align: center; order: 2; }
-    .cta-title-row .cta-mascot { order: 1; height: 130px; }
+    .cta-title-row .cta-mascot { order: 1; }
     .cta-body { text-align: center; margin: 0 auto 40px; }
     .cta-btns { justify-content: center; }
-    .warranty-h2-text .sec-lead { font-size: 13.5px; }
     .why-lead-break-mobile { display: inline; }
     .warranty-lead-break-mobile { display: inline; }
     .mobile-break { display: inline; }
     .warranty-mascot-wrap { margin-top: 2px; }
-    .warranty-mascot { height: 90px; }
-    .flow-mascot { height: 190px; }
     .warranty-age-note { margin: 6px 0 20px; }
     .warranty-scards { grid-template-columns: 1fr; gap: 24px; margin-top: 16px; }
     .warranty-scard { padding: 28px 24px; min-height: 262px; }
     .warranty-scard-stat { text-align: left; display: flex; align-items: flex-end; }
-    .warranty-scard-stat-num { font-size: 38px; }
     .warranty-formula { padding: 16px 16px; }
-    .warranty-formula-lead { font-size: 13px; }
-    .warranty-formula-label { font-size: 15px; white-space: normal; }
+    .warranty-formula-label { white-space: normal; }
     .warranty-formula-row { position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
     .warranty-formula-op { display: none; }
     .warranty-formula-row::after { content: "+"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 30px; font-weight: 700; color: var(--muted); }
     .warranty-cta-banner { position: relative; flex-direction: column; }
     .warranty-cta-photo { display: none; }
     .warranty-cta-body { flex-direction: column; align-items: stretch; text-align: left; padding: 20px 16px; gap: 14px; }
-    .warranty-cta-title { font-size: 25px; line-height: 1.25; }
+    .warranty-cta-title { line-height: 1.25; }
     .warranty-cta-desc { font-size: 13px; }
     .warranty-cta-text { flex: 0 1 auto; }
     .warranty-cta-desc .cta-desc-break { display: none; }
     .warranty-cta-btn { width: 100%; text-align: center; font-size: 14px; padding: 15px 30px; align-self: center; }
     .flow-row { padding: 16px 16px; gap: 14px; }
     .flow-row-tab { padding: 6px 16px; font-size: 12.5px; top: -20px; }
-    .flow-row-icon { width: 72px; height: 72px; }
     .flow-row-icon svg { width: 42px; height: 42px; }
     .flow-row-icon .flow-sparkle-lg { width: 17px; height: 17px; }
     .flow-row-icon .flow-sparkle-sm { width: 11px; height: 11px; }
-    .flow-row-title { font-size: 17px; }
-    .flow-row-desc  { font-size: 13px; }
     .wrap, .footer-inner { padding-left: 20px; padding-right: 20px; }
   }
 

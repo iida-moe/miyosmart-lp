@@ -1,3 +1,9 @@
+<?php
+header('Cache-Control: no-cache, no-store, must-revalidate');
+header('Pragma: no-cache');
+header('Expires: 0');
+$lp_assets = get_stylesheet_directory_uri() . '/lp/assets/miyosmart/img';
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,11 +13,15 @@
 <meta name="description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART®）」「エシロール® ステレスト®（Essilor®Stellest®）」をアイメガネ全店で取り扱い。業界最高水準のアイキッズ＆ジュニア保証付き。">
 <meta property="og:title" content="小児の近視用メガネレンズ「ミヨスマート」「エシロール® ステレスト®」取り扱い開始 | アイメガネ">
 <meta property="og:description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART®）」「エシロール® ステレスト®（Essilor®Stellest®）」をアイメガネ全店で取り扱い。業界最高水準のアイキッズ＆ジュニア保証付き。">
-<meta property="og:image" content="https://iida-moe.github.io/miyosmart-lp/images/hero-eye2.png">
-<meta property="og:url" content="https://iida-moe.github.io/miyosmart-lp/">
+<meta property="og:image" content="<?php echo $lp_assets; ?>/hero-eye2.png">
+<meta property="og:url" content="https://www.aimegane.com/lp-miyosmart/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="アイメガネ">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="小児の近視用メガネレンズ「ミヨスマート」「エシロール® ステレスト®」取り扱い開始 | アイメガネ">
+<meta name="twitter:description" content="小児の近視用メガネレンズ「ミヨスマート（MiYOSMART®）」「エシロール® ステレスト®（Essilor®Stellest®）」をアイメガネ全店で取り扱い。業界最高水準のアイキッズ＆ジュニア保証付き。">
+<meta name="twitter:image" content="<?php echo $lp_assets; ?>/hero-eye2.png">
+<link rel="canonical" href="https://www.aimegane.com/lp-miyosmart/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -72,7 +82,7 @@
   .pg-frame { position: relative; background: var(--cream); padding: 16px 22px 0; overflow: hidden; }
   .pg-topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 6px 10px 12px; flex-wrap: wrap; }
   .pg-logo { display: flex; align-items: center; gap: 12px; }
-  .pg-logo-img { height: clamp(36px, calc(29.66px + 1.69vw), 54px); width: auto; display: block; }
+  .pg-logo-img { height: 54px; width: auto; display: block; }
   .pg-nav { display: flex; align-items: center; gap: 36px; }
   .pg-nav a { font-size: 15px; font-weight: 700; color: var(--text); text-decoration: none; position: relative; padding-bottom: 2px; }
   .pg-nav a:hover { color: var(--blue); }
@@ -90,9 +100,9 @@
   .hero-v3-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(250,250,248,0) 50%, var(--cream) 96%); pointer-events: none; }
   .hero-v3-text { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 20px 32px 20px 44px; }
   .hero-v3-blob { position: relative; z-index: 1; padding: 12px 8px; }
-  .hero-v3-kicker { font-size: clamp(14px, calc(13.3px + 0.188vw), 16px); font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 12px; }
-  .hero-v3-blob h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(38px, calc(31.66px + 1.69vw), 56px); letter-spacing: 0.10em; color: var(--deep); line-height: 1.3; text-wrap: balance; margin-bottom: 18px; }
-  .hero-v3-sub { font-size: clamp(14px, calc(13.3px + 0.188vw), 16px); color: var(--muted); line-height: 1.85; margin-bottom: 30px; text-wrap: pretty; }
+  .hero-v3-kicker { font-size: 16px; font-weight: 700; color: var(--blue); letter-spacing: .04em; margin-bottom: 12px; }
+  .hero-v3-blob h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(42px, 4.6vw, 56px); letter-spacing: 0.10em; color: var(--deep); line-height: 1.3; text-wrap: balance; margin-bottom: 18px; }
+  .hero-v3-sub { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 30px; text-wrap: pretty; }
   .hero-v3-sub .sub-break-mobile { display: none; }
   .hero-v3-corner-blob { position: absolute; z-index: -1; width: 120px; height: 112px; bottom: -60px; right: -30px; background: var(--pale); clip-path: url(#heroBlobSmallClip); pointer-events: none; }
 
@@ -105,22 +115,20 @@
   section { padding: var(--py) 0; }
   .sec-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--pale); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 12px; }
   .sec-h2  { font-family: var(--serif); font-size: 52px; font-weight: 700; color: var(--deep); line-height: 1.4; text-wrap: balance; margin-bottom: 14px; }
-  .sec-flow .sec-h2 { margin-left: -14px; margin-bottom: 0; font-size: clamp(38px, calc(33.07px + 1.31vw), 52px); }
-  .sec-why .sec-h2 { font-size: clamp(34px, calc(27.66px + 1.69vw), 52px); }
+  .sec-flow .sec-h2 { margin-left: -14px; margin-bottom: 0; }
   .flow-title-row { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 14px; }
-  .flow-mascot { height: clamp(140px, calc(207.61px - 4.69vw), 190px); width: auto; flex-shrink: 0; }
+  .flow-mascot { height: 140px; width: auto; flex-shrink: 0; }
   .warranty-h2-row { display: flex; align-items: flex-end; justify-content: flex-start; gap: 24px; margin-bottom: 4px; }
   .warranty-h2-text { text-align: left; }
-  .warranty-subtitle { display: block; font-size: clamp(14px, calc(11.89px + 0.563vw), 20px); font-weight: 700; color: var(--deep); margin-bottom: -10px; }
-  .warranty-h2-text .sec-h2 { margin-bottom: 10px; font-size: clamp(30px, calc(22.25px + 2.07vw), 52px); }
-  .warranty-h2-text .sec-lead { color: var(--deep); font-size: clamp(13.5px, calc(12.27px + 0.329vw), 17px); }
+  .warranty-subtitle { display: block; font-size: 20px; font-weight: 700; color: var(--deep); margin-bottom: -10px; }
+  .warranty-h2-text .sec-h2 { margin-bottom: 10px; }
+  .warranty-h2-text .sec-lead { color: var(--deep); }
   .warranty-h2-accent { color: var(--deep); font-size: 1.5em; line-height: 1; vertical-align: -0.08em; display: inline-block; }
   .warranty-mascot-wrap { position: relative; flex-shrink: 0; margin-bottom: 24px; }
-  .warranty-mascot { height: clamp(90px, calc(65.35px + 6.57vw), 160px); width: auto; flex-shrink: 0; display: block; }
-  .sec-lead { font-size: clamp(17px, calc(19.70px - 0.188vw), 19px); color: var(--muted); line-height: 1.95; max-width: 880px; margin-bottom: 48px; }
-  .sec-why .sec-lead { max-width: 920px; font-size: clamp(15px, calc(14.30px + 0.188vw), 17px); color: var(--deep); }
-  .sec-flow .sec-lead { color: var(--deep); }
-  .sec-about .sec-lead { color: var(--deep); font-size: clamp(14.5px, calc(13.62px + 0.235vw), 17px); }
+  .warranty-mascot { height: 160px; width: auto; flex-shrink: 0; display: block; }
+  .sec-lead { font-size: 17px; color: var(--muted); line-height: 1.95; max-width: 880px; margin-bottom: 48px; }
+  .sec-why .sec-lead { max-width: 920px; }
+  .sec-about .sec-lead { color: var(--deep); }
   .about-h2-break-mobile, .about-lead-break-mobile { display: none; }
   .jp-bracket-hang { margin-left: -0.5em; }
   .warranty-lead-break-mobile, .warranty-lead-break-mobile2 { display: none; }
@@ -132,10 +140,10 @@
   .sec-about  { background: var(--cream); }
   .sec-about .wrap { max-width: 1160px; }
   .section-gap-transition { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 90px; }
-  .section-gap-transition span { font-size: clamp(27px, calc(21.01px + 1.6vw), 44px); font-weight: 700; color: var(--deep); }
+  .section-gap-transition span { font-size: 44px; font-weight: 700; color: var(--deep); }
   .section-gap-arrow { position: relative; width: 100vw; margin: -70px calc(50% - 50vw) -160px; height: 160px; z-index: 1; pointer-events: none; }
   .section-gap-arrow::before { content: ""; position: absolute; inset: 0; background: var(--cream); clip-path: polygon(0 0, 100% 0, 50% 100%); }
-  .about-h2   { font-family: var(--serif); font-size: clamp(32px, calc(29.89px + 0.563vw), 38px); font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; }
+  .about-h2   { font-family: var(--serif); font-size: 38px; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 18px; }
   .highlight-marker { background: none; color: var(--deep); font-weight: 700; border-bottom: 5px solid #ffd93d; padding-bottom: 2px; }
   .lead-emphasis { font-size: 1.3em; }
   .lead-note-line { display: inline-block; font-size: 13px; white-space: nowrap; }
@@ -146,7 +154,7 @@
   .brand-card-tab { display: block; text-align: center; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.3; padding: 16px 20px; border-radius: var(--r-sm); margin-bottom: 20px; }
   .brand-card-tab span { font-size: 16px; vertical-align: super; }
   .brand-card-badge { display: inline-block; background: var(--pale); color: var(--deep); font-size: 12px; font-weight: 700; letter-spacing: .03em; padding: 5px 14px; border-radius: var(--r-pill); margin-bottom: 14px; }
-  .brand-card-note { font-size: clamp(14px, calc(13.47px + 0.141vw), 15.5px); color: var(--text); line-height: 1.9; text-align: left; max-width: 560px; margin: 0 auto 20px; min-height: 115px; }
+  .brand-card-note { font-size: 15.5px; color: var(--text); line-height: 1.9; text-align: left; max-width: 560px; margin: 0 auto 20px; min-height: 115px; }
   .brand-card-footnote { display: block; text-align: right; font-size: 11px; color: var(--muted); margin-top: 4px; }
   .brand-card-note strong { color: var(--blue); font-weight: 700; }
   .brand-card-link { display: block; text-align: right; margin-top: auto; padding-top: 16px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; }
@@ -161,10 +169,10 @@
   .flow-row { position: relative; display: flex; align-items: center; gap: 22px; background: var(--white); border: 2px solid var(--blue); border-radius: 0 var(--r-sm) var(--r-sm) var(--r-sm); padding: 24px 28px; }
   .flow-rows > .flow-row:first-child { margin-top: 26px; }
   .flow-row-tab { position: absolute; top: -22px; left: -2px; background: var(--blue); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 14px; letter-spacing: .02em; padding: 8px 22px; border-radius: var(--r-sm) var(--r-sm) 0 0; box-shadow: 0 -2px 4px rgba(36,74,107,.08); }
-  .flow-row-icon { flex-shrink: 0; width: clamp(72px, calc(67.78px + 1.13vw), 84px); height: clamp(72px, calc(67.78px + 1.13vw), 84px); display: flex; align-items: center; justify-content: center; }
+  .flow-row-icon { flex-shrink: 0; width: 84px; height: 84px; display: flex; align-items: center; justify-content: center; }
   .flow-row-text { flex: 1; min-width: 0; }
-  .flow-row-title { font-size: clamp(17px, calc(14.54px + 0.657vw), 24px); font-weight: 700; color: var(--deep); margin-bottom: 6px; }
-  .flow-row-desc  { font-size: clamp(13px, calc(12.30px + 0.188vw), 15px); color: var(--muted); line-height: 1.7; }
+  .flow-row-title { font-size: 24px; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
+  .flow-row-desc  { font-size: 15px; color: var(--muted); line-height: 1.7; }
   .flow-rail { text-align: center; padding: 20px 0; }
   .flow-rail svg { width: 34px; height: 34px; }
   .flow-note  { margin-top: 32px; text-align: center; }
@@ -174,7 +182,7 @@
   .sec-shop { background: var(--cream); }
   .sec-shop .wrap { text-align: center; }
   .shop-h2-row { position: relative; margin-bottom: 14px; }
-  .shop-mascot { position: absolute; top: -20px; left: 50%; margin-left: 235px; height: clamp(110px, calc(88.87px + 5.63vw), 170px); width: auto; }
+  .shop-mascot { position: absolute; top: -20px; left: 50%; margin-left: 235px; height: 170px; width: auto; }
   .shop-intro { font-size: 15px; color: var(--muted); line-height: 1.8; margin: 0 auto 24px; max-width: 560px; }
   .shop-rx-note { text-align: center; margin: 0 auto 28px; }
   .shop-rx-note p { font-size: 15px; color: var(--text); line-height: 1.8; }
@@ -289,17 +297,17 @@
   .warranty-scard-title { font-size: 22px; font-weight: 700; color: var(--deep); line-height: 1.2; margin: 0; }
   .warranty-scard-scene { display: block; font-size: 14px; font-weight: 700; color: var(--blue); line-height: 1.2; margin-bottom: 6px; }
   .warranty-scard-stat { margin-bottom: 4px; text-align: left; }
-  .warranty-scard-stat-num { position: relative; font-family: var(--serif); font-size: clamp(38px, calc(34.48px + 0.939vw), 48px); font-weight: 700; color: var(--blue); line-height: 1; }
+  .warranty-scard-stat-num { position: relative; font-family: var(--serif); font-size: 48px; font-weight: 700; color: var(--blue); line-height: 1; }
   .warranty-scard-stat-sub { font-family: var(--serif); font-size: 14px; font-weight: 700; color: var(--deep); margin-left: 8px; }
   .warranty-scard-desc  { margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.6; text-align: left; text-wrap: pretty; }
   .warranty-scard-note  { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; text-wrap: pretty; }
   .warranty-formula { margin: 24px auto 0; max-width: 760px; padding: 14px 32px; background: var(--white); border-radius: var(--r); box-shadow: var(--shadow-sm); }
-  .warranty-formula-lead { text-align: center; font-size: clamp(13px, calc(12.30px + 0.188vw), 15px); color: var(--deep); line-height: 1.6; margin-bottom: 6px; }
+  .warranty-formula-lead { text-align: center; font-size: 15px; color: var(--deep); line-height: 1.6; margin-bottom: 6px; }
   .warranty-formula-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; }
   .warranty-formula-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
   .warranty-formula-icon { height: 62px; display: flex; align-items: center; justify-content: center; }
   .warranty-formula-icon-round { width: 78px; height: 78px; border-radius: 50%; background: var(--sky); }
-  .warranty-formula-label { font-size: clamp(13px, calc(15.70px - 0.188vw), 15px); font-weight: 700; color: var(--deep); white-space: nowrap; }
+  .warranty-formula-label { font-size: 13px; font-weight: 700; color: var(--deep); white-space: nowrap; }
   .warranty-formula-op { font-size: 26px; font-weight: 700; color: var(--muted); }
   .warranty-cta-banner { margin-top: 24px; background: #f8f2e8; border-radius: var(--r); display: flex; align-items: stretch; overflow: hidden; }
   .warranty-cta-photo { flex-shrink: 0; width: 220px; display: flex; align-items: center; justify-content: center; padding-left: 18px; }
@@ -308,7 +316,7 @@
   .warranty-cta-body { flex: 1; display: flex; align-items: center; gap: 32px; padding: 22px 32px 22px 12px; min-width: 0; }
   .warranty-cta-icon  { width: 56px; height: 56px; border-radius: 50%; background: var(--white); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .warranty-cta-text  { flex: 0 1 760px; }
-  .warranty-cta-title { font-size: clamp(25px, calc(23.59px + 0.376vw), 29px); font-weight: 700; color: var(--deep); line-height: 1.2; margin-bottom: 10px; }
+  .warranty-cta-title { font-size: 29px; font-weight: 700; color: var(--deep); line-height: 1.2; margin-bottom: 10px; }
   .warranty-cta-desc  { font-size: 14px; color: var(--text); line-height: 1.6; }
   .warranty-cta-btn   { display: inline-block; flex-shrink: 0; background: var(--orange); color: #fff; border: none; padding: 18px 36px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .12s; box-shadow: 0 4px 16px rgba(245,130,32,.3); white-space: nowrap; }
   .warranty-cta-btn:hover  { background: var(--orange-d); }
@@ -337,8 +345,8 @@
   .sec-cta::after  { content: ""; position: absolute; bottom: -80px; left: -80px; width: 320px; height: 320px; border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%; background: rgba(255,255,255,.4); pointer-events: none; }
   .cta-inner { position: relative; z-index: 1; }
   .cta-title-row { display: flex; align-items: center; justify-content: flex-start; gap: 24px; margin-bottom: 14px; }
-  .cta-mascot { height: clamp(130px, calc(122.96px + 1.88vw), 150px); width: auto; flex-shrink: 0; display: block; filter: drop-shadow(0 8px 14px rgba(36,74,107,.15)); }
-  .cta-h2   { font-family: var(--serif); font-size: clamp(24px, calc(17.31px + 1.78vw), 43px); font-weight: 700; color: var(--deep); line-height: 1.5; text-wrap: balance; margin-bottom: 0; text-align: left; }
+  .cta-mascot { height: 150px; width: auto; flex-shrink: 0; display: block; filter: drop-shadow(0 8px 14px rgba(36,74,107,.15)); }
+  .cta-h2   { font-family: var(--serif); font-size: 43px; font-weight: 700; color: var(--deep); line-height: 1.5; text-wrap: balance; margin-bottom: 0; text-align: left; }
   .cta-body { font-size: 15px; color: var(--muted); line-height: 1.95; max-width: 520px; margin: 0 0 40px; text-align: left; }
   .cta-btns { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; }
   .btn-cta { display: inline-block; background: var(--orange); color: #fff; border: none; padding: 18px 52px; border-radius: var(--r-pill); font-family: var(--sans); font-size: 17px; font-weight: 700; text-decoration: none; cursor: pointer; box-shadow: 0 4px 22px rgba(245,130,32,.38); transition: background .2s, transform .12s; }
@@ -362,12 +370,17 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 740px) {
     :root { --py: 56px; }
-    .warranty-subtitle { margin-bottom: 4px; }
+    .section-gap-transition span { font-size: 27px; }
+    .warranty-subtitle { font-size: 14px; margin-bottom: 4px; }
     .section-gap-arrow { height: 100px; margin-top: -50px; margin-bottom: -100px; }
     .sec-warranty { padding-top: 132px; }
+    .sec-lead { font-size: 19px; }
     .sec-flow .sec-lead { font-size: 17px; }
+    .sec-about .sec-lead { font-size: 14.5px; }
+    .sec-why .sec-lead { font-size: 15px; }
     .pg-frame        { padding: 16px 16px 0; }
     .pg-topbar       { gap: 12px; padding: 4px 4px 16px; }
+    .pg-logo-img     { height: 36px; }
     .pg-nav          { display: none; }
     .pg-topbar-right { display: none; }
     .pg-hamburger    { display: flex; }
@@ -386,23 +399,24 @@
     .hero-v3-content { padding-top: 16px; }
     .hero-v3-text     { padding: 28px 20px 40px; }
     .hero-v3-blob     { padding: 12px 8px; text-align: center; }
-    .hero-v3-blob h1 {line-height: 1.15;}
-    .hero-v3-sub      { margin-bottom: 22px; }
+    .hero-v3-blob h1 {font-size: 38px;line-height: 1.15;}
+    .hero-v3-sub      { font-size: 14px; margin-bottom: 22px; }
     .hero-v3-sub .sub-break { display: none; }
     .hero-v3-sub .sub-break-mobile { display: inline; }
+    .hero-v3-kicker   { font-size: 14px; }
     .hero-v3-corner-blob { display: none; }
-    .about-h2 {line-height: 1.3;font-weight: 800;letter-spacing: -0.02em;margin-bottom: 32px;}
+    .about-h2 {font-size: 32px;line-height: 1.3;font-weight: 800;letter-spacing: -0.02em;margin-bottom: 32px;}
     .about-h2-break-mobile, .about-lead-break-mobile { display: inline; }
     .lead-note-line { white-space: normal; font-size: 12px; }
     .about-points { gap: 12px; }
     .brand-cards    { grid-template-columns: 1fr; }
     .brand-card-tab { font-size: 19px; padding: 13px 16px; }
     .brand-card { padding: 32px 24px; }
-    .brand-card-note { min-height: 0; }
+    .brand-card-note { min-height: 0; font-size: 14px; }
     .sec-why .sec-lead { margin-bottom: 20px; }
     .why-grid4 { grid-template-columns: 1fr; gap: 24px; margin-top: 8px; padding-top: 0; }
     .shop-hero-card { flex-direction: column; }
-    .shop-mascot { position: static; display: block; margin: -12px auto 4px; }
+    .shop-mascot { position: static; display: block; margin: -12px auto 4px; height: 110px; }
     .shop-hero-photo { width: 100%; min-height: 180px; }
     .shop-hero-body { text-align: center; }
     .shop-others-grid, .shop-initial, .shop-more-list-outer .shop-more-list { grid-template-columns: 1fr !important; gap: 12px !important; }
@@ -411,39 +425,49 @@
     .warranty-h2-row { flex-direction: row; align-items: flex-start; gap: 10px; }
     .warranty-h2-text { text-align: left; flex: 1; min-width: 0; }
     .warranty-h2-text .sec-h2, .warranty-h2-text .sec-lead, .warranty-age-note { text-align: left !important; }
-    .warranty-h2-text .sec-h2 { white-space: nowrap; }
-    .sec-flow .sec-h2 { white-space: nowrap; }
+    .warranty-h2-text .sec-h2 { font-size: 30px; white-space: nowrap; }
+    .sec-why .sec-h2 { font-size: 34px; }
+    .sec-flow .sec-h2 { font-size: 38px; white-space: nowrap; }
+    .cta-h2 { font-size: 24px; }
     .cta-title-row { flex-direction: column; gap: 8px; }
     .cta-title-row .cta-h2 { text-align: center; order: 2; }
-    .cta-title-row .cta-mascot { order: 1; }
+    .cta-title-row .cta-mascot { order: 1; height: 130px; }
     .cta-body { text-align: center; margin: 0 auto 40px; }
     .cta-btns { justify-content: center; }
+    .warranty-h2-text .sec-lead { font-size: 13.5px; }
     .why-lead-break-mobile { display: inline; }
     .warranty-lead-break-mobile { display: inline; }
     .mobile-break { display: inline; }
     .warranty-mascot-wrap { margin-top: 2px; }
+    .warranty-mascot { height: 90px; }
+    .flow-mascot { height: 190px; }
     .warranty-age-note { margin: 6px 0 20px; }
     .warranty-scards { grid-template-columns: 1fr; gap: 24px; margin-top: 16px; }
     .warranty-scard { padding: 28px 24px; min-height: 262px; }
     .warranty-scard-stat { text-align: left; display: flex; align-items: flex-end; }
+    .warranty-scard-stat-num { font-size: 38px; }
     .warranty-formula { padding: 16px 16px; }
-    .warranty-formula-label { white-space: normal; }
+    .warranty-formula-lead { font-size: 13px; }
+    .warranty-formula-label { font-size: 15px; white-space: normal; }
     .warranty-formula-row { position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
     .warranty-formula-op { display: none; }
     .warranty-formula-row::after { content: "+"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 30px; font-weight: 700; color: var(--muted); }
     .warranty-cta-banner { position: relative; flex-direction: column; }
     .warranty-cta-photo { display: none; }
     .warranty-cta-body { flex-direction: column; align-items: stretch; text-align: left; padding: 20px 16px; gap: 14px; }
-    .warranty-cta-title { line-height: 1.25; }
+    .warranty-cta-title { font-size: 25px; line-height: 1.25; }
     .warranty-cta-desc { font-size: 13px; }
     .warranty-cta-text { flex: 0 1 auto; }
     .warranty-cta-desc .cta-desc-break { display: none; }
     .warranty-cta-btn { width: 100%; text-align: center; font-size: 14px; padding: 15px 30px; align-self: center; }
     .flow-row { padding: 16px 16px; gap: 14px; }
     .flow-row-tab { padding: 6px 16px; font-size: 12.5px; top: -20px; }
+    .flow-row-icon { width: 72px; height: 72px; }
     .flow-row-icon svg { width: 42px; height: 42px; }
     .flow-row-icon .flow-sparkle-lg { width: 17px; height: 17px; }
     .flow-row-icon .flow-sparkle-sm { width: 11px; height: 11px; }
+    .flow-row-title { font-size: 17px; }
+    .flow-row-desc  { font-size: 13px; }
     .wrap, .footer-inner { padding-left: 20px; padding-right: 20px; }
   }
 
@@ -468,31 +492,11 @@
     * { transition: none !important; animation: none !important; }
   }
 
-  /* ── PASSWORD GATE ── */
-  .pw-gate { position: fixed; inset: 0; z-index: 999; background: var(--cream); display: flex; align-items: center; justify-content: center; padding: 20px; }
-  .pw-gate-box { background: #fff; border-radius: var(--r); box-shadow: var(--shadow-sm); padding: 40px 36px; max-width: 360px; width: 100%; text-align: center; }
-  .pw-gate-box h1 { font-family: var(--serif); font-size: 19px; color: var(--deep); margin-bottom: 8px; }
-  .pw-gate-box p { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-  .pw-gate-input { width: 100%; padding: 12px 16px; border: 2px solid var(--rule); border-radius: var(--r-sm); font-size: 15px; margin-bottom: 12px; box-sizing: border-box; text-align: center; }
-  .pw-gate-input:focus { outline: none; border-color: var(--blue); }
-  .pw-gate-btn { width: 100%; padding: 12px; background: var(--orange); color: #fff; border: none; border-radius: var(--r-pill); font-size: 15px; font-weight: 700; cursor: pointer; font-family: var(--sans); }
-  .pw-gate-btn:hover { background: var(--orange-d); }
-  .pw-gate-error { color: #d9534f; font-size: 12.5px; margin-top: 10px; display: none; }
-  .pw-gate.is-unlocked { display: none; }
-  body.pw-locked { overflow: hidden; }
 </style>
+<?php include get_stylesheet_directory() . '/lp/lp-tracking-head.php'; ?>
 </head>
 <body>
-
-<div class="pw-gate" id="pwGate">
-  <div class="pw-gate-box">
-    <h1>閲覧にはパスワードが必要です</h1>
-    <p>レビュー用の確認ページです。<br>パスワードを入力してください。</p>
-    <input type="password" class="pw-gate-input" id="pwGateInput" placeholder="パスワード" autocomplete="off">
-    <button type="button" class="pw-gate-btn" id="pwGateBtn">閲覧する</button>
-    <p class="pw-gate-error" id="pwGateError">パスワードが違います。</p>
-  </div>
-</div>
+<?php include get_stylesheet_directory() . '/lp/lp-tracking-body.php'; ?>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -518,7 +522,7 @@
 <div class="pg-frame" aria-label="メインビジュアル">
   <div class="pg-topbar">
     <a href="https://www.aimegane.com/" target="_blank" rel="noopener" class="pg-logo">
-      <img src="images/aimegane_logo.png" alt="アイメガネ" class="pg-logo-img">
+      <img src="<?php echo $lp_assets; ?>/aimegane_logo.png" alt="アイメガネ" class="pg-logo-img">
     </a>
     <div class="pg-topbar-right">
       <nav class="pg-nav">
@@ -544,7 +548,7 @@
 
   <div class="hero-v3">
     <div class="hero-v3-photo">
-      <img src="images/hero-eye2.png" alt="メガネをかけた子どもの目元アップ">
+      <img src="<?php echo $lp_assets; ?>/hero-eye2.png" alt="メガネをかけた子どもの目元アップ">
     </div>
     <div class="hero-v3-text">
       <div class="hero-v3-blob">
@@ -567,7 +571,7 @@
         <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;<br class="narrow-break">(ミヨスマート)</p>
         <p class="brand-card-note">お子さまの視力はかけがえのないものです。<br>ミヨスマートは、現在世界50か国以上&#8251;で販売されている小児向けの近視に対応する特殊な構造のメガネレンズです。<span class="brand-card-footnote">&#8251;2025年9月時点</span></p>
         <a href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">
-          <img src="images/miyosmart-official-banner.jpg" alt="ミヨスマート(MiYOSMART) HOYA公式バナー" class="brand-card-banner" loading="lazy">
+          <img src="<?php echo $lp_assets; ?>/miyosmart-official-banner.jpg" alt="ミヨスマート(MiYOSMART) HOYA公式バナー" class="brand-card-banner" loading="lazy">
         </a>
         <p class="brand-card-price">【価格】お好きなフレーム<br class="mobile-break">＋<span>¥77,000(税込)</span></p>
         <a class="brand-card-link" href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">HOYA公式サイトで詳しく見る ›</a>
@@ -576,7 +580,7 @@
         <p class="brand-card-tab">Essilor<span>&reg;</span>Stellest<span>&reg;</span>&nbsp;&nbsp;<br class="mobile-break">(エシロール ステレスト)</p>
         <p class="brand-card-note">エシロール&reg;ステレスト&reg;は、エシロール社が長年培ってきた光学設計技術をもとに、独自のH.A.L.T.&reg;(Highly Aspherical Lenslet Target)テクノロジーを採用した眼鏡レンズです。</p>
         <a href="https://stellest.jp/" target="_blank" rel="noopener">
-          <img src="images/stellest-official-banner.jpg" alt="エシロール ステレスト(Essilor Stellest) 公式バナー" class="brand-card-banner" loading="lazy">
+          <img src="<?php echo $lp_assets; ?>/stellest-official-banner.jpg" alt="エシロール ステレスト(Essilor Stellest) 公式バナー" class="brand-card-banner" loading="lazy">
         </a>
         <p class="brand-card-price">【価格】お好きなフレーム<br class="mobile-break">＋<span>¥79,200(税込)</span></p>
         <a class="brand-card-link" href="https://stellest.jp/" target="_blank" rel="noopener">エシロール公式サイトで詳しく見る ›</a>
@@ -600,7 +604,7 @@
         <p class="warranty-age-note">※ご購入時、中学生以下が対象となります。</p>
       </div>
       <div class="warranty-mascot-wrap">
-        <img src="images/kiririn/kiririn-thumbsup.png" alt="キッズ保証マスコット" class="warranty-mascot">
+        <img src="<?php echo $lp_assets; ?>/kiririn/kiririn-thumbsup.png" alt="キッズ保証マスコット" class="warranty-mascot">
       </div>
     </div>
 
@@ -737,7 +741,7 @@
     <div class="why-grid4">
       <div class="why-grid4-item">
         <div class="why-grid4-photo">
-          <img src="images/why-split-photo.png" alt="お子さまがメガネを試着している様子" loading="lazy" style="object-position: 60% 30%;">
+          <img src="<?php echo $lp_assets; ?>/why-split-photo.png" alt="お子さまがメガネを試着している様子" loading="lazy" style="object-position: 60% 30%;">
         </div>
         <div class="why-grid4-text">
           <p class="why-grid4-cap">自分らしい一本を見つけよう</p>
@@ -746,7 +750,7 @@
       </div>
       <div class="why-grid4-item">
         <div class="why-grid4-photo">
-          <img src="images/fitting-scene.png" alt="スタッフがお子さまにメガネを合わせている様子" loading="lazy">
+          <img src="<?php echo $lp_assets; ?>/fitting-scene.png" alt="スタッフがお子さまにメガネを合わせている様子" loading="lazy">
         </div>
         <div class="why-grid4-text">
           <p class="why-grid4-cap">眼鏡作製技能士が対応</p>
@@ -755,7 +759,7 @@
       </div>
       <div class="why-grid4-item">
         <div class="why-grid4-photo">
-          <img src="images/maintenance-scene.png" alt="スタッフがメガネのレンズをクロスで拭いている様子" loading="lazy" style="object-position: 50% 35%;">
+          <img src="<?php echo $lp_assets; ?>/maintenance-scene.png" alt="スタッフがメガネのレンズをクロスで拭いている様子" loading="lazy" style="object-position: 50% 35%;">
         </div>
         <div class="why-grid4-text">
           <p class="why-grid4-cap">いつでも安心、無料メンテナンス</p>
@@ -767,7 +771,7 @@
 
     <div class="warranty-cta-banner">
       <div class="warranty-cta-photo">
-        <img src="images/kiririn/kiririn-wave.png" alt="" class="warranty-cta-mascot" loading="lazy">
+        <img src="<?php echo $lp_assets; ?>/kiririn/kiririn-wave.png" alt="" class="warranty-cta-mascot" loading="lazy">
       </div>
       <div class="warranty-cta-body">
         <div class="warranty-cta-text">
@@ -791,14 +795,14 @@
   <div class="wrap">
     <div class="flow-title-row">
       <h2 class="sec-h2">ご購入までの流れ</h2>
-      <img src="images/kiririn/kiririn-thumbsup2.png" alt="" class="flow-mascot">
+      <img src="<?php echo $lp_assets; ?>/kiririn/kiririn-thumbsup2.png" alt="" class="flow-mascot">
     </div>
     <p class="sec-lead" style="margin-bottom:0">眼科での受診から、お渡しまでの6ステップ。</p>
     <div class="flow-rows">
       <div class="flow-row">
         <span class="flow-row-tab">STEP 1</span>
         <div class="flow-row-icon">
-          <img src="images/icon-eye-exam.svg" alt="眼科受診" width="62" height="62">
+          <img src="<?php echo $lp_assets; ?>/icon-eye-exam.svg" alt="眼科受診" width="62" height="62">
         </div>
         <div class="flow-row-text">
           <h3 class="flow-row-title">眼科受診</h3>
@@ -809,7 +813,7 @@
       <div class="flow-row">
         <span class="flow-row-tab">STEP 2</span>
         <div class="flow-row-icon">
-          <img src="images/icon-prescription.svg" alt="処方箋" width="56" height="56">
+          <img src="<?php echo $lp_assets; ?>/icon-prescription.svg" alt="処方箋" width="56" height="56">
         </div>
         <div class="flow-row-text">
           <h3 class="flow-row-title">処方箋を持ってアイメガネへ</h3>
@@ -859,7 +863,7 @@
       <div class="flow-row">
         <span class="flow-row-tab">STEP 5</span>
         <div class="flow-row-icon" style="position:relative;">
-          <img src="images/icon-glasses-round3.svg" alt="お渡し" width="48" height="48">
+          <img src="<?php echo $lp_assets; ?>/icon-glasses-round3.svg" alt="お渡し" width="48" height="48">
           <svg class="flow-sparkle flow-sparkle-lg" width="17" height="17" viewBox="0 0 20 20" style="position:absolute; top:-3px; right:-5px;"><path d="M10 0l1.6 6.4L18 8l-6.4 1.6L10 16l-1.6-6.4L2 8l6.4-1.6z" fill="#3aadd4"/></svg>
           <svg class="flow-sparkle flow-sparkle-sm" width="11" height="11" viewBox="0 0 20 20" style="position:absolute; bottom:-1px; left:-7px;"><path d="M10 0l1.6 6.4L18 8l-6.4 1.6L10 16l-1.6-6.4L2 8l6.4-1.6z" fill="#3aadd4"/></svg>
         </div>
@@ -872,7 +876,7 @@
       <div class="flow-row">
         <span class="flow-row-tab">STEP 6</span>
         <div class="flow-row-icon">
-          <img src="images/icon-eye-exam.svg" alt="眼科受診" width="62" height="62">
+          <img src="<?php echo $lp_assets; ?>/icon-eye-exam.svg" alt="眼科受診" width="62" height="62">
         </div>
         <div class="flow-row-text">
           <h3 class="flow-row-title">眼科受診</h3>
@@ -891,7 +895,7 @@
   <div class="wrap">
     <div class="shop-h2-row">
       <h2 class="sec-h2">お近くの<br class="why-lead-break-mobile">店舗を探す</h2>
-      <img src="images/kiririn/kiririn-map.png" alt="" class="shop-mascot">
+      <img src="<?php echo $lp_assets; ?>/kiririn/kiririn-map.png" alt="" class="shop-mascot">
     </div>
     <p class="shop-intro">現在地、または郵便番号で近くの店舗を探せます。</p>
 
@@ -924,7 +928,7 @@
   <div class="wrap">
     <div class="faq-h2-row">
       <h2 class="sec-h2" style="margin-bottom:0;">よくある<br class="why-lead-break-mobile">ご質問</h2>
-      <img src="images/kiririn/kiririn-think.png" alt="" class="faq-mascot">
+      <img src="<?php echo $lp_assets; ?>/kiririn/kiririn-think.png" alt="" class="faq-mascot">
     </div>
     <div class="faq-list">
       <details class="faq-card">
@@ -960,7 +964,7 @@
   <div class="wrap cta-inner">
     <div class="cta-title-row">
       <h2 class="cta-h2">子どもの目のことを、<br>まずは相談してみてください。</h2>
-      <img src="images/kiririn/kiririn-thumbsup.png" alt="" class="cta-mascot">
+      <img src="<?php echo $lp_assets; ?>/kiririn/kiririn-thumbsup.png" alt="" class="cta-mascot">
     </div>
     <p class="cta-body">全店に眼鏡作製技能士が在籍し、<br class="why-lead-break-mobile">購入後も保証・無料メンテナンスで<br class="why-lead-break-mobile">ずっと安心。処方箋がまだない方も、<br class="why-lead-break-mobile">まずはお気軽にご相談ください。</p>
     <div class="cta-btns">
@@ -974,7 +978,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <a href="https://www.aimegane.com/" target="_blank" rel="noopener">
-        <img src="images/aimegane_logo.png" alt="アイメガネ" class="footer-logo-img">
+        <img src="<?php echo $lp_assets; ?>/aimegane_logo.png" alt="アイメガネ" class="footer-logo-img">
       </a>
       <nav class="footer-links">
         <a href="https://www.aimegane.com/" target="_blank" rel="noopener">アイメガネ公式サイト</a>
@@ -999,39 +1003,6 @@
 <a href="#shop-search" class="sticky-cta-vertical">来店予約はこちら</a>
 
 <script>
-// パスワードゲート(レビュー用簡易ロック)
-(() => {
-  const PASSWORD = '2026MIYO';
-  const gate = document.getElementById('pwGate');
-  const input = document.getElementById('pwGateInput');
-  const btn = document.getElementById('pwGateBtn');
-  const error = document.getElementById('pwGateError');
-  if (!gate || !input || !btn) return;
-
-  const unlock = () => {
-    gate.classList.add('is-unlocked');
-    document.body.classList.remove('pw-locked');
-  };
-
-  if (localStorage.getItem('miyoLpUnlocked') === 'yes') {
-    unlock();
-  } else {
-    document.body.classList.add('pw-locked');
-  }
-
-  const tryUnlock = () => {
-    if (input.value === PASSWORD) {
-      localStorage.setItem('miyoLpUnlocked', 'yes');
-      error.style.display = 'none';
-      unlock();
-    } else {
-      error.style.display = 'block';
-    }
-  };
-  btn.addEventListener('click', tryUnlock);
-  input.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
-})();
-
 // ハンバーガーメニュー(スマホ版)
 (() => {
   const btn = document.querySelector('.pg-hamburger');

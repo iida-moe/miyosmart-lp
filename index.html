@@ -123,6 +123,7 @@
   .warranty-lead-break-mobile, .warranty-lead-break-mobile2 { display: none; }
   .why-lead-break-mobile { display: none; }
   .mobile-break { display: none; }
+  .narrow-break { display: none; }
 
   /* ── PROBLEM ── */
   .sec-problem { background: var(--cream); }
@@ -497,9 +498,9 @@
     .warranty-scard { padding: 28px 24px; min-height: 262px; }
     .warranty-scard-stat { text-align: left; display: flex; align-items: flex-end; }
     .warranty-scard-stat-num { font-size: 38px; }
-    .warranty-formula { padding: 16px 12px; }
+    .warranty-formula { padding: 16px 40px 16px 12px; }
     .warranty-formula-lead { font-size: 13px; }
-    .warranty-formula-label { font-size: 15px; }
+    .warranty-formula-label { font-size: 15px; white-space: normal; }
     .warranty-formula-row { position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
     .warranty-formula-op { display: none; }
     .warranty-formula-row::after { content: "+"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 22px; font-weight: 700; color: var(--muted); }
@@ -522,6 +523,13 @@
     .s-divider       { display: none; }
     .s-stat          { text-align: left; }
     .wrap, .stats-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
+  }
+
+  /* ── 極小幅(iPhone SE 1st/5世代など320px前後)向けの安全マージン ── */
+  @media (max-width: 340px) {
+    .hero-v3-blob h1 { font-size: 33px; }
+    .about-h2 { font-size: 28px; }
+    .narrow-break { display: inline; }
   }
 
   /* ── MEDIUM VIEWPORT(タブレット幅など、3カラムが窮屈になる範囲) ── */
@@ -621,7 +629,7 @@
       <div class="hero-v3-blob">
         <p class="hero-v3-kicker">お子さまの近視が気になり始めた方へ</p>
         <h1>子どもの近視用<br>メガネレンズ</h1>
-        <p class="hero-v3-sub">「ミヨスマート」「エシロール® ステレスト®」を<br>アイメガネ全店で取り扱っています。</p>
+        <p class="hero-v3-sub">「ミヨスマート」「エシロール®<br class="narrow-break">ステレスト®」を<br>アイメガネ全店で取り扱っています。</p>
         <a href="#shop-search" class="btn-primary">まずは無料相談から&#9654;</a>
       </div>
     </div>
@@ -635,7 +643,7 @@
     <p class="sec-lead">アイメガネ全店でご相談いただけます。<br class="mobile-break">本レンズは、眼科医が発行する<br class="why-lead-break-mobile"><mark class="highlight-marker lead-emphasis">眼鏡処方箋</mark>に基づいて販売いたします。<br>まずは眼科を受診のうえ、処方箋をご持参ください。</p>
     <div class="brand-cards">
       <div class="brand-card">
-        <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;(ミヨスマート)</p>
+        <p class="brand-card-tab">MiYOSMART<span>&reg;</span>&nbsp;&nbsp;<br class="narrow-break">(ミヨスマート)</p>
         <p class="brand-card-note">お子さまの視力はかけがえのないものです。<br>ミヨスマートは、現在世界50か国以上&#8251;で販売されている小児向けの近視に対応する特殊な構造のメガネレンズです。<span class="brand-card-footnote">&#8251;2025年9月時点</span></p>
         <a href="https://www.vc.hoya.co.jp/miyosmart/user/" target="_blank" rel="noopener">
           <img src="images/miyosmart-official-banner.jpg" alt="ミヨスマート(MiYOSMART) HOYA公式バナー" class="brand-card-banner" loading="lazy">
